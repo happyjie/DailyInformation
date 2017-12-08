@@ -3,4 +3,14 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="colorTheme">#3F51B5</color>
+    <color name="colorThemeDark">#303F9F</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+
+    <!--文字颜色-->
+    <color name="TextColor63">#333333</color>
+    <color name="TextColor66">#666666</color>
+    <color name="TextColor69">#999999</color>
 </resources>
