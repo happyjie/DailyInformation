@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_bg_page"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:background="@drawable/slide_bar_bg">
+
+                    <!--给背景加点灰度透明色-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#5000" />
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <com.lib.llj.widget.CircleImageView
+                            android:id="@+id/iv_avatar"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:border_width="3px"
+                            app:border_color="@color/colorWhite"
+                            android:src="@drawable/default_avatar" />
+
+                        <TextView
+                            style="@style/textSmallColorWhite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="会飞的闪电狮子" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+                
+                <com.lib.llj.widget.MenuItemView
+                    android:id="@+id/menu_go_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/menu_item_default_height"
+                    app:icon_res_id="@drawable/ic_nav_homepage"
+                    app:icon_width="25dp"
+                    app:is_show_next_arrow="true"
+                    app:menu_title="回到首页"/>
+
+                <com.lib.llj.widget.MenuItemView
+                    android:id="@+id/menu_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/menu_item_default_height"
+                    app:icon_res_id="@drawable/ic_nav_deedback"
+                    app:icon_width="25dp"
+                    app:is_show_next_arrow="true"
+                    app:menu_title="问题反馈"/>
+
+                <com.lib.llj.widget.MenuItemView
+                    android:id="@+id/menu_app_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/menu_item_default_height"
+                    app:icon_res_id="@drawable/ic_nav_scan"
+                    app:icon_width="25dp"
+                    app:is_show_next_arrow="true"
+                    app:menu_title="应用推荐"/>
+
+                <View style="@style/horizontal_divide_line_2px"/>
+
+                <com.lib.llj.widget.MenuItemView
+                    android:id="@+id/menu_about_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/menu_item_default_height"
+                    app:icon_res_id="@drawable/ic_nav_login"
+                    app:icon_width="25dp"
+                    app:is_show_next_arrow="true"
+                    app:menu_title="关于我们"/>
+
+                <com.lib.llj.widget.MenuItemView
+                    android:id="@+id/menu_exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/menu_item_default_height"
+                    app:icon_res_id="@drawable/ic_nav_exit"
+                    app:icon_width="25dp"
+                    app:is_show_next_arrow="true"
+                    app:menu_title="退出应用"/>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

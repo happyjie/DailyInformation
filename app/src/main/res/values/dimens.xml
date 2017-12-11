@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 文字大小定义-->
+    <dimen name="textSizeMini">12sp</dimen>
+    <dimen name="textSizeSmall">14sp</dimen>
+    <dimen name="textSizeNormal">16sp</dimen>
+    <dimen name="textSizeBig">18sp</dimen>
+    <dimen name="textSizeLarge">20sp</dimen>
+    <dimen name="textSizeHuge">22sp</dimen>
+    <!-- end  of 文字大小定义-->
+
+    <dimen name="menu_item_default_height">48dp</dimen>
+</resources>

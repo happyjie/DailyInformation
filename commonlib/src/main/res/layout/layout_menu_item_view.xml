@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/selector_bg_white"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/tv_menu_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:layout_centerVertical="true"
+        android:textSize="14sp"
+        android:textColor="#333333"
+        tools:text="菜单项1"/>
+
+
+
+    <ImageView
+        android:id="@+id/iv_red_point"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_alignTop="@+id/tv_menu_title"
+        android:layout_toRightOf="@+id/tv_menu_title"
+        android:background="@drawable/shape_red_point"
+        android:visibility="invisible"/>
+    <ImageView
+        android:id="@+id/iv_next_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ic_next_arrow"/>
+
+</RelativeLayout>

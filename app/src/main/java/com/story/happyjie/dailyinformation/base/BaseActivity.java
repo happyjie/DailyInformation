@@ -10,7 +10,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.lib.llj.utils.SingleClickListener;
 import com.lib.llj.utils.StatusBarUtil;
@@ -20,7 +22,6 @@ import com.story.happyjie.dailyinformation.databinding.ActivityBaseBinding;
 /**
  * Created by llj on 2017/12/8.
  */
-
 public class BaseActivity<VDB extends ViewDataBinding> extends AppCompatActivity {
 
     protected ActivityBaseBinding mBaseBinding;
@@ -40,7 +41,10 @@ public class BaseActivity<VDB extends ViewDataBinding> extends AppCompatActivity
         mBaseBinding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.activity_base, null, false);
         mViewBinding = DataBindingUtil.inflate(getLayoutInflater(), layoutResID, null, false);
 
-//        RelativeLayout rlContainer = mBaseBinding.container
+        //将传入的布局设置为match_parent
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        mViewBinding.getRoot().setLayoutParams(layoutParams);
+
         mBaseBinding.container.addView(mViewBinding.getRoot());
         super.setContentView(mBaseBinding.getRoot());
 
@@ -63,10 +67,17 @@ public class BaseActivity<VDB extends ViewDataBinding> extends AppCompatActivity
 
         //先隐藏content布局
         mViewBinding.getRoot().setVisibility(View.GONE);
+
+        initView();
+        initListener();
     }
 
-    protected void setToolBarVisible(boolean visible){
-        mBaseBinding.toolBar.setVisibility(visible ? View.VISIBLE : View.GONE);
+    protected void initView(){
+
+    }
+
+    protected void initListener(){
+
     }
 
     /**
@@ -87,6 +98,14 @@ public class BaseActivity<VDB extends ViewDataBinding> extends AppCompatActivity
                 onBackPressed();
             }
         });
+    }
+
+    /**
+     * 设置toolbar是否显示
+     * @param visible
+     */
+    protected void setToolbarVisible(boolean visible){
+        mBaseBinding.toolBar.setVisibility(visible ? View.VISIBLE : View.GONE);
     }
 
     /**

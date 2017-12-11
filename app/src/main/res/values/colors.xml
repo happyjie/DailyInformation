@@ -7,10 +7,14 @@
     <color name="colorTheme">#3F51B5</color>
     <color name="colorThemeDark">#303F9F</color>
 
-    <color name="colorWhite">#FFFFFF</color>
+    <color name="color_bg_page">#f5f5f5</color>
 
-    <!--文字颜色-->
-    <color name="TextColor63">#333333</color>
-    <color name="TextColor66">#666666</color>
-    <color name="TextColor69">#999999</color>
+    <!-- 灰度定义 -->
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="color63">#333333</color>
+    <color name="color66">#666666</color>
+    <color name="color69">#999999</color>
+    <!-- end of 灰度定义 -->
+
 </resources>
