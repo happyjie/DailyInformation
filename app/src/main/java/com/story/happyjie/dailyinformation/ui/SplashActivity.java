@@ -1,4 +1,4 @@
-package com.story.happyjie.dailyinformation;
+package com.story.happyjie.dailyinformation.ui;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -10,8 +10,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import com.bumptech.glide.Glide;
+import com.story.happyjie.dailyinformation.R;
 import com.story.happyjie.dailyinformation.constants.ConstantsImageUrl;
 import com.story.happyjie.dailyinformation.databinding.ActivitySplashBinding;
+import com.story.happyjie.dailyinformation.ui.MainActivity;
 
 import java.util.Random;
 

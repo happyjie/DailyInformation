@@ -1,6 +1,7 @@
 package com.story.happyjie.dailyinformation.utils;
 
 import android.content.Context;
+import android.databinding.BindingAdapter;
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
@@ -18,6 +19,11 @@ import com.story.happyjie.dailyinformation.R;
 
 public class ImageLoaderUtils {
 
+    /**
+     * 显示头像
+     * @param imageView
+     * @param imageUrl
+     */
     public static void showAvatar(ImageView imageView, String imageUrl){
         Glide.with(imageView.getContext())
                 .load(imageUrl)
@@ -27,7 +33,42 @@ public class ImageLoaderUtils {
                 .into(imageView);
     }
 
+    public static void showImage(ImageView imageView, String url){
+        showImage(imageView, url, R.drawable.img_default, R.drawable.img_default);
+    }
 
+    public static void showImage(ImageView imageView, String url, int defaultImageResId){
+        showImage(imageView, url, defaultImageResId, defaultImageResId);
+    }
+
+    public static void showImage(ImageView imageView, String url, int defaultImageResId, int errImageResId){
+        Glide.with(imageView.getContext())
+                .load(url)
+                .crossFade(500)
+                .placeholder(defaultImageResId)
+                .error(errImageResId)
+                .into(imageView);
+    }
+
+
+
+    @BindingAdapter({"android:showAdapterImage", "android:defaultImageType"})
+    public static void showAdapterImage(ImageView imageView, String url, int defaultImageType){
+        showImage(imageView, url, getDefaultPic(defaultImageType));
+    }
+
+
+    private static int getDefaultPic(int type) {
+        switch (type) {
+            case 0:// 电影
+                return R.drawable.img_default_movie;
+            case 1:// 妹子
+                return R.drawable.img_default_meizi;
+            case 2:// 书籍
+                return R.drawable.img_default_book;
+        }
+        return R.drawable.img_default;
+    }
 
     public static class GlideCircleTransform extends BitmapTransformation {
 
