@@ -20,8 +20,7 @@
 
         <activity android:name=".ui.SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/ViewBigPicTheme"
-            android:label="闪屏界面">
+            android:theme="@style/ViewBigPicTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

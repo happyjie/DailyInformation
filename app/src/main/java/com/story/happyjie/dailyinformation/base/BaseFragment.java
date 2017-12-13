@@ -16,6 +16,9 @@ import com.lib.llj.utils.SingleClickListener;
 import com.story.happyjie.dailyinformation.R;
 import com.story.happyjie.dailyinformation.databinding.FragmentBaseBinding;
 
+import rx.Subscription;
+import rx.subscriptions.CompositeSubscription;
+
 /**
  * Created by llj on 2017-12-11 .
  */
@@ -26,6 +29,7 @@ public abstract class BaseFragment<VDB extends ViewDataBinding> extends Fragment
     protected LinearLayout llLoading;
     protected LinearLayout llError;
     protected AnimationDrawable mAnimationDrawable;
+    private CompositeSubscription mCompositeSubscription;
 
     // fragment是否显示了
     protected boolean mIsVisible = false;
@@ -167,5 +171,26 @@ public abstract class BaseFragment<VDB extends ViewDataBinding> extends Fragment
 
     protected <T extends View> T getView(int id) {
         return (T) getView().findViewById(id);
+    }
+
+    public void addSubscription(Subscription s) {
+        if (this.mCompositeSubscription == null) {
+            this.mCompositeSubscription = new CompositeSubscription();
+        }
+        this.mCompositeSubscription.add(s);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (this.mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions()) {
+            this.mCompositeSubscription.unsubscribe();
+        }
+    }
+
+    public void removeSubscription() {
+        if (this.mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions()) {
+            this.mCompositeSubscription.unsubscribe();
+        }
     }
 }

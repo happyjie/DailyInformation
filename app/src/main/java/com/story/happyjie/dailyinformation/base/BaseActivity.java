@@ -19,6 +19,9 @@ import com.lib.llj.utils.StatusBarUtil;
 import com.story.happyjie.dailyinformation.R;
 import com.story.happyjie.dailyinformation.databinding.ActivityBaseBinding;
 
+import rx.Subscription;
+import rx.subscriptions.CompositeSubscription;
+
 /**
  * Created by llj on 2017/12/8.
  */
@@ -29,6 +32,7 @@ public class BaseActivity<VDB extends ViewDataBinding> extends AppCompatActivity
     protected LinearLayout llLoading;
     protected LinearLayout llError;
     protected AnimationDrawable mAnimationDrawable;
+    private CompositeSubscription mCompositeSubscription;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -174,5 +178,26 @@ public class BaseActivity<VDB extends ViewDataBinding> extends AppCompatActivity
 
     protected <V extends View> V getView(@IdRes int id){
         return (V) findViewById(id);
+    }
+
+    public void addSubscription(Subscription s) {
+        if (this.mCompositeSubscription == null) {
+            this.mCompositeSubscription = new CompositeSubscription();
+        }
+        this.mCompositeSubscription.add(s);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (this.mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions()) {
+            this.mCompositeSubscription.unsubscribe();
+        }
+    }
+
+    public void removeSubscription() {
+        if (this.mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions()) {
+            this.mCompositeSubscription.unsubscribe();
+        }
     }
 }

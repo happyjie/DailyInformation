@@ -17,6 +17,7 @@ import com.lib.llj.utils.SingleClickListener;
 import com.lib.llj.utils.StatusBarUtil;
 import com.lib.llj.widget.MenuItemView;
 import com.orhanobut.logger.Logger;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.story.happyjie.dailyinformation.R;
 import com.story.happyjie.dailyinformation.base.BaseActivity;
 import com.story.happyjie.dailyinformation.databinding.ActivityMainBinding;
