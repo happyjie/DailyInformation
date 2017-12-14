@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -174,8 +175,6 @@ public class BaseActivity<VDB extends ViewDataBinding> extends AppCompatActivity
         }
     }
 
-
-
     protected <V extends View> V getView(@IdRes int id){
         return (V) findViewById(id);
     }
@@ -187,15 +186,15 @@ public class BaseActivity<VDB extends ViewDataBinding> extends AppCompatActivity
         this.mCompositeSubscription.add(s);
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void removeSubscription() {
         if (this.mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions()) {
             this.mCompositeSubscription.unsubscribe();
         }
     }
 
-    public void removeSubscription() {
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
         if (this.mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions()) {
             this.mCompositeSubscription.unsubscribe();
         }

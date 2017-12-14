@@ -17,7 +17,7 @@ import com.story.happyjie.dailyinformation.R;
  * Created by llj on 2017/12/11.
  */
 
-public class ImageLoaderUtils {
+public class GlideUtils {
 
     /**
      * 显示头像

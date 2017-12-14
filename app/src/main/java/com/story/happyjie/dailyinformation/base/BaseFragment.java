@@ -5,6 +5,7 @@ import android.databinding.ViewDataBinding;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -180,15 +181,15 @@ public abstract class BaseFragment<VDB extends ViewDataBinding> extends Fragment
         this.mCompositeSubscription.add(s);
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void removeSubscription() {
         if (this.mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions()) {
             this.mCompositeSubscription.unsubscribe();
         }
     }
 
-    public void removeSubscription() {
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
         if (this.mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions()) {
             this.mCompositeSubscription.unsubscribe();
         }

@@ -1,32 +1,21 @@
 package com.story.happyjie.dailyinformation.ui.gank;
 
-import android.graphics.Canvas;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 
-import com.orhanobut.logger.Logger;
-import com.scwang.smartrefresh.header.MaterialHeader;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
-import com.scwang.smartrefresh.layout.api.RefreshFooter;
-import com.scwang.smartrefresh.layout.api.RefreshHeader;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
-import com.scwang.smartrefresh.layout.constant.RefreshState;
-import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
-import com.scwang.smartrefresh.layout.listener.OnMultiPurposeListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshLoadmoreListener;
 import com.story.happyjie.dailyinformation.R;
+import com.story.happyjie.dailyinformation.base.BaseAdapter.OnItemClickListener;
 import com.story.happyjie.dailyinformation.base.BaseFragment;
-import com.story.happyjie.dailyinformation.bean.BeautifulGrilBean;
 import com.story.happyjie.dailyinformation.bean.GankIoDataBean;
 import com.story.happyjie.dailyinformation.databinding.FragmentOtakuWelfareBinding;
 import com.story.happyjie.dailyinformation.http.RequestCallBack;
 import com.story.happyjie.dailyinformation.model.GetGankIoRequestModel;
 import com.story.happyjie.dailyinformation.ui.gank.adapter.OtakuWelfareAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.story.happyjie.dailyinformation.utils.ToastUtils;
 
 import rx.Subscription;
 
@@ -39,6 +28,7 @@ public class OtakuWelfareFragment extends BaseFragment<FragmentOtakuWelfareBindi
 
     private SmartRefreshLayout refreshLayout;
     private OtakuWelfareAdapter mAdapter;
+    private int mCurPage = 1;
 
     @Override
     protected int setContentView() {
@@ -61,9 +51,15 @@ public class OtakuWelfareFragment extends BaseFragment<FragmentOtakuWelfareBindi
         mViewBinding.recycleView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         mViewBinding.recycleView.setAdapter(mAdapter);
 
-        mAdapter.setDatas(generateTestData());
+        mAdapter.setOnItemClickListener(new OnItemClickListener<GankIoDataBean.ResultsBean>() {
 
-        getData(1);
+            @Override
+            public void onClick(GankIoDataBean.ResultsBean resultsBean, int position) {
+                //TODO
+            }
+        });
+
+        getData(mCurPage);
     }
 
     @Override
@@ -74,24 +70,14 @@ public class OtakuWelfareFragment extends BaseFragment<FragmentOtakuWelfareBindi
         refreshLayout.setOnRefreshLoadmoreListener(new OnRefreshLoadmoreListener() {
             @Override
             public void onLoadmore(RefreshLayout refreshlayout) {
-                mViewBinding.recycleView.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mAdapter.addAll(generateTestData());
-                        refreshlayout.finishLoadmore();
-                    }
-                }, 1000);
+                mCurPage++;
+                getData(mCurPage);
             }
 
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
-                mViewBinding.recycleView.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mAdapter.setDatas(generateTestData());
-                        refreshlayout.finishRefresh();
-                    }
-                }, 2000);
+                mCurPage = 1;
+                getData(mCurPage);
             }
         });
     }
@@ -100,37 +86,38 @@ public class OtakuWelfareFragment extends BaseFragment<FragmentOtakuWelfareBindi
         GetGankIoRequestModel model = new GetGankIoRequestModel("福利", page);
         model.getData(new RequestCallBack<GankIoDataBean>() {
             @Override
-            public void onSuccess(GankIoDataBean obj) {
-                Logger.i("onSuccess");
+            public void onSuccess(GankIoDataBean bean) {
+                refreshLayout.finishRefresh();
+                refreshLayout.finishLoadmore();
+
+                if(bean.isError()){
+                    if(1 == page){
+                        showError();
+                    } else {
+                        ToastUtils.showToast("数据异常");
+                    }
+                    return;
+                }
+
+                showContentView();
+                if (1 == page){
+                    mAdapter.clear();
+                }
+                mAdapter.addAll(bean.getResults());
             }
 
             @Override
             public void onError(Throwable throwable) {
-                Logger.i("onError-->" + throwable.getMessage());
+                refreshLayout.finishRefresh();
+                refreshLayout.finishLoadmore();
+
+                if(mCurPage > 1) mCurPage--;
             }
 
             @Override
             public void returnSubscription(Subscription subscription) {
-                Logger.i("addSubscription-->" + subscription.toString());
                 addSubscription(subscription);
             }
         });
-    }
-
-    private List<BeautifulGrilBean> generateTestData(){
-        List<BeautifulGrilBean> list = new ArrayList<>();
-
-        String[] urls = new String[]{
-                "https://ws1.sinaimg.cn/large/610dc034ly1fhj53yz5aoj21hc0xcn41.jpg",
-                "https://ws1.sinaimg.cn/large/610dc034ly1fhhz28n9vyj20u00u00w9.jpg",
-                "https://ws1.sinaimg.cn/large/610dc034ly1fhgsi7mqa9j20ku0kuh1r.jpg",
-                "https://ws1.sinaimg.cn/large/610dc034ly1fhfmsbxvllj20u00u0q80.jpg",
-                "https://ws1.sinaimg.cn/large/610dc034ly1fhegpeu0h5j20u011iae5.jpg",
-        };
-
-        for (int i = 0; i < 20; i++) {
-            list.add(new BeautifulGrilBean(urls[i % urls.length]));
-        }
-        return list;
     }
 }

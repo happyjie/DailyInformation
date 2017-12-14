@@ -11,9 +11,9 @@ import com.orhanobut.logger.Logger;
 public class DailyInformationApplication extends Application {
 
     private static final String TAG = DailyInformationApplication.class.getSimpleName();
-    private DailyInformationApplication dailyInformationApplication;
+    private static DailyInformationApplication dailyInformationApplication;
 
-    public DailyInformationApplication getInstance() {
+    public static DailyInformationApplication getInstance() {
         return dailyInformationApplication;
     }
 

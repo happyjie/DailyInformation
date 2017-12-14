@@ -22,16 +22,18 @@ public abstract class BaseRequestModel {
                 .subscribe(new Observer<T>() {
                     @Override
                     public void onCompleted() {
-                        Logger.i("onCompleted()");
+                        Logger.d("onCompleted()");
                     }
 
                     @Override
                     public void onError(Throwable e) {
+                        Logger.e("onError", e);
                         callBack.onError(e);
                     }
 
                     @Override
                     public void onNext(T t) {
+                        Logger.d("onNext()");
                         callBack.onSuccess(t);
                     }
                 });

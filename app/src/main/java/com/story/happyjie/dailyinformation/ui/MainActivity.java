@@ -105,7 +105,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> implements V
         View headerView = navigationView.getHeaderView(0);
         slideMenuBinding = DataBindingUtil.bind(headerView);
 
-//        ImageLoaderUtils.showAvatar(slideMenuBinding.ivAvatar, "");
+//        GlideUtils.showAvatar(slideMenuBinding.ivAvatar, "");
 //        slideMenuBinding.ivAvatar.setOnClickListener(listener);
         slideMenuBinding.menuGoHome.setOnClickListener(listener);
         slideMenuBinding.menuAppRecommend.setOnClickListener(listener);

@@ -1,7 +1,6 @@
 package com.story.happyjie.dailyinformation.base.BaseAdapter;
 
 import android.support.v7.widget.RecyclerView;
-import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +11,11 @@ import java.util.List;
 
 public abstract class BaseRecycleViewAdapter<T> extends RecyclerView.Adapter<BaseRecycleViewHolder> {
 
-    private List<T> datas = new ArrayList<T>();
+    private List<T> datas = new ArrayList<>();
+    protected OnItemClickListener clickListener;
+    protected OnItemLongClickListener longClickListener;
+
+
 
     @Override
     public void onBindViewHolder(BaseRecycleViewHolder holder, int position) {
@@ -24,12 +27,19 @@ public abstract class BaseRecycleViewAdapter<T> extends RecyclerView.Adapter<Bas
         return null == datas ? 0 : datas.size();
     }
 
-
+    /**
+     * 先清空，再装载数据
+     * @param list
+     */
     public void setDatas(List<T> list){
         datas.clear();
         addAll(list);
     }
 
+    /**
+     * 在List末尾添加数据集合
+     * @param list
+     */
     public void addAll(List<T> list){
         datas.addAll(list);
         notifyDataSetChanged();
@@ -51,6 +61,13 @@ public abstract class BaseRecycleViewAdapter<T> extends RecyclerView.Adapter<Bas
     }
 
     /**
+     * 清空数据，清完未添加刷新界面操作，如果需要，可手动调用notifyDataSetChanged()
+     */
+    public void clear(){
+        datas.clear();
+    }
+
+    /**
      * 添加数据到指定的位置
      * @param t
      * @param position
@@ -61,5 +78,13 @@ public abstract class BaseRecycleViewAdapter<T> extends RecyclerView.Adapter<Bas
         } else {
             datas.add(position, t);
         }
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        this.clickListener = listener;
+    }
+
+    public void setOnItemLongClickListener(OnItemLongClickListener longClickListener) {
+        this.longClickListener = longClickListener;
     }
 }
