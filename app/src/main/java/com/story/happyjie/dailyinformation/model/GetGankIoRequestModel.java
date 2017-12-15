@@ -1,7 +1,7 @@
 package com.story.happyjie.dailyinformation.model;
 
 import com.story.happyjie.dailyinformation.api.ApiService;
-import com.story.happyjie.dailyinformation.bean.GankIoDataBean;
+import com.story.happyjie.dailyinformation.bean.GankIoDataResult;
 import com.story.happyjie.dailyinformation.http.RequestCallBack;
 import com.story.happyjie.dailyinformation.model.base.BaseRequestModel;
 
@@ -19,7 +19,7 @@ public class GetGankIoRequestModel extends BaseRequestModel{
         this.page = page;
     }
 
-    public void getData(RequestCallBack<GankIoDataBean> callBack){
+    public void getData(RequestCallBack<GankIoDataResult> callBack){
         request(ApiService.gankApiService.getGankIoData(type, per_page, page), callBack);
     }
 

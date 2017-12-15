@@ -12,11 +12,13 @@ public class HttpUtils {
     // gankio、豆瓣、（轮播图）
     private final static String API_GANKIO = "https://gank.io/api/";
     private final static String API_MUSIC = "https://tingapi.ting.baidu.com/v1/restserver/";
-    private final static String API_DOUBAN = "Https://api.douban.com/";
+    private final static String API_DOUBAN = "https://api.douban.com/";
+    private final static String API_NEWS = "http://is.snssdk.com/api/news/feed/v51/";
 
     private ApiService gankApiService;
     private ApiService musicApiService;
     private ApiService doubanApiService;
+    private ApiService newsApiService;
 
     private static HttpUtils instance;
 
@@ -63,5 +65,16 @@ public class HttpUtils {
             }
         }
         return doubanApiService;
+    }
+
+    public ApiService getNewsApi(){
+        if(null == newsApiService){
+            synchronized (HttpUtils.class){
+                if(null == newsApiService){
+                    newsApiService = HttpClient.getInstance().getRetrofit(API_NEWS).create(ApiService.class);
+                }
+            }
+        }
+        return newsApiService;
     }
 }

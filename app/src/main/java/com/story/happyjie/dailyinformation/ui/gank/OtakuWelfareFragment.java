@@ -10,12 +10,16 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshLoadmoreListener;
 import com.story.happyjie.dailyinformation.R;
 import com.story.happyjie.dailyinformation.base.BaseAdapter.OnItemClickListener;
 import com.story.happyjie.dailyinformation.base.BaseFragment;
-import com.story.happyjie.dailyinformation.bean.GankIoDataBean;
+import com.story.happyjie.dailyinformation.bean.GankIoDataResult;
 import com.story.happyjie.dailyinformation.databinding.FragmentOtakuWelfareBinding;
 import com.story.happyjie.dailyinformation.http.RequestCallBack;
 import com.story.happyjie.dailyinformation.model.GetGankIoRequestModel;
+import com.story.happyjie.dailyinformation.tools.view_big_image.ShowBigImageBean;
+import com.story.happyjie.dailyinformation.tools.view_big_image.ViewBigImageActivity;
 import com.story.happyjie.dailyinformation.ui.gank.adapter.OtakuWelfareAdapter;
 import com.story.happyjie.dailyinformation.utils.ToastUtils;
+
+import java.util.ArrayList;
 
 import rx.Subscription;
 
@@ -29,6 +33,7 @@ public class OtakuWelfareFragment extends BaseFragment<FragmentOtakuWelfareBindi
     private SmartRefreshLayout refreshLayout;
     private OtakuWelfareAdapter mAdapter;
     private int mCurPage = 1;
+    private ArrayList<ShowBigImageBean> imageList = new ArrayList<>();
 
     @Override
     protected int setContentView() {
@@ -51,11 +56,11 @@ public class OtakuWelfareFragment extends BaseFragment<FragmentOtakuWelfareBindi
         mViewBinding.recycleView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         mViewBinding.recycleView.setAdapter(mAdapter);
 
-        mAdapter.setOnItemClickListener(new OnItemClickListener<GankIoDataBean.ResultsBean>() {
+        mAdapter.setOnItemClickListener(new OnItemClickListener<GankIoDataResult.ResultsBean>() {
 
             @Override
-            public void onClick(GankIoDataBean.ResultsBean resultsBean, int position) {
-                //TODO
+            public void onClick(GankIoDataResult.ResultsBean resultsBean, int position) {
+                ViewBigImageActivity.startAction(getActivity(), imageList, position);
             }
         });
 
@@ -84,9 +89,9 @@ public class OtakuWelfareFragment extends BaseFragment<FragmentOtakuWelfareBindi
 
     private void getData(int page){
         GetGankIoRequestModel model = new GetGankIoRequestModel("福利", page);
-        model.getData(new RequestCallBack<GankIoDataBean>() {
+        model.getData(new RequestCallBack<GankIoDataResult>() {
             @Override
-            public void onSuccess(GankIoDataBean bean) {
+            public void onSuccess(GankIoDataResult bean) {
                 refreshLayout.finishRefresh();
                 refreshLayout.finishLoadmore();
 
@@ -102,8 +107,13 @@ public class OtakuWelfareFragment extends BaseFragment<FragmentOtakuWelfareBindi
                 showContentView();
                 if (1 == page){
                     mAdapter.clear();
+                    imageList.clear();
                 }
                 mAdapter.addAll(bean.getResults());
+                for(int i = 0; i < bean.getResults().size(); i++){
+                    ShowBigImageBean imageBean = new ShowBigImageBean(bean.getResults().get(i).getUrl(), 0);
+                    imageList.add(imageBean);
+                }
             }
 
             @Override

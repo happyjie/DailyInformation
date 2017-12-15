@@ -60,11 +60,6 @@ public class ViewBigImageActivity extends FragmentActivity implements OnPageChan
     private List<ShowBigImageBean> imageList;
     private int curImagePosition;
 
-    /**
-     * 用于判断是否是加载本地图片
-     */
-    private boolean isLocal;
-
     private ViewPagerAdapter adapter;
 
     public static void startAction(Context context, ArrayList<ShowBigImageBean> list, int curImagePosition) {
@@ -207,46 +202,6 @@ public class ViewBigImageActivity extends FragmentActivity implements OnPageChan
     @Override
     public void onPhotoTap(ImageView view, float x, float y) {
         finish();
-    }
-
-    /**
-     * 本应用图片适配器
-     */
-
-    class MyPageAdapter extends PagerAdapter {
-
-        @Override
-        public int getCount() {
-            return 1;
-        }
-
-        @Override
-        public boolean isViewFromObject(View view, Object object) {
-            return view == object;
-        }
-
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-            View view = getLayoutInflater().inflate(R.layout.viewpager_very_image, container, false);
-            PhotoView zoom_image_view = (PhotoView) view.findViewById(R.id.zoom_image_view);
-            ProgressBar spinner = (ProgressBar) view.findViewById(R.id.loading);
-            spinner.setVisibility(View.GONE);
-
-            ShowBigImageBean bean = imageList.get(position);
-
-            if (bean.getResId() > 0) {
-                zoom_image_view.setImageResource(bean.getResId());
-            }
-            zoom_image_view.setOnPhotoTapListener(ViewBigImageActivity.this);
-            container.addView(view, 0);
-            return view;
-        }
-
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
-            View view = (View) object;
-            container.removeView(view);
-        }
     }
 
     /**

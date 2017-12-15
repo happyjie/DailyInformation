@@ -6,28 +6,28 @@ import android.view.ViewGroup;
 import com.story.happyjie.dailyinformation.R;
 import com.story.happyjie.dailyinformation.base.BaseAdapter.BaseRecycleViewAdapter;
 import com.story.happyjie.dailyinformation.base.BaseAdapter.BaseRecycleViewHolder;
-import com.story.happyjie.dailyinformation.bean.GankIoDataBean;
+import com.story.happyjie.dailyinformation.bean.GankIoDataResult;
 import com.story.happyjie.dailyinformation.databinding.ItemOtakuWelfareBinding;
 
 /**
  * Created by llj on 2017/12/12.
  */
 
-public class OtakuWelfareAdapter extends BaseRecycleViewAdapter<GankIoDataBean.ResultsBean> {
+public class OtakuWelfareAdapter extends BaseRecycleViewAdapter<GankIoDataResult.ResultsBean> {
 
     @Override
     public BaseRecycleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new ViewHolder(parent, R.layout.item_otaku_welfare);
     }
 
-    private class ViewHolder extends BaseRecycleViewHolder<GankIoDataBean.ResultsBean, ItemOtakuWelfareBinding>{
+    private class ViewHolder extends BaseRecycleViewHolder<GankIoDataResult.ResultsBean, ItemOtakuWelfareBinding>{
 
         public ViewHolder(ViewGroup parent, @LayoutRes int layoutId) {
             super(parent, layoutId);
         }
 
         @Override
-        protected void onBindViewHolder(GankIoDataBean.ResultsBean object, int position) {
+        protected void onBindViewHolder(GankIoDataResult.ResultsBean object, int position) {
             mViewBinding.setBean(object);
             mViewBinding.executePendingBindings();
             itemView.setOnClickListener((v) -> {

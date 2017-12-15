@@ -20,4 +20,7 @@
     <color name="color69">#999999</color>
     <!-- end of 灰度定义 -->
 
+    <!--彩色文字颜色-->
+    <color name="textColorRed">#ee0000</color>
+
 </resources>

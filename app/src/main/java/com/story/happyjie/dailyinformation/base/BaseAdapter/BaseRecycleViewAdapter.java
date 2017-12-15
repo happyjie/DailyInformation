@@ -15,8 +15,6 @@ public abstract class BaseRecycleViewAdapter<T> extends RecyclerView.Adapter<Bas
     protected OnItemClickListener clickListener;
     protected OnItemLongClickListener longClickListener;
 
-
-
     @Override
     public void onBindViewHolder(BaseRecycleViewHolder holder, int position) {
         holder.bindData(datas.get(position), position);
@@ -25,6 +23,10 @@ public abstract class BaseRecycleViewAdapter<T> extends RecyclerView.Adapter<Bas
     @Override
     public int getItemCount() {
         return null == datas ? 0 : datas.size();
+    }
+
+    public List<T> getDatas() {
+        return datas;
     }
 
     /**

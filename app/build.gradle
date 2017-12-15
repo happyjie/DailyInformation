@@ -34,7 +34,9 @@ android {
         enabled = true
     }
 
-
+    dexOptions {
+        javaMaxHeapSize "2g"
+    }
 
 }
 

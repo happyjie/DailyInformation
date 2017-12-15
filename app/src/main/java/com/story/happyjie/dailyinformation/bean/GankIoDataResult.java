@@ -6,7 +6,7 @@ import java.util.List;
  * Created by llj on 2017/12/13.
  */
 
-public class GankIoDataBean {
+public class GankIoDataResult {
 
 
     /**

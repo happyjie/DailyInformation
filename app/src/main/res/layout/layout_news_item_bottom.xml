@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <!--<import type="com.story.happyjie.dailyinformation.utils.TimeUtils"/>
+        <import type="android.view.View"/>-->
+        <import type="com.story.happyjie.dailyinformation.bean.NewsDataResult.DataBean"/>
+        <variable
+            name="bean2"
+            type="DataBean" />
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <!--热门标记-->
+        <TextView
+            android:id="@+id/tv_hot_flag"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_news_hot_flag"
+            android:gravity="center"
+
+            android:text="热"
+            android:textColor="@color/textColorRed"
+            android:textSize="12sp" />
+
+        <!--android:visibility="@{bean.content.hot == 1 ? View.VISIBLE : View.GONE}"-->
+
+        <TextView
+            android:id="@+id/tv_author"
+            style="@style/textMiniColor66"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            tools:text="长安街知事" />
+        <!--android:text="@{bean.content.source}"-->
+
+        <TextView
+            android:id="@+id/tv_commentaries"
+            style="@style/textMiniColor66"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+
+            tools:text="23评论" />
+        <!--android:text='@{bean.content.comment_count+"评论"}'-->
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/textMiniColor66"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+
+            tools:text="35分钟前" />
+
+        <!--android:text="@{TimeUtils.format(bean.content.publish_time)}"-->
+
+    </LinearLayout>
+</layout>

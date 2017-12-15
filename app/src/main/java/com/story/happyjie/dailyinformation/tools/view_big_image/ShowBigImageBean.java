@@ -3,9 +3,6 @@ package com.story.happyjie.dailyinformation.tools.view_big_image;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.IdRes;
-import android.text.TextUtils;
-
-import com.story.happyjie.dailyinformation.exception.ShowBigImageBeanException;
 
 /**
  * Created by llj on 2017/12/14.
@@ -15,15 +12,12 @@ public class ShowBigImageBean implements Parcelable{
     private String url;
     private int resId;
 
-    public ShowBigImageBean(String url, @IdRes int resId) throws Exception {
-        if(TextUtils.isEmpty(url) && resId <= 0){
-            throw new ShowBigImageBeanException();
-        }
-
-        if(!TextUtils.isEmpty(url) && resId > 0){
-            throw new ShowBigImageBeanException();
-        }
-
+    /**
+     * 两个参数传一个就可以了,不要同时传两个
+     * @param url
+     * @param resId
+     */
+    public ShowBigImageBean(String url, @IdRes int resId) {
         this.url = url;
         this.resId = resId;
     }

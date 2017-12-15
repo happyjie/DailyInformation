@@ -17,7 +17,6 @@ import com.lib.llj.utils.SingleClickListener;
 import com.lib.llj.utils.StatusBarUtil;
 import com.lib.llj.widget.MenuItemView;
 import com.orhanobut.logger.Logger;
-import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.story.happyjie.dailyinformation.R;
 import com.story.happyjie.dailyinformation.base.BaseActivity;
 import com.story.happyjie.dailyinformation.databinding.ActivityMainBinding;
@@ -25,7 +24,7 @@ import com.story.happyjie.dailyinformation.databinding.LayoutSlideMenuBinding;
 import com.story.happyjie.dailyinformation.ui.adapter.MyFragmentPagerAdapter;
 import com.story.happyjie.dailyinformation.ui.douban.DoubanFragment;
 import com.story.happyjie.dailyinformation.ui.gank.GankFragment;
-import com.story.happyjie.dailyinformation.ui.music.MusicFragment;
+import com.story.happyjie.dailyinformation.ui.news.NewsFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,7 +79,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> implements V
     private void initContentView() {
         List<Fragment> fragmentList = new ArrayList<>();
         fragmentList.add(new GankFragment());
-        fragmentList.add(new MusicFragment());
+        fragmentList.add(new NewsFragment());
         fragmentList.add(new DoubanFragment());
         List<String> titleList = new ArrayList<>();
         titleList.add("干货");
