@@ -23,6 +23,6 @@ public class NewsRequestModel extends BaseRequestModel{
     }
 
     public void getData(RequestCallBack<NewsDataResult> callBack){
-        request(ApiService.gankApiService.getNewsData(category, refer, count), callBack);
+        request(ApiService.newsApiService.getNewsData(category, refer, count), callBack);
     }
 }

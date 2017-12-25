@@ -2,9 +2,13 @@ package com.story.happyjie.dailyinformation.ui.news;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 
+import com.google.gson.Gson;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnRefreshLoadmoreListener;
 import com.story.happyjie.dailyinformation.R;
 import com.story.happyjie.dailyinformation.base.BaseAdapter.OnItemClickListener;
 import com.story.happyjie.dailyinformation.base.BaseFragment;
@@ -28,6 +32,8 @@ public class RecommendNewsFragment extends BaseFragment<FragmentRecommendNewsBin
     private SmartRefreshLayout refreshLayout;
     private NewsAdapter mAdapter;
     private int mCurPage = 1;
+    private boolean isViewInited = false;
+    private boolean isDateInited = false;
 
     @Override
     protected int setContentView() {
@@ -47,7 +53,7 @@ public class RecommendNewsFragment extends BaseFragment<FragmentRecommendNewsBin
         refreshLayout = mViewBinding.smartRefreshLayout;
 
         mAdapter = new NewsAdapter();
-        mViewBinding.recycleView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        mViewBinding.recycleView.setLayoutManager(new LinearLayoutManager(getContext()));
         mViewBinding.recycleView.setAdapter(mAdapter);
 
         mAdapter.setOnItemClickListener(new OnItemClickListener<GankIoDataResult.ResultsBean>() {
@@ -56,8 +62,32 @@ public class RecommendNewsFragment extends BaseFragment<FragmentRecommendNewsBin
             public void onClick(GankIoDataResult.ResultsBean resultsBean, int position) {
             }
         });
+        isViewInited = true;
+    }
 
-        getData(mCurPage);
+    @Override
+    protected void onVisible() {
+        if(isViewInited && !isDateInited){
+            getData(mCurPage);
+        }
+    }
+
+    @Override
+    protected void initListener() {
+        super.initListener();
+        refreshLayout.setOnRefreshLoadmoreListener(new OnRefreshLoadmoreListener() {
+            @Override
+            public void onLoadmore(RefreshLayout refreshlayout) {
+                mCurPage++;
+                getData(mCurPage);
+            }
+
+            @Override
+            public void onRefresh(RefreshLayout refreshlayout) {
+                mCurPage = 1;
+                getData(mCurPage);
+            }
+        });
     }
 
     private void getData(int page){
@@ -77,11 +107,19 @@ public class RecommendNewsFragment extends BaseFragment<FragmentRecommendNewsBin
                     return;
                 }
 
+                if(bean.getData() != null && bean.getData().size() > 0){
+                    for(NewsDataResult.DataBean item : bean.getData()){
+                        item.setContentBean(new Gson().fromJson(item.getContent(), NewsDataResult.ContentBean.class));
+                    }
+                }
+
                 showContentView();
                 if (1 == page){
                     mAdapter.clear();
                 }
                 mAdapter.addAll(bean.getData());
+
+                isDateInited = true;
             }
 
             @Override

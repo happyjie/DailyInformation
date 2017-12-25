@@ -35,7 +35,7 @@ public interface ApiService {
      * 获取今日头条的新闻数据
      * @return
      */
-    @GET()
+    @GET("feed/v51/")
     Observable<NewsDataResult> getNewsData(@Query("category") String category, @Query("refer") int refer, @Query("count") int count);
 
 

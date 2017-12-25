@@ -1,5 +1,7 @@
 package com.story.happyjie.dailyinformation.bean;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 /**
@@ -8,19 +10,6 @@ import java.util.List;
 
 public class NewsDataResult {
 
-    /**
-     * message : success
-     * data : [{"content":"{\"abstract\":\"超级女声出来的何洁本来绯闻很少，但是这段时间因为和丈夫赫子铭离婚案件正在开庭，因此也成为网友和粉丝们关注的焦点。今天何洁在网上发文称诉求：从来就是孩子我养，从未要求男方净身出户，相信法律的公正！\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"http://toutiao.com/group/6498657160266777102/\",\"ban_comment\":0,\"behot_time\":1513318132,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":0,\"cursor\":1513318132000,\"digg_count\":0,\"display_url\":\"http://toutiao.com/group/6498657160266777102/\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:388630543\",\"is_selected\":false,\"name\":\"拉黑作者:疯帽子先生\"},{\"id\":\"2:11384965\",\"is_selected\":false,\"name\":\"不想看:明星八卦\"},{\"id\":\"6:15899\",\"is_selected\":false,\"name\":\"不想看:何洁\"},{\"id\":\"6:2947260\",\"is_selected\":false,\"name\":\"不想看:赫子铭\"}],\"forward_info\":{\"forward_count\":1},\"gallary_image_count\":8,\"group_id\":6498657160266777102,\"has_image\":true,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":false,\"hot\":0,\"ignore_web_transform\":1,\"image_list\":[{\"height\":300,\"uri\":\"list/4e5b000386c8df958fae\",\"url\":\"http://p1.pstatp.com/list/300x196/4e5b000386c8df958fae.webp\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/list/300x196/4e5b000386c8df958fae.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4e5b000386c8df958fae.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4e5b000386c8df958fae.webp\"}],\"width\":534},{\"height\":345,\"uri\":\"list/4e6100003344cc49b6ed\",\"url\":\"http://p1.pstatp.com/list/300x196/4e6100003344cc49b6ed.webp\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/list/300x196/4e6100003344cc49b6ed.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4e6100003344cc49b6ed.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4e6100003344cc49b6ed.webp\"}],\"width\":614},{\"height\":393,\"uri\":\"list/4e5c000341d166d7a81c\",\"url\":\"http://p1.pstatp.com/list/300x196/4e5c000341d166d7a81c.webp\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/list/300x196/4e5c000341d166d7a81c.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4e5c000341d166d7a81c.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4e5c000341d166d7a81c.webp\"}],\"width\":700}],\"is_subject\":false,\"item_id\":6498657160266777102,\"item_version\":0,\"keywords\":\"何洁,净身出户,粉丝,赫子铭,超级女声\",\"level\":0,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"media_info\":{\"avatar_url\":\"http://p8.pstatp.com/large/2c5f00167a4f5ac175f6\",\"follow\":false,\"is_star_user\":false,\"media_id\":1564750676220930,\"name\":\"疯帽子先生\",\"recommend_reason\":\"\",\"recommend_type\":0,\"user_id\":59120984291,\"user_verified\":false,\"verified_content\":\"\"},\"media_name\":\"疯帽子先生\",\"middle_image\":{\"height\":300,\"uri\":\"list/4e5b000386c8df958fae\",\"url\":\"http://p1.pstatp.com/list/300x196/4e5b000386c8df958fae.webp\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/list/300x196/4e5b000386c8df958fae.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4e5b000386c8df958fae.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4e5b000386c8df958fae.webp\"}],\"width\":534},\"publish_time\":1513122844,\"read_count\":297,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":0,\"share_url\":\"http://m.toutiao.com/a6498657160266777102/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"疯帽子先生\",\"source_icon_style\":6,\"source_open_url\":\"sslocal://profile?uid=59120984291\",\"tag\":\"news_entertainment\",\"tag_id\":6498657160266777102,\"tip\":0,\"title\":\"何洁霸气回应离婚，赫子铭要净身出户：拿着钱有多远滚多远！\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"\"},\"url\":\"http://toutiao.com/group/6498657160266777102/\",\"user_info\":{\"avatar_url\":\"http://p3.pstatp.com/thumb/2c5f00167a4f5ac175f6\",\"description\":\"热锅上的大象，精彩与您同分享！\",\"follow\":false,\"follower_count\":0,\"name\":\"疯帽子先生\",\"user_id\":59120984291,\"user_verified\":false},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"【一人之下】漂亮姐姐居然要活埋弟弟\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"http://toutiao.com/group/6499000694182248974/\",\"ban_comment\":0,\"behot_time\":1513318072,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":0,\"cursor\":1513318072000,\"digg_count\":2,\"display_url\":\"http://toutiao.com/group/6499000694182248974/\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:171162344\",\"is_selected\":false,\"name\":\"拉黑作者:采蘑菇的玉帝哥哥\"}],\"forward_info\":{\"forward_count\":0},\"group_flags\":32832,\"group_id\":6499000694182248974,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":true,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6499000694182248974,\"item_version\":0,\"keywords\":\"姐姐\",\"large_image_list\":[{\"height\":326,\"uri\":\"video1609/4e600003cc6da9524dd4\",\"url\":\"http://p1.pstatp.com/video1609/4e600003cc6da9524dd4\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/video1609/4e600003cc6da9524dd4\"},{\"url\":\"http://pb3.pstatp.com/video1609/4e600003cc6da9524dd4\"},{\"url\":\"http://pb9.pstatp.com/video1609/4e600003cc6da9524dd4\"}],\"width\":580}],\"level\":0,\"like_count\":2,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"media_info\":{\"avatar_url\":\"http://p9.pstatp.com/large/437f000286b002e25e29\",\"follow\":false,\"is_star_user\":false,\"media_id\":1571451332198402,\"name\":\"采蘑菇的玉帝哥哥\",\"recommend_reason\":\"\",\"recommend_type\":0,\"user_id\":5855866902,\"user_verified\":false,\"verified_content\":\"\"},\"media_name\":\"采蘑菇的玉帝哥哥\",\"middle_image\":{\"height\":360,\"uri\":\"list/4e600003cc6da9524dd4\",\"url\":\"http://p1.pstatp.com/list/300x196/4e600003cc6da9524dd4.webp\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/list/300x196/4e600003cc6da9524dd4.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4e600003cc6da9524dd4.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4e600003cc6da9524dd4.webp\"}],\"width\":640},\"publish_time\":1513166515,\"read_count\":17,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":8,\"share_url\":\"http://m.toutiao.com/a6499000694182248974/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"采蘑菇的玉帝哥哥\",\"source_icon_style\":2,\"source_open_url\":\"sslocal://profile?refer=video\\u0026uid=5855866902\",\"tag\":\"news\",\"tag_id\":6499000694182248974,\"tip\":0,\"title\":\"「一人之下」漂亮姐姐居然要活埋弟弟\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"\"},\"url\":\"http://toutiao.com/group/6499000694182248974/\",\"user_info\":{\"avatar_url\":\"http://p9.pstatp.com/thumb/437f000286b002e25e29\",\"description\":\"我不喜欢这世界，我只喜欢你啊\",\"follow\":false,\"follower_count\":0,\"name\":\"采蘑菇的玉帝哥哥\",\"user_id\":5855866902,\"user_verified\":false},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_detail_info\":{\"detail_video_large_image\":{\"height\":326,\"uri\":\"video1609/4e600003cc6da9524dd4\",\"url\":\"http://p1.pstatp.com/video1609/4e600003cc6da9524dd4\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/video1609/4e600003cc6da9524dd4\"},{\"url\":\"http://pb3.pstatp.com/video1609/4e600003cc6da9524dd4\"},{\"url\":\"http://pb9.pstatp.com/video1609/4e600003cc6da9524dd4\"}],\"width\":580},\"direct_play\":1,\"group_flags\":32832,\"show_pgc_subscribe\":1,\"video_id\":\"19b685e9acd2454eb6bdbbbdd5bedce9\",\"video_preloading_flag\":1,\"video_type\":0,\"video_watch_count\":37,\"video_watching_count\":0},\"video_duration\":478,\"video_id\":\"19b685e9acd2454eb6bdbbbdd5bedce9\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"王者荣耀爆笑团：套路！\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"http://toutiao.com/group/6498983799567680014/\",\"ban_comment\":0,\"behot_time\":1513318012,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":24,\"cursor\":1513318012000,\"digg_count\":385,\"display_url\":\"http://toutiao.com/group/6498983799567680014/\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:1264712031\",\"is_selected\":false,\"name\":\"拉黑作者:王者爆笑团\"},{\"id\":\"1:181567883\",\"is_selected\":false,\"name\":\"不想看:游戏视频\"},{\"id\":\"6:208192\",\"is_selected\":false,\"name\":\"不想看:庄子\"},{\"id\":\"6:153758450\",\"is_selected\":false,\"name\":\"不想看:王者荣耀\"}],\"forward_info\":{\"forward_count\":12},\"group_flags\":32832,\"group_id\":6498983799567680014,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":true,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6498983799567680014,\"item_version\":0,\"keywords\":\"爆笑团,庄周\",\"level\":0,\"like_count\":385,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"media_info\":{\"avatar_url\":\"http://p3.pstatp.com/large/4385000210a06f3fb108\",\"follow\":false,\"is_star_user\":false,\"media_id\":51558373308,\"name\":\"王者爆笑团\",\"recommend_reason\":\"\",\"recommend_type\":0,\"user_id\":51559903593,\"user_verified\":true,\"verified_content\":\"\"},\"media_name\":\"王者爆笑团\",\"middle_image\":{\"height\":360,\"uri\":\"list/4c9d0007b42926492f71\",\"url\":\"http://p9.pstatp.com/list/300x196/4c9d0007b42926492f71.webp\",\"url_list\":[{\"url\":\"http://p9.pstatp.com/list/300x196/4c9d0007b42926492f71.webp\"},{\"url\":\"http://pb1.pstatp.com/list/300x196/4c9d0007b42926492f71.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4c9d0007b42926492f71.webp\"}],\"width\":640},\"publish_time\":1513162581,\"read_count\":3497,\"repin_count\":222,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":103,\"share_url\":\"http://m.toutiao.com/a6498983799567680014/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"王者爆笑团\",\"source_icon_style\":5,\"source_open_url\":\"sslocal://profile?refer=video\\u0026uid=51559903593\",\"tag\":\"video_game\",\"tag_id\":6498983799567680014,\"tip\":0,\"title\":\"王者荣耀爆笑团：套路！庄周上课睡觉的原因很强大\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"头条号视频原创作者\"},\"url\":\"http://toutiao.com/group/6498983799567680014/\",\"user_info\":{\"avatar_url\":\"http://p3.pstatp.com/thumb/4385000210a06f3fb108\",\"description\":\"关于游戏的新闻、攻略、视频等众多原创内容。\",\"follow\":false,\"follower_count\":0,\"name\":\"王者爆笑团\",\"user_auth_info\":\"{\\\"auth_type\\\": \\\"0\\\", \\\"other_auth\\\": {\\\"pgc\\\": \\\"头条号视频原创作者\\\"}, \\\"auth_info\\\": \\\"头条号视频原创作者\\\"}\",\"user_id\":51559903593,\"user_verified\":true,\"verified_content\":\"头条号视频原创作者\"},\"user_repin\":0,\"user_verified\":1,\"verified_content\":\"头条号视频原创作者\",\"video_detail_info\":{\"detail_video_large_image\":{\"height\":326,\"uri\":\"video1609/4c9d0007b42926492f71\",\"url\":\"http://p9.pstatp.com/video1609/4c9d0007b42926492f71\",\"url_list\":[{\"url\":\"http://p9.pstatp.com/video1609/4c9d0007b42926492f71\"},{\"url\":\"http://pb1.pstatp.com/video1609/4c9d0007b42926492f71\"},{\"url\":\"http://pb3.pstatp.com/video1609/4c9d0007b42926492f71\"}],\"width\":580},\"direct_play\":1,\"group_flags\":32832,\"show_pgc_subscribe\":1,\"video_id\":\"3de98536d4e6401e9681d911a3340c56\",\"video_preloading_flag\":1,\"video_type\":0,\"video_watch_count\":33261,\"video_watching_count\":0},\"video_duration\":61,\"video_id\":\"3de98536d4e6401e9681d911a3340c56\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"每日点兵为您解答：先说说发动机，很多对军事不太了解的人也许张嘴就夸日本发动机棒棒哒，这其实是以偏概全，在航空发动机领域日本真的很菜。心神的XF-51发动机技术来自英法联合研制的阿杜尔发动机，只能算是一款小推力发动机，最大加力推力只有5吨，不及我国已投产的涡扇10B发动机14.\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"https://www.wukong.com/question/6498496042428793101\",\"ban_comment\":0,\"behot_time\":1513317952,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":27,\"cursor\":1513317952000,\"digg_count\":23,\"display_url\":\"https://www.wukong.com/question/6498496042428793101\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:577529345\",\"is_selected\":false,\"name\":\"拉黑作者:每日点兵\"},{\"id\":\"3:264329561\",\"is_selected\":false,\"name\":\"不想看:战斗机\"},{\"id\":\"6:15826\",\"is_selected\":false,\"name\":\"不想看:日本\"}],\"forward_info\":{\"forward_count\":0},\"gallary_image_count\":3,\"group_id\":6498830516995752206,\"has_image\":true,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":false,\"hot\":0,\"ignore_web_transform\":1,\"image_list\":[{\"height\":253,\"uri\":\"list/4ace001d25a7eca20f05\",\"url\":\"http://p1.pstatp.com/list/300x196/4ace001d25a7eca20f05.webp\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/list/300x196/4ace001d25a7eca20f05.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4ace001d25a7eca20f05.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4ace001d25a7eca20f05.webp\"}],\"width\":450},{\"height\":534,\"uri\":\"list/4a330006cfa4cbbeb2fb\",\"url\":\"http://p1.pstatp.com/list/300x196/4a330006cfa4cbbeb2fb.webp\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/list/300x196/4a330006cfa4cbbeb2fb.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4a330006cfa4cbbeb2fb.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4a330006cfa4cbbeb2fb.webp\"}],\"width\":950},{\"height\":675,\"uri\":\"list/4a340006c9f6fff761a9\",\"url\":\"http://p9.pstatp.com/list/300x196/4a340006c9f6fff761a9.webp\",\"url_list\":[{\"url\":\"http://p9.pstatp.com/list/300x196/4a340006c9f6fff761a9.webp\"},{\"url\":\"http://pb1.pstatp.com/list/300x196/4a340006c9f6fff761a9.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4a340006c9f6fff761a9.webp\"}],\"width\":1200}],\"is_subject\":false,\"item_id\":6498830516995752206,\"item_version\":0,\"keywords\":\"苏35,四代机,F35,折流板,苏-35,F22,F-22,歼20,教练机,战斗机\",\"level\":0,\"like_count\":23,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"middle_image\":{\"height\":253,\"uri\":\"list/4ace001d25a7eca20f05\",\"url\":\"http://p1.pstatp.com/list/300x196/4ace001d25a7eca20f05.webp\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/list/300x196/4ace001d25a7eca20f05.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4ace001d25a7eca20f05.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4ace001d25a7eca20f05.webp\"}],\"width\":450},\"publish_time\":1513126892,\"read_count\":6112,\"repin_count\":5,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":5,\"share_url\":\"http://m.toutiao.com/group/6498830516995752206/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"每日点兵\",\"source_avatar\":\"http://p1.pstatp.com/thumb/2c64001b517f89afbc54\",\"source_icon_style\":2,\"tag\":\"news_military\",\"tag_id\":6498830516995752206,\"tip\":0,\"title\":\"日本的心神战机性能究竟怎么样？\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"头条号优质视频原创作者\"},\"url\":\"https://www.wukong.com/question/6498496042428793101\",\"user_info\":{\"avatar_url\":\"http://p1.pstatp.com/thumb/2c64001b517f89afbc54\",\"description\":\"只做军事视频，让你获得军事知识。\",\"follow\":false,\"follower_count\":0,\"name\":\"每日点兵\",\"user_auth_info\":\"{\\\"auth_type\\\": \\\"0\\\", \\\"other_auth\\\": {\\\"pgc\\\": \\\"头条号优质视频原创作者\\\"}, \\\"auth_info\\\": \\\"头条号优质视频原创作者\\\"}\",\"user_id\":6887101617,\"user_verified\":true,\"verified_content\":\"头条号优质视频原创作者\"},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"有钱赚\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"https://www.wukong.com/question/6498909765438013709\",\"ban_comment\":0,\"behot_time\":1513317892,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":0,\"cursor\":1513317892000,\"digg_count\":0,\"display_url\":\"https://www.wukong.com/question/6498909765438013709\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:1219607705\",\"is_selected\":false,\"name\":\"拉黑作者:过路客7788\"},{\"id\":\"1:1637\",\"is_selected\":false,\"name\":\"不想看:社会\"},{\"id\":\"6:137487\",\"is_selected\":false,\"name\":\"不想看:临汾\"}],\"forward_info\":{\"forward_count\":0},\"group_id\":6499018122358423822,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":false,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6499018122358423822,\"item_version\":0,\"keywords\":\"临汾,斑马线,黄河电视台,马路\",\"level\":0,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"publish_time\":1513170572,\"read_count\":14,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":0,\"share_url\":\"http://m.toutiao.com/group/6499018122358423822/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"过路客7788\",\"source_avatar\":\"http://p0.pstatp.com/origin/3795/3047680722\",\"source_icon_style\":2,\"tag\":\"news_society\",\"tag_id\":6499018122358423822,\"tip\":0,\"title\":\"临汾市民过马路不走斑马线的理由都有啥？\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"\"},\"url\":\"https://www.wukong.com/question/6498909765438013709\",\"user_info\":{\"avatar_url\":\"http://p0.pstatp.com/origin/3795/3047680722\",\"follow\":false,\"follower_count\":0,\"name\":\"过路客7788\",\"user_id\":6365070508,\"user_verified\":false},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"孩子不理解大人的离合，大人更不懂孩子的悲伤结局看哭每个爸爸妈妈！\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"http://toutiao.com/group/6498843904123601422/\",\"ban_comment\":0,\"behot_time\":1513317832,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":0,\"cursor\":1513317832000,\"digg_count\":0,\"display_url\":\"http://toutiao.com/group/6498843904123601422/\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:986176980\",\"is_selected\":false,\"name\":\"拉黑作者:假装坚强\"},{\"id\":\"1:1234638608\",\"is_selected\":false,\"name\":\"不想看:亲子视频\"}],\"forward_info\":{\"forward_count\":0},\"group_flags\":32832,\"group_id\":6498843904123601422,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":true,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6498843904123601422,\"item_version\":0,\"keywords\":\"爸爸妈妈,大人\",\"large_image_list\":[{\"height\":326,\"uri\":\"video1609/4c84000f7a992f40ce95\",\"url\":\"http://p1.pstatp.com/video1609/4c84000f7a992f40ce95\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/video1609/4c84000f7a992f40ce95\"},{\"url\":\"http://pb3.pstatp.com/video1609/4c84000f7a992f40ce95\"},{\"url\":\"http://pb9.pstatp.com/video1609/4c84000f7a992f40ce95\"}],\"width\":580}],\"level\":0,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"media_info\":{\"avatar_url\":\"http://p9.pstatp.com/large/43770000c77f087ba819\",\"follow\":false,\"is_star_user\":false,\"media_id\":1583375545834510,\"name\":\"假装坚强\",\"recommend_reason\":\"\",\"recommend_type\":0,\"user_id\":74940134877,\"user_verified\":false,\"verified_content\":\"\"},\"media_name\":\"假装坚强\",\"middle_image\":{\"height\":360,\"uri\":\"list/4c84000f7a992f40ce95\",\"url\":\"http://p1.pstatp.com/list/300x196/4c84000f7a992f40ce95.webp\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/list/300x196/4c84000f7a992f40ce95.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4c84000f7a992f40ce95.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4c84000f7a992f40ce95.webp\"}],\"width\":640},\"publish_time\":1513130009,\"read_count\":24,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":2,\"share_url\":\"http://m.toutiao.com/a6498843904123601422/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"假装坚强\",\"source_icon_style\":4,\"source_open_url\":\"sslocal://profile?refer=video\\u0026uid=74940134877\",\"tag\":\"video_motherbaby\",\"tag_id\":6498843904123601422,\"tip\":0,\"title\":\"孩子不理解大人的离合，大人不懂孩子的悲伤结局看哭每个爸爸妈妈\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"\"},\"url\":\"http://toutiao.com/group/6498843904123601422/\",\"user_info\":{\"avatar_url\":\"http://p9.pstatp.com/thumb/43770000c77f087ba819\",\"description\":\"他们能够成功是因为他们认为自己能\",\"follow\":false,\"follower_count\":0,\"name\":\"假装坚强\",\"user_id\":74940134877,\"user_verified\":false},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_detail_info\":{\"detail_video_large_image\":{\"height\":326,\"uri\":\"video1609/4c84000f7a992f40ce95\",\"url\":\"http://p1.pstatp.com/video1609/4c84000f7a992f40ce95\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/video1609/4c84000f7a992f40ce95\"},{\"url\":\"http://pb3.pstatp.com/video1609/4c84000f7a992f40ce95\"},{\"url\":\"http://pb9.pstatp.com/video1609/4c84000f7a992f40ce95\"}],\"width\":580},\"direct_play\":1,\"group_flags\":32832,\"show_pgc_subscribe\":1,\"video_id\":\"4d63e4fc5d1f40e0a82a8619a2f8cf69\",\"video_preloading_flag\":1,\"video_type\":0,\"video_watch_count\":141,\"video_watching_count\":0},\"video_duration\":313,\"video_id\":\"4d63e4fc5d1f40e0a82a8619a2f8cf69\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"闭关锁国还不叫昏君叫什么？\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"https://www.wukong.com/question/6485555052344770830\",\"ban_comment\":0,\"behot_time\":1513317772,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":0,\"cursor\":1513317772000,\"digg_count\":0,\"display_url\":\"https://www.wukong.com/question/6485555052344770830\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:1235720244\",\"is_selected\":false,\"name\":\"拉黑作者:感叹号22418164\"},{\"id\":\"3:444600626\",\"is_selected\":false,\"name\":\"不想看:中国古代史\"},{\"id\":\"6:2438485\",\"is_selected\":false,\"name\":\"不想看:清朝\"}],\"forward_info\":{\"forward_count\":0},\"group_id\":6498862659629220110,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":false,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6498862659629220110,\"item_version\":0,\"level\":0,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"publish_time\":1513134376,\"read_count\":10,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":0,\"share_url\":\"http://m.toutiao.com/group/6498862659629220110/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"感叹号22418164\",\"source_avatar\":\"http://p1.pstatp.com/thumb/3f04001a2a26756ac086\",\"source_icon_style\":1,\"tag\":\"news_history\",\"tag_id\":6498862659629220110,\"tip\":0,\"title\":\"清朝共传了十二帝，为何直到灭亡也没出过一位昏君？\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"\"},\"url\":\"https://www.wukong.com/question/6485555052344770830\",\"user_info\":{\"avatar_url\":\"http://p1.pstatp.com/thumb/3f04001a2a26756ac086\",\"description\":\"当我们搬开别人架下的绊脚石时，也许恰恰是在为自己铺路\",\"follow\":false,\"follower_count\":0,\"name\":\"感叹号22418164\",\"user_id\":1173850774,\"user_verified\":false},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"汽车打火的正确方法，看了受益终身啊\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"http://toutiao.com/group/6498910223061746190/\",\"ban_comment\":0,\"behot_time\":1513317712,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":0,\"cursor\":1513317712000,\"digg_count\":5,\"display_url\":\"http://toutiao.com/group/6498910223061746190/\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:1835925165\",\"is_selected\":false,\"name\":\"拉黑作者:客家小文\"},{\"id\":\"1:181604311\",\"is_selected\":false,\"name\":\"不想看:汽车视频\"}],\"forward_info\":{\"forward_count\":0},\"group_flags\":32832,\"group_id\":6498910223061746190,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":true,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6498910223061746190,\"item_version\":0,\"large_image_list\":[{\"height\":326,\"uri\":\"video1609/4c90000d9e288b9efe83\",\"url\":\"http://p1.pstatp.com/video1609/4c90000d9e288b9efe83\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/video1609/4c90000d9e288b9efe83\"},{\"url\":\"http://pb3.pstatp.com/video1609/4c90000d9e288b9efe83\"},{\"url\":\"http://pb9.pstatp.com/video1609/4c90000d9e288b9efe83\"}],\"width\":580}],\"level\":0,\"like_count\":5,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"media_info\":{\"avatar_url\":\"http://p9.pstatp.com/large/401100033f4c4f262c65\",\"follow\":false,\"is_star_user\":false,\"media_id\":1581469337293838,\"name\":\"客家小文\",\"recommend_reason\":\"\",\"recommend_type\":0,\"user_id\":72455987640,\"user_verified\":false,\"verified_content\":\"\"},\"media_name\":\"客家小文\",\"middle_image\":{\"height\":202,\"uri\":\"list/4c90000d9e288b9efe83\",\"url\":\"http://p1.pstatp.com/list/300x196/4c90000d9e288b9efe83.webp\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/list/300x196/4c90000d9e288b9efe83.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4c90000d9e288b9efe83.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4c90000d9e288b9efe83.webp\"}],\"width\":360},\"publish_time\":1513145450,\"read_count\":41,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":6,\"share_url\":\"http://m.toutiao.com/a6498910223061746190/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"客家小文\",\"source_icon_style\":5,\"source_open_url\":\"sslocal://profile?refer=video\\u0026uid=72455987640\",\"tag\":\"video_car\",\"tag_id\":6498910223061746190,\"tip\":0,\"title\":\"汽车打火的正确方法，看了受益终身啊\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"\"},\"url\":\"http://toutiao.com/group/6498910223061746190/\",\"user_info\":{\"avatar_url\":\"http://p9.pstatp.com/thumb/401100033f4c4f262c65\",\"description\":\"每天分享农村最有趣的三农视频，喜欢我的视频就关注吧！\",\"follow\":false,\"follower_count\":0,\"name\":\"客家小文\",\"user_id\":72455987640,\"user_verified\":false},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_detail_info\":{\"detail_video_large_image\":{\"height\":326,\"uri\":\"video1609/4c90000d9e288b9efe83\",\"url\":\"http://p1.pstatp.com/video1609/4c90000d9e288b9efe83\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/video1609/4c90000d9e288b9efe83\"},{\"url\":\"http://pb3.pstatp.com/video1609/4c90000d9e288b9efe83\"},{\"url\":\"http://pb9.pstatp.com/video1609/4c90000d9e288b9efe83\"}],\"width\":580},\"direct_play\":1,\"group_flags\":32832,\"show_pgc_subscribe\":1,\"video_id\":\"75eecda86f8049db96ae6b20e26abba5\",\"video_preloading_flag\":1,\"video_type\":0,\"video_watch_count\":468,\"video_watching_count\":0},\"video_duration\":125,\"video_id\":\"75eecda86f8049db96ae6b20e26abba5\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"《古文观止》是三百年来中国优秀古代散文的最好选本之一。古代散文简称为古文，\u201c诗词歌赋曲\u201d都是有别于散文的其他文体，没有纳入《古文观止》的收录范围，因此也没有收录汉赋。《古文观止》成书于康照十四年(1695年)，编者吴楚材、吴调侯，是叔侄二人，浙江山阴(今绍兴)人。\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"https://www.wukong.com/question/6498162570979967245\",\"ban_comment\":0,\"behot_time\":1513317652,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":6,\"cursor\":1513317652000,\"digg_count\":10,\"display_url\":\"https://www.wukong.com/question/6498162570979967245\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:323040007\",\"is_selected\":false,\"name\":\"拉黑作者:悟空问答\"},{\"id\":\"3:264324686\",\"is_selected\":false,\"name\":\"不想看:文学\"}],\"forward_info\":{\"forward_count\":0},\"gallary_image_count\":3,\"group_id\":6498496739434037517,\"has_image\":true,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":false,\"hot\":0,\"ignore_web_transform\":1,\"image_list\":[{\"height\":450,\"uri\":\"list/4ad40003f68dffd1dcdf\",\"url\":\"http://p1.pstatp.com/list/300x196/4ad40003f68dffd1dcdf.webp\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/list/300x196/4ad40003f68dffd1dcdf.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4ad40003f68dffd1dcdf.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4ad40003f68dffd1dcdf.webp\"}],\"width\":800},{\"height\":450,\"uri\":\"list/4a35000678bbdf7ade0b\",\"url\":\"http://p3.pstatp.com/list/300x196/4a35000678bbdf7ade0b.webp\",\"url_list\":[{\"url\":\"http://p3.pstatp.com/list/300x196/4a35000678bbdf7ade0b.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4a35000678bbdf7ade0b.webp\"},{\"url\":\"http://pb1.pstatp.com/list/300x196/4a35000678bbdf7ade0b.webp\"}],\"width\":800},{\"height\":252,\"uri\":\"list/4a33000679e663647f9c\",\"url\":\"http://p1.pstatp.com/list/300x196/4a33000679e663647f9c.webp\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/list/300x196/4a33000679e663647f9c.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4a33000679e663647f9c.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4a33000679e663647f9c.webp\"}],\"width\":448}],\"is_subject\":false,\"item_id\":6498496739434037517,\"item_version\":0,\"keywords\":\"吴楚材,散文,吴调侯,浙江,古文观止\",\"level\":0,\"like_count\":10,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"middle_image\":{\"height\":450,\"uri\":\"list/4ad40003f68dffd1dcdf\",\"url\":\"http://p1.pstatp.com/list/300x196/4ad40003f68dffd1dcdf.webp\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/list/300x196/4ad40003f68dffd1dcdf.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4ad40003f68dffd1dcdf.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4ad40003f68dffd1dcdf.webp\"}],\"width\":800},\"publish_time\":1513049178,\"read_count\":1251,\"repin_count\":64,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":156,\"share_url\":\"http://m.toutiao.com/group/6498496739434037517/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"麓风轩书法与文创\",\"source_avatar\":\"http://p3.pstatp.com/thumb/39fe00028085fe6861ac\",\"source_icon_style\":5,\"tag\":\"news_culture\",\"tag_id\":6498496739434037517,\"tip\":0,\"title\":\"为什么古文观止没有收录汉赋？\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"文化问答达人\"},\"url\":\"https://www.wukong.com/question/6498162570979967245\",\"user_info\":{\"avatar_url\":\"http://p3.pstatp.com/thumb/39fe00028085fe6861ac\",\"description\":\"书法公益课堂、文创内容分享\",\"follow\":false,\"follower_count\":0,\"name\":\"麓风轩书法与文创\",\"user_auth_info\":\"{\\\"auth_type\\\": \\\"3\\\", \\\"auth_info\\\": \\\"文化问答达人\\\"}\",\"user_id\":68965941673,\"user_verified\":true,\"verified_content\":\"文化问答达人\"},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"\u201c你真的愿意帮这种忙，你要知道宫沫涵可是一个不好惹的人，你就不怕他会找你麻烦？\u201d找他帮忙就应该要想到这些的，所以施诗觉得有必要把话说清楚。既然答应了她，那他就没有想过要害怕。再说了，他也没有必要怕宫沫涵，就不相信他不能对付得那个男人。\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"http://101.201.154.127/api/toutiao/chapterContent.html?apikey=05503e42e221c328275c84e580caad37\\u0026bookid=100311\\u0026chapterid=306923\",\"ban_comment\":0,\"behot_time\":1513317592,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":0,\"cursor\":1513317592000,\"digg_count\":0,\"display_url\":\"http://toutiao.com/group/6498754596310089997/\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"7:6\",\"is_selected\":false,\"name\":\"标题党\"},{\"id\":\"5:2087064286\",\"is_selected\":false,\"name\":\"拉黑作者:松鼠小说\"},{\"id\":\"1:1664\",\"is_selected\":false,\"name\":\"不想看:故事\"}],\"forward_info\":{\"forward_count\":0},\"group_id\":6498754596310089997,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":false,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6495650000675029518,\"item_version\":0,\"keywords\":\"开玩笑,施诗,养父母,苏全影,宫沫涵\",\"level\":0,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"media_info\":{\"avatar_url\":\"http://p6.pstatp.com/large/43d5000295b5caf2613a\",\"follow\":false,\"is_star_user\":false,\"media_id\":1580765530719245,\"name\":\"松鼠小说\",\"recommend_reason\":\"\",\"recommend_type\":0,\"user_id\":71628380074,\"user_verified\":false,\"verified_content\":\"\"},\"media_name\":\"松鼠小说\",\"publish_time\":1505714404,\"read_count\":2,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":0,\"share_url\":\"http://m.toutiao.com/group/6498754596310089997/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"松鼠小说\",\"source_icon_style\":2,\"source_open_url\":\"sslocal://profile?uid=71628380074\",\"tag\":\"news_story\",\"tag_id\":6498754596310089997,\"tip\":0,\"title\":\"第512章整个人都傻了\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"\"},\"url\":\"http://101.201.154.127/api/toutiao/chapterContent.html?apikey=05503e42e221c328275c84e580caad37\\u0026bookid=100311\\u0026chapterid=306923\",\"user_info\":{\"avatar_url\":\"http://p3.pstatp.com/thumb/43d5000295b5caf2613a\",\"description\":\"中企瑞铭拥有丰富的内容资源，力求打造具影响力的数字阅读平台。\",\"follow\":false,\"follower_count\":0,\"name\":\"松鼠小说\",\"user_id\":71628380074,\"user_verified\":false},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"北京迎来今冬最强冷空气 6台尖峰锅炉启动\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"http://toutiao.com/item/6498742120961016333/\",\"ban_comment\":0,\"behot_time\":1513317532,\"bury_count\":1,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":23,\"cursor\":1513317532000,\"digg_count\":1,\"display_url\":\"http://toutiao.com/group/6498742120961016333/\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:40167974\",\"is_selected\":false,\"name\":\"拉黑作者:BTV新闻\"},{\"id\":\"1:1234639701\",\"is_selected\":false,\"name\":\"不想看:国内视频\"}],\"forward_info\":{\"forward_count\":22},\"group_flags\":32832,\"group_id\":6498742120961016333,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":true,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6498742120961016333,\"item_version\":0,\"keywords\":\"北京\",\"large_image_list\":[{\"height\":326,\"uri\":\"video1609/4e5c0003c268b484257c\",\"url\":\"http://p9.pstatp.com/video1609/4e5c0003c268b484257c\",\"url_list\":[{\"url\":\"http://p9.pstatp.com/video1609/4e5c0003c268b484257c\"},{\"url\":\"http://pb1.pstatp.com/video1609/4e5c0003c268b484257c\"},{\"url\":\"http://pb3.pstatp.com/video1609/4e5c0003c268b484257c\"}],\"width\":580}],\"level\":0,\"like_count\":1,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"media_info\":{\"avatar_url\":\"http://p1.pstatp.com/large/8904/471883965\",\"follow\":false,\"is_star_user\":false,\"media_id\":5580129726,\"name\":\"BTV新闻\",\"recommend_reason\":\"\",\"recommend_type\":0,\"user_id\":5577050366,\"user_verified\":true,\"verified_content\":\"\"},\"media_name\":\"BTV新闻\",\"middle_image\":{\"height\":270,\"uri\":\"list/4e5c0003c268b484257c\",\"url\":\"http://p9.pstatp.com/list/300x196/4e5c0003c268b484257c.webp\",\"url_list\":[{\"url\":\"http://p9.pstatp.com/list/300x196/4e5c0003c268b484257c.webp\"},{\"url\":\"http://pb1.pstatp.com/list/300x196/4e5c0003c268b484257c.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4e5c0003c268b484257c.webp\"}],\"width\":480},\"publish_time\":1513106311,\"read_count\":1120,\"repin_count\":8,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":5,\"share_url\":\"http://m.toutiao.com/a6498742120961016333/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"BTV新闻\",\"source_icon_style\":6,\"source_open_url\":\"sslocal://profile?refer=video\\u0026uid=5577050366\",\"tag\":\"news\",\"tag_id\":6498742120961016333,\"tip\":0,\"title\":\"让城市更有温度：北京陆续启动6台尖峰锅炉 确保市民家中室温达标\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"北京电视台新闻频道官方帐号\"},\"url\":\"http://toutiao.com/item/6498742120961016333/\",\"user_info\":{\"avatar_url\":\"http://p3.pstatp.com/thumb/8904/471883965\",\"description\":\"四九城消息包打听，北京大小新鲜事儿，听我到来！突发新闻、重大民生政策，看我呈现！\",\"follow\":false,\"follower_count\":0,\"name\":\"BTV新闻\",\"user_auth_info\":\"{\\\"auth_type\\\": \\\"0\\\", \\\"auth_info\\\": \\\"北京电视台新闻频道官方帐号\\\"}\",\"user_id\":5577050366,\"user_verified\":true,\"verified_content\":\"北京电视台新闻频道官方帐号\"},\"user_repin\":0,\"user_verified\":1,\"verified_content\":\"北京电视台新闻频道官方帐号\",\"video_detail_info\":{\"detail_video_large_image\":{\"height\":326,\"uri\":\"video1609/4e5c0003c268b484257c\",\"url\":\"http://p9.pstatp.com/video1609/4e5c0003c268b484257c\",\"url_list\":[{\"url\":\"http://p9.pstatp.com/video1609/4e5c0003c268b484257c\"},{\"url\":\"http://pb1.pstatp.com/video1609/4e5c0003c268b484257c\"},{\"url\":\"http://pb3.pstatp.com/video1609/4e5c0003c268b484257c\"}],\"width\":580},\"direct_play\":1,\"group_flags\":32832,\"show_pgc_subscribe\":1,\"video_id\":\"1276c710b98a4c58a3a338fa578e9f5b\",\"video_preloading_flag\":1,\"video_type\":0,\"video_watch_count\":2127,\"video_watching_count\":0},\"video_duration\":77,\"video_id\":\"1276c710b98a4c58a3a338fa578e9f5b\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"有单位的开证明，不用交，其他人要交\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"https://www.wukong.com/question/6498868724240482574\",\"ban_comment\":0,\"behot_time\":1513317472,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":0,\"cursor\":1513317472000,\"digg_count\":0,\"display_url\":\"https://www.wukong.com/question/6498868724240482574\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:1245594433\",\"is_selected\":false,\"name\":\"拉黑作者:为人民服务55275283\"},{\"id\":\"6:47324\",\"is_selected\":false,\"name\":\"不想看:医疗保险\"}],\"forward_info\":{\"forward_count\":0},\"group_id\":6498872296361427214,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":false,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6498872296361427214,\"item_version\":0,\"level\":0,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"publish_time\":1513136619,\"read_count\":10,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":0,\"share_url\":\"http://m.toutiao.com/group/6498872296361427214/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"为人民服务55275283\",\"source_avatar\":\"http://p9.pstatp.com/thumb/249a0002fb66d756a51f\",\"source_icon_style\":2,\"tag\":\"news_society\",\"tag_id\":6498872296361427214,\"tip\":0,\"title\":\"参加新农合，以户为单位交钱，家里人有职工医保了，一样要按人头交钱吗？\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"\"},\"url\":\"https://www.wukong.com/question/6498868724240482574\",\"user_info\":{\"avatar_url\":\"http://p9.pstatp.com/thumb/249a0002fb66d756a51f\",\"description\":\"就在你眨眼的瞬奸\",\"follow\":false,\"follower_count\":0,\"name\":\"为人民服务55275283\",\"user_id\":5452444916,\"user_verified\":false},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"考驾照学员的心声，句句说在你心坎上，真是太有才了！\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"http://toutiao.com/group/6498969889930215949/\",\"ban_comment\":0,\"behot_time\":1513317412,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":7,\"cursor\":1513317412000,\"digg_count\":9,\"display_url\":\"http://toutiao.com/group/6498969889930215949/\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:2078047851\",\"is_selected\":false,\"name\":\"拉黑作者:一懒众衫晓\"}],\"forward_info\":{\"forward_count\":4},\"group_flags\":32832,\"group_id\":6498969889930215949,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":true,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6498969889930215949,\"item_version\":0,\"large_image_list\":[{\"height\":326,\"uri\":\"video1609/4c97000cedb3b7fa1878\",\"url\":\"http://p3.pstatp.com/video1609/4c97000cedb3b7fa1878\",\"url_list\":[{\"url\":\"http://p3.pstatp.com/video1609/4c97000cedb3b7fa1878\"},{\"url\":\"http://pb9.pstatp.com/video1609/4c97000cedb3b7fa1878\"},{\"url\":\"http://pb1.pstatp.com/video1609/4c97000cedb3b7fa1878\"}],\"width\":580}],\"level\":0,\"like_count\":9,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"media_info\":{\"avatar_url\":\"http://p1.pstatp.com/large/472a0003255143e318bb\",\"follow\":false,\"is_star_user\":false,\"media_id\":1585650653137933,\"name\":\"一懒众衫晓\",\"recommend_reason\":\"\",\"recommend_type\":0,\"user_id\":78472344899,\"user_verified\":false,\"verified_content\":\"\"},\"media_name\":\"一懒众衫晓\",\"middle_image\":{\"height\":202,\"uri\":\"list/4c97000cedb3b7fa1878\",\"url\":\"http://p3.pstatp.com/list/300x196/4c97000cedb3b7fa1878.webp\",\"url_list\":[{\"url\":\"http://p3.pstatp.com/list/300x196/4c97000cedb3b7fa1878.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4c97000cedb3b7fa1878.webp\"},{\"url\":\"http://pb1.pstatp.com/list/300x196/4c97000cedb3b7fa1878.webp\"}],\"width\":360},\"publish_time\":1513159343,\"read_count\":3284,\"repin_count\":34,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":48,\"share_url\":\"http://m.toutiao.com/a6498969889930215949/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"一懒众衫晓\",\"source_icon_style\":4,\"source_open_url\":\"sslocal://profile?refer=video\\u0026uid=78472344899\",\"tag\":\"news\",\"tag_id\":6498969889930215949,\"tip\":0,\"title\":\"考驾照学员的心声，句句说在你心坎上，真是太有才了！\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"\"},\"url\":\"http://toutiao.com/group/6498969889930215949/\",\"user_info\":{\"avatar_url\":\"http://p1.pstatp.com/thumb/472a0003255143e318bb\",\"description\":\"每天更新身边发生的事，拍些有趣视频给大家，请大家多多关注我！\",\"follow\":false,\"follower_count\":0,\"name\":\"一懒众衫晓\",\"user_id\":78472344899,\"user_verified\":false},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_detail_info\":{\"detail_video_large_image\":{\"height\":326,\"uri\":\"video1609/4c97000cedb3b7fa1878\",\"url\":\"http://p3.pstatp.com/video1609/4c97000cedb3b7fa1878\",\"url_list\":[{\"url\":\"http://p3.pstatp.com/video1609/4c97000cedb3b7fa1878\"},{\"url\":\"http://pb9.pstatp.com/video1609/4c97000cedb3b7fa1878\"},{\"url\":\"http://pb1.pstatp.com/video1609/4c97000cedb3b7fa1878\"}],\"width\":580},\"direct_play\":1,\"group_flags\":32832,\"show_pgc_subscribe\":1,\"video_id\":\"b468afd3a98e442e95cfcc502b1158de\",\"video_preloading_flag\":1,\"video_type\":0,\"video_watch_count\":3210,\"video_watching_count\":0},\"video_duration\":180,\"video_id\":\"b468afd3a98e442e95cfcc502b1158de\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"鸭胗换种新吃法 分分钟被抢光\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"http://toutiao.com/group/6498899098865762830/\",\"ban_comment\":0,\"behot_time\":1513317352,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":0,\"cursor\":1513317352000,\"digg_count\":0,\"display_url\":\"http://toutiao.com/group/6498899098865762830/\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:1676532203\",\"is_selected\":false,\"name\":\"拉黑作者:已笙\"},{\"id\":\"1:181559745\",\"is_selected\":false,\"name\":\"不想看:美食视频\"}],\"forward_info\":{\"forward_count\":0},\"group_flags\":32832,\"group_id\":6498899098865762830,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":true,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6498899098865762830,\"item_version\":0,\"keywords\":\"鸭胗\",\"level\":0,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"media_info\":{\"avatar_url\":\"http://p3.pstatp.com/large/401c0003b4363db96de9\",\"follow\":false,\"is_star_user\":false,\"media_id\":1581680689472525,\"name\":\"已笙\",\"recommend_reason\":\"\",\"recommend_type\":0,\"user_id\":72677367168,\"user_verified\":false,\"verified_content\":\"\"},\"media_name\":\"已笙\",\"middle_image\":{\"height\":360,\"uri\":\"list/4c8d000c4920bff5438d\",\"url\":\"http://p1.pstatp.com/list/300x196/4c8d000c4920bff5438d.webp\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/list/300x196/4c8d000c4920bff5438d.webp\"},{\"url\":\"http://pb3.pstatp.com/list/300x196/4c8d000c4920bff5438d.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4c8d000c4920bff5438d.webp\"}],\"width\":640},\"publish_time\":1513142860,\"read_count\":5,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":0,\"share_url\":\"http://m.toutiao.com/a6498899098865762830/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"已笙\",\"source_icon_style\":1,\"source_open_url\":\"sslocal://profile?refer=video\\u0026uid=72677367168\",\"tag\":\"video_food\",\"tag_id\":6498899098865762830,\"tip\":0,\"title\":\"鸭胗换种新吃法 分分钟被抢光\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"\"},\"url\":\"http://toutiao.com/group/6498899098865762830/\",\"user_info\":{\"avatar_url\":\"http://p3.pstatp.com/thumb/401c0003b4363db96de9\",\"description\":\"别怕，就算前方的路再怎么漆黑，也会有那一束光照亮你整个世界。\",\"follow\":false,\"follower_count\":0,\"name\":\"已笙\",\"user_id\":72677367168,\"user_verified\":false},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_detail_info\":{\"detail_video_large_image\":{\"height\":326,\"uri\":\"video1609/4c8d000c4920bff5438d\",\"url\":\"http://p1.pstatp.com/video1609/4c8d000c4920bff5438d\",\"url_list\":[{\"url\":\"http://p1.pstatp.com/video1609/4c8d000c4920bff5438d\"},{\"url\":\"http://pb3.pstatp.com/video1609/4c8d000c4920bff5438d\"},{\"url\":\"http://pb9.pstatp.com/video1609/4c8d000c4920bff5438d\"}],\"width\":580},\"direct_play\":1,\"group_flags\":32832,\"show_pgc_subscribe\":1,\"video_id\":\"78739361f540451cb9bdb3811295f302\",\"video_preloading_flag\":1,\"video_type\":0,\"video_watch_count\":27,\"video_watching_count\":0},\"video_duration\":71,\"video_id\":\"78739361f540451cb9bdb3811295f302\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"柳生千泉还在房间内想着，等到这些蛊师全部解决，就去将董鹏等人千刀万剐，上次在缅甸的事，他们没有拿到足够多的份额，赚不到多少钱，家族入不敷出，这样的情况下，修炼资源就会减少，家族实力变相减弱。\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"http://book.zhulang.com/405915/537453.html\",\"ban_comment\":0,\"behot_time\":1513317292,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":0,\"cursor\":1513317292000,\"digg_count\":0,\"display_url\":\"http://toutiao.com/group/6497389216589152782/\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:350952044\",\"is_selected\":false,\"name\":\"拉黑作者:逐浪小说网\"},{\"id\":\"1:586978634\",\"is_selected\":false,\"name\":\"不想看:小说\"}],\"forward_info\":{\"forward_count\":0},\"group_id\":6497389216589152782,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":false,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6497389216589152782,\"item_version\":0,\"keywords\":\"柳生,柳生家族,蛊师,蛊虫,胡家\",\"level\":0,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"media_info\":{\"avatar_url\":\"http://p3.pstatp.com/large/ef5000d378a0180447c\",\"follow\":false,\"is_star_user\":false,\"media_id\":52106702131,\"name\":\"逐浪小说网\",\"recommend_reason\":\"\",\"recommend_type\":0,\"user_id\":52106702131,\"user_verified\":true,\"verified_content\":\"\"},\"media_name\":\"逐浪小说网\",\"publish_time\":1503453810,\"read_count\":1,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":0,\"share_url\":\"http://m.toutiao.com/group/6497389216589152782/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"逐浪小说网\",\"source_icon_style\":6,\"source_open_url\":\"sslocal://profile?uid=52106702131\",\"tag\":\"news_story\",\"tag_id\":6497389216589152782,\"tip\":0,\"title\":\"第六百一十四章 瓮中捉鳖\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"头条号优质文化原创作者\"},\"url\":\"http://book.zhulang.com/405915/537453.html\",\"user_info\":{\"avatar_url\":\"http://p3.pstatp.com/thumb/ef5000d378a0180447c\",\"description\":\"逐浪小说网热门连载和完本小说阅读。\",\"follow\":false,\"follower_count\":0,\"name\":\"逐浪小说网\",\"user_auth_info\":\"{\\\"auth_type\\\": \\\"0\\\", \\\"other_auth\\\": {\\\"pgc\\\": \\\"头条号优质文化原创作者\\\"}, \\\"auth_info\\\": \\\"头条号优质文化原创作者\\\"}\",\"user_id\":52106702131,\"user_verified\":true,\"verified_content\":\"头条号优质文化原创作者\"},\"user_repin\":0,\"user_verified\":1,\"verified_content\":\"头条号优质文化原创作者\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"新人教部编版 小学一年级数学上册 第五单元 6-10的认识和加减法 8《解决问题－加法》，适合复习和预习。\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"http://toutiao.com/group/6498816026791117326/\",\"ban_comment\":0,\"behot_time\":1513317232,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":0,\"cursor\":1513317232000,\"digg_count\":0,\"display_url\":\"http://toutiao.com/group/6498816026791117326/\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:2077692463\",\"is_selected\":false,\"name\":\"拉黑作者:教学资源分享\"},{\"id\":\"1:307199833\",\"is_selected\":false,\"name\":\"不想看:教育视频\"},{\"id\":\"6:36812\",\"is_selected\":false,\"name\":\"不想看:数学\"}],\"forward_info\":{\"forward_count\":0},\"group_flags\":32832,\"group_id\":6498816026791117326,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":true,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6498816026791117326,\"item_version\":0,\"keywords\":\"年级,解决问题加法,解决问题－加法\",\"large_image_list\":[{\"height\":326,\"uri\":\"video1609/4c81001147cb78dc61a6\",\"url\":\"http://p3.pstatp.com/video1609/4c81001147cb78dc61a6\",\"url_list\":[{\"url\":\"http://p3.pstatp.com/video1609/4c81001147cb78dc61a6\"},{\"url\":\"http://pb9.pstatp.com/video1609/4c81001147cb78dc61a6\"},{\"url\":\"http://pb1.pstatp.com/video1609/4c81001147cb78dc61a6\"}],\"width\":580}],\"level\":0,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"media_info\":{\"avatar_url\":\"http://p4.pstatp.com/large/4ad700037f691d9bbf3d\",\"follow\":false,\"is_star_user\":false,\"media_id\":1570962845807618,\"name\":\"教学资源分享\",\"recommend_reason\":\"\",\"recommend_type\":0,\"user_id\":62408874187,\"user_verified\":false,\"verified_content\":\"\"},\"media_name\":\"教学资源分享\",\"middle_image\":{\"height\":360,\"uri\":\"list/4c81001147cb78dc61a6\",\"url\":\"http://p3.pstatp.com/list/300x196/4c81001147cb78dc61a6.webp\",\"url_list\":[{\"url\":\"http://p3.pstatp.com/list/300x196/4c81001147cb78dc61a6.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4c81001147cb78dc61a6.webp\"},{\"url\":\"http://pb1.pstatp.com/list/300x196/4c81001147cb78dc61a6.webp\"}],\"width\":640},\"publish_time\":1513131333,\"read_count\":47,\"repin_count\":4,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":5,\"share_url\":\"http://m.toutiao.com/a6498816026791117326/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"教学资源分享\",\"source_icon_style\":2,\"source_open_url\":\"sslocal://profile?refer=video\\u0026uid=62408874187\",\"tag\":\"video_edu\",\"tag_id\":6498816026791117326,\"tip\":0,\"title\":\"人教 一年级数学上五单元6-10的认识和加减法 8《解决问题 加法》\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"\"},\"url\":\"http://toutiao.com/group/6498816026791117326/\",\"user_info\":{\"avatar_url\":\"http://p1.pstatp.com/thumb/4ad700037f691d9bbf3d\",\"description\":\"分享各种优秀的教学资源\",\"follow\":false,\"follower_count\":0,\"name\":\"教学资源分享\",\"user_id\":62408874187,\"user_verified\":false},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_detail_info\":{\"detail_video_large_image\":{\"height\":326,\"uri\":\"video1609/4c81001147cb78dc61a6\",\"url\":\"http://p3.pstatp.com/video1609/4c81001147cb78dc61a6\",\"url_list\":[{\"url\":\"http://p3.pstatp.com/video1609/4c81001147cb78dc61a6\"},{\"url\":\"http://pb9.pstatp.com/video1609/4c81001147cb78dc61a6\"},{\"url\":\"http://pb1.pstatp.com/video1609/4c81001147cb78dc61a6\"}],\"width\":580},\"direct_play\":1,\"group_flags\":32832,\"show_pgc_subscribe\":1,\"video_id\":\"a0be6919875a4e0bac29e9e706b276bd\",\"video_preloading_flag\":1,\"video_type\":0,\"video_watch_count\":89,\"video_watching_count\":0},\"video_duration\":713,\"video_id\":\"a0be6919875a4e0bac29e9e706b276bd\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"维生素K缺乏症是由于维生素K缺乏使血液中凝血酶原和凝血因子减少，以造成家禽血液凝固过程发生障碍，血凝时间延迟或出血等病症的疾病病因1.饲料中供给维生素K的量不足 按NRC标准，鸡再各个生理阶段维生素K都是0.5mg/kg；火鸡和鹌鹑在0-8周龄;鸭鹅与鸡的相同。\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"http://toutiao.com/group/6499033656340775437/\",\"ban_comment\":0,\"behot_time\":1513317172,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":0,\"cursor\":1513317172000,\"digg_count\":0,\"display_url\":\"http://toutiao.com/group/6499033656340775437/\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:1949576138\",\"is_selected\":false,\"name\":\"拉黑作者:吉材禽病小小野\"},{\"id\":\"2:31135323\",\"is_selected\":false,\"name\":\"不想看:养生\"}],\"forward_info\":{\"forward_count\":0},\"gallary_image_count\":2,\"group_id\":6499033656340775437,\"has_image\":true,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":false,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6499033656340775437,\"item_version\":0,\"keywords\":\"球虫病,草木樨,凝血酶原,维生素K3,维生素K缺乏\",\"level\":0,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"media_info\":{\"avatar_url\":\"http://p1.pstatp.com/large/36370000e556641d68dd\",\"follow\":false,\"is_star_user\":false,\"media_id\":1575490202524686,\"name\":\"吉材禽病小小野\",\"recommend_reason\":\"\",\"recommend_type\":0,\"user_id\":65194713533,\"user_verified\":false,\"verified_content\":\"\"},\"media_name\":\"吉材禽病小小野\",\"middle_image\":{\"height\":360,\"uri\":\"list/4e5f0004913cbdd6c5f8\",\"url\":\"http://p3.pstatp.com/list/300x196/4e5f0004913cbdd6c5f8.webp\",\"url_list\":[{\"url\":\"http://p3.pstatp.com/list/300x196/4e5f0004913cbdd6c5f8.webp\"},{\"url\":\"http://pb9.pstatp.com/list/300x196/4e5f0004913cbdd6c5f8.webp\"},{\"url\":\"http://pb1.pstatp.com/list/300x196/4e5f0004913cbdd6c5f8.webp\"}],\"width\":640},\"publish_time\":1513174189,\"read_count\":24,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":0,\"share_url\":\"http://m.toutiao.com/a6499033656340775437/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"吉材禽病小小野\",\"source_icon_style\":4,\"source_open_url\":\"sslocal://profile?uid=65194713533\",\"tag\":\"news_agriculture\",\"tag_id\":6499033656340775437,\"tip\":0,\"title\":\"吉材禽病\u2014\u2014维生素K缺乏症\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"\"},\"url\":\"http://toutiao.com/group/6499033656340775437/\",\"user_info\":{\"avatar_url\":\"http://p1.pstatp.com/thumb/36370000e556641d68dd\",\"description\":\"为广大养殖朋友提供一个技术信息交流平台！\",\"follow\":false,\"follower_count\":0,\"name\":\"吉材禽病小小野\",\"user_id\":65194713533,\"user_verified\":false},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"去百度下载一个小马激活工具就好\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"https://www.wukong.com/question/6498990399904809230\",\"ban_comment\":0,\"behot_time\":1513317112,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":1,\"cursor\":1513317112000,\"digg_count\":0,\"display_url\":\"https://www.wukong.com/question/6498990399904809230\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:1202990869\",\"is_selected\":false,\"name\":\"拉黑作者:蓝雅IT服务\"},{\"id\":\"1:1653\",\"is_selected\":false,\"name\":\"不想看:游戏\"},{\"id\":\"6:23342\",\"is_selected\":false,\"name\":\"不想看:电脑\"}],\"forward_info\":{\"forward_count\":0},\"group_id\":6499009258548379917,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":false,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6499009258548379917,\"item_version\":0,\"level\":0,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"publish_time\":1513168509,\"read_count\":8,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":0,\"share_url\":\"http://m.toutiao.com/group/6499009258548379917/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"蓝雅IT服务\",\"source_avatar\":\"http://p3.pstatp.com/thumb/289c0020e8c94ed7def3\",\"source_icon_style\":1,\"tag\":\"news_tech\",\"tag_id\":6499009258548379917,\"tip\":0,\"title\":\"打开电脑后，老是显示\u201c你的计算机可能运行的是window的盗版副本\u201d，这怎么办？\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"\"},\"url\":\"https://www.wukong.com/question/6498990399904809230\",\"user_info\":{\"avatar_url\":\"http://p3.pstatp.com/thumb/289c0020e8c94ed7def3\",\"follow\":false,\"follower_count\":0,\"name\":\"蓝雅IT服务\",\"user_id\":4728976957,\"user_verified\":false},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"\u201c.....做不成爱人，我们依旧还是朋友。\u201c安念静静的盯着盛和平蒙上阴霾的眸子，唇畔勾起不屑的笑，既然已经做不成爱人，又怎么可能做朋友？盛和平还能说出做朋友这样的话，说明他对陈婷真的不够爱，对今天即将要成为他新娘子的苏瑾更是一种不负责任。嗤之以鼻：\u201c话我一定给带到。\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"http://book.zhulang.com/411681/535995.html\",\"ban_comment\":0,\"behot_time\":1513317052,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":0,\"cursor\":1513317052000,\"digg_count\":0,\"display_url\":\"http://toutiao.com/group/6497561615112602125/\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:350952044\",\"is_selected\":false,\"name\":\"拉黑作者:逐浪小说网\"},{\"id\":\"1:586978634\",\"is_selected\":false,\"name\":\"不想看:小说\"}],\"forward_info\":{\"forward_count\":0},\"group_id\":6497561615112602125,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":false,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6497561615112602125,\"item_version\":0,\"keywords\":\"孤儿院,苏瑾,新娘子,安念,唐梓潼\",\"level\":0,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"media_info\":{\"avatar_url\":\"http://p3.pstatp.com/large/ef5000d378a0180447c\",\"follow\":false,\"is_star_user\":false,\"media_id\":52106702131,\"name\":\"逐浪小说网\",\"recommend_reason\":\"\",\"recommend_type\":0,\"user_id\":52106702131,\"user_verified\":true,\"verified_content\":\"\"},\"media_name\":\"逐浪小说网\",\"publish_time\":1503356772,\"read_count\":19,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":0,\"share_url\":\"http://m.toutiao.com/group/6497561615112602125/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"逐浪小说网\",\"source_icon_style\":1,\"source_open_url\":\"sslocal://profile?uid=52106702131\",\"tag\":\"news_story\",\"tag_id\":6497561615112602125,\"tip\":0,\"title\":\"第二百六十八章：不要脸的本质。\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"头条号优质文化原创作者\"},\"url\":\"http://book.zhulang.com/411681/535995.html\",\"user_info\":{\"avatar_url\":\"http://p3.pstatp.com/thumb/ef5000d378a0180447c\",\"description\":\"逐浪小说网热门连载和完本小说阅读。\",\"follow\":false,\"follower_count\":0,\"name\":\"逐浪小说网\",\"user_auth_info\":\"{\\\"auth_type\\\": \\\"0\\\", \\\"other_auth\\\": {\\\"pgc\\\": \\\"头条号优质文化原创作者\\\"}, \\\"auth_info\\\": \\\"头条号优质文化原创作者\\\"}\",\"user_id\":52106702131,\"user_verified\":true,\"verified_content\":\"头条号优质文化原创作者\"},\"user_repin\":0,\"user_verified\":1,\"verified_content\":\"头条号优质文化原创作者\",\"video_style\":0}","code":""},{"content":"{\"abstract\":\"12月12日，彩虹股份(600707)公告称，公司控股子公司张家港平板公司拟与关联方邵阳玻璃公司签订《生产线设施设备租赁合同》，将其停运的12Z、13Z 玻璃基板生产线租赁给邵阳玻璃公司，用于运营盖板玻璃业务。根据公告，上述生产线每条线租赁期限为10年。\",\"action_list\":[{\"action\":1,\"desc\":\"\",\"extra\":{}},{\"action\":3,\"desc\":\"\",\"extra\":{}},{\"action\":7,\"desc\":\"\",\"extra\":{}},{\"action\":9,\"desc\":\"\",\"extra\":{}}],\"aggr_type\":1,\"allow_download\":false,\"article_sub_type\":0,\"article_type\":0,\"article_url\":\"http://www.egsea.com/index.php?app=wz\\u0026mod=News\\u0026act=detail\\u0026id=157359\",\"ban_comment\":0,\"behot_time\":1513316992,\"bury_count\":0,\"cell_flag\":11,\"cell_layout_style\":1,\"cell_type\":0,\"comment_count\":0,\"cursor\":1513316992000,\"digg_count\":0,\"display_url\":\"http://toutiao.com/group/6499022965928100366/\",\"filter_words\":[{\"id\":\"8:0\",\"is_selected\":false,\"name\":\"看过了\"},{\"id\":\"9:1\",\"is_selected\":false,\"name\":\"内容太水\"},{\"id\":\"5:810364014\",\"is_selected\":false,\"name\":\"拉黑作者:e公司\"},{\"id\":\"4:306458403\",\"is_selected\":false,\"name\":\"不想看:电子行业\"}],\"forward_info\":{\"forward_count\":0},\"group_id\":6499022965928100366,\"has_m3u8_video\":false,\"has_mp4_video\":0,\"has_video\":false,\"hot\":0,\"ignore_web_transform\":1,\"is_subject\":false,\"item_id\":6499022965928100366,\"item_version\":0,\"keywords\":\"四川金顶,生产线,赤天化,增值税,生产线设施设备租赁合同,彩虹股份\",\"level\":0,\"log_pb\":{\"impr_id\":\"20171215140852010008060131490EAF\"},\"media_info\":{\"avatar_url\":\"http://p8.pstatp.com/large/16ab00002b6300ce35ab\",\"follow\":false,\"is_star_user\":false,\"media_id\":5563881854,\"name\":\"e公司\",\"recommend_reason\":\"\",\"recommend_type\":0,\"user_id\":5556814597,\"user_verified\":false,\"verified_content\":\"\"},\"media_name\":\"e公司\",\"publish_time\":1513171491,\"read_count\":26,\"repin_count\":1,\"rid\":\"20171215140852010008060131490EAF\",\"share_count\":0,\"share_url\":\"http://m.toutiao.com/group/6499022965928100366/?iid=0\\u0026app=news_article\",\"show_more\":null,\"show_portrait\":false,\"show_portrait_article\":false,\"source\":\"e公司\",\"source_icon_style\":5,\"source_open_url\":\"sslocal://profile?uid=5556814597\",\"tag\":\"news_finance\",\"tag_id\":6499022965928100366,\"tip\":0,\"title\":\"彩虹股份向关联方租赁停运生产线 租用合理性存疑\",\"ugc_recommend\":{\"activity\":\"\",\"reason\":\"\"},\"url\":\"http://www.egsea.com/index.php?app=wz\\u0026mod=News\\u0026act=detail\\u0026id=157359\",\"user_info\":{\"avatar_url\":\"http://p3.pstatp.com/thumb/16ab00002b6300ce35ab\",\"description\":\"证券时报新媒体产品，立志打造A股上市公司资讯第一平台。\",\"follow\":false,\"follower_count\":0,\"name\":\"e公司\",\"user_id\":5556814597,\"user_verified\":false},\"user_repin\":0,\"user_verified\":0,\"verified_content\":\"\",\"video_style\":0}","code":""}]
-     * total_number : 20
-     * has_more : true
-     * login_status : 0
-     * show_et_status : 0
-     * post_content_hint : 分享今日新鲜事
-     * has_more_to_refresh : true
-     * action_to_last_stick : 0
-     * feed_flag : 0
-     * tips : {"type":"app","display_duration":2,"display_info":"今日头条推荐引擎有20条更新","display_template":"今日头条推荐引擎有%s条更新","open_url":"","web_url":"","download_url":"","app_name":"今日头条","package_name":""}
-     */
 
     private String message;
     private int total_number;
@@ -36,6 +25,7 @@ public class NewsDataResult {
 
     public boolean isSuccess(){
         return "success".equals(message);
+
     }
 
     public String getMessage() {
@@ -223,19 +213,16 @@ public class NewsDataResult {
     }
 
     public static class DataBean {
-        /**
-         * content : {"abstract":"超级女声出来的何洁本来绯闻很少，但是这段时间因为和丈夫赫子铭离婚案件正在开庭，因此也成为网友和粉丝们关注的焦点。今天何洁在网上发文称诉求：从来就是孩子我养，从未要求男方净身出户，相信法律的公正！","action_list":[{"action":1,"desc":"","extra":{}},{"action":3,"desc":"","extra":{}},{"action":7,"desc":"","extra":{}},{"action":9,"desc":"","extra":{}}],"aggr_type":1,"allow_download":false,"article_sub_type":0,"article_type":0,"article_url":"http://toutiao.com/group/6498657160266777102/","ban_comment":0,"behot_time":1513318132,"bury_count":0,"cell_flag":11,"cell_layout_style":1,"cell_type":0,"comment_count":0,"cursor":1513318132000,"digg_count":0,"display_url":"http://toutiao.com/group/6498657160266777102/","filter_words":[{"id":"8:0","is_selected":false,"name":"看过了"},{"id":"9:1","is_selected":false,"name":"内容太水"},{"id":"5:388630543","is_selected":false,"name":"拉黑作者:疯帽子先生"},{"id":"2:11384965","is_selected":false,"name":"不想看:明星八卦"},{"id":"6:15899","is_selected":false,"name":"不想看:何洁"},{"id":"6:2947260","is_selected":false,"name":"不想看:赫子铭"}],"forward_info":{"forward_count":1},"gallary_image_count":8,"group_id":6498657160266777102,"has_image":true,"has_m3u8_video":false,"has_mp4_video":0,"has_video":false,"hot":0,"ignore_web_transform":1,"image_list":[{"height":300,"uri":"list/4e5b000386c8df958fae","url":"http://p1.pstatp.com/list/300x196/4e5b000386c8df958fae.webp","url_list":[{"url":"http://p1.pstatp.com/list/300x196/4e5b000386c8df958fae.webp"},{"url":"http://pb3.pstatp.com/list/300x196/4e5b000386c8df958fae.webp"},{"url":"http://pb9.pstatp.com/list/300x196/4e5b000386c8df958fae.webp"}],"width":534},{"height":345,"uri":"list/4e6100003344cc49b6ed","url":"http://p1.pstatp.com/list/300x196/4e6100003344cc49b6ed.webp","url_list":[{"url":"http://p1.pstatp.com/list/300x196/4e6100003344cc49b6ed.webp"},{"url":"http://pb3.pstatp.com/list/300x196/4e6100003344cc49b6ed.webp"},{"url":"http://pb9.pstatp.com/list/300x196/4e6100003344cc49b6ed.webp"}],"width":614},{"height":393,"uri":"list/4e5c000341d166d7a81c","url":"http://p1.pstatp.com/list/300x196/4e5c000341d166d7a81c.webp","url_list":[{"url":"http://p1.pstatp.com/list/300x196/4e5c000341d166d7a81c.webp"},{"url":"http://pb3.pstatp.com/list/300x196/4e5c000341d166d7a81c.webp"},{"url":"http://pb9.pstatp.com/list/300x196/4e5c000341d166d7a81c.webp"}],"width":700}],"is_subject":false,"item_id":6498657160266777102,"item_version":0,"keywords":"何洁,净身出户,粉丝,赫子铭,超级女声","level":0,"log_pb":{"impr_id":"20171215140852010008060131490EAF"},"media_info":{"avatar_url":"http://p8.pstatp.com/large/2c5f00167a4f5ac175f6","follow":false,"is_star_user":false,"media_id":1564750676220930,"name":"疯帽子先生","recommend_reason":"","recommend_type":0,"user_id":59120984291,"user_verified":false,"verified_content":""},"media_name":"疯帽子先生","middle_image":{"height":300,"uri":"list/4e5b000386c8df958fae","url":"http://p1.pstatp.com/list/300x196/4e5b000386c8df958fae.webp","url_list":[{"url":"http://p1.pstatp.com/list/300x196/4e5b000386c8df958fae.webp"},{"url":"http://pb3.pstatp.com/list/300x196/4e5b000386c8df958fae.webp"},{"url":"http://pb9.pstatp.com/list/300x196/4e5b000386c8df958fae.webp"}],"width":534},"publish_time":1513122844,"read_count":297,"rid":"20171215140852010008060131490EAF","share_count":0,"share_url":"http://m.toutiao.com/a6498657160266777102/?iid=0\u0026app=news_article","show_more":null,"show_portrait":false,"show_portrait_article":false,"source":"疯帽子先生","source_icon_style":6,"source_open_url":"sslocal://profile?uid=59120984291","tag":"news_entertainment","tag_id":6498657160266777102,"tip":0,"title":"何洁霸气回应离婚，赫子铭要净身出户：拿着钱有多远滚多远！","ugc_recommend":{"activity":"","reason":""},"url":"http://toutiao.com/group/6498657160266777102/","user_info":{"avatar_url":"http://p3.pstatp.com/thumb/2c5f00167a4f5ac175f6","description":"热锅上的大象，精彩与您同分享！","follow":false,"follower_count":0,"name":"疯帽子先生","user_id":59120984291,"user_verified":false},"user_repin":0,"user_verified":0,"verified_content":"","video_style":0}
-         * code :
-         */
 
-        private NewsContentBean content;
+        private String content;
         private String code;
+        private ContentBean contentBean;
 
-        public NewsContentBean getContent() {
+        public String getContent() {
             return content;
         }
 
-        public void setContent(NewsContentBean content) {
+        public void setContent(String content) {
             this.content = content;
         }
 
@@ -246,5 +233,1065 @@ public class NewsDataResult {
         public void setCode(String code) {
             this.code = code;
         }
+
+        public ContentBean getContentBean() {
+            return contentBean;
+        }
+
+        public void setContentBean(ContentBean contentBean) {
+            this.contentBean = contentBean;
+        }
     }
+
+    public static class ContentBean{
+
+        @SerializedName("abstract")
+        private String abstractX;
+        private int aggr_type;
+        private boolean allow_download;
+        private String article_alt_url;
+        private int article_sub_type;
+        private int article_type;
+        private String article_url;
+        private int ban_comment;
+        private int behot_time;
+        private int bury_count;
+        private int cell_flag;
+        private int cell_layout_style;
+        private int cell_type;
+        private int comment_count;
+        private long cursor;
+        private int digg_count;
+        private String display_url;
+        private ForwardInfoBean forward_info;
+        private int gallary_image_count;
+        private int gallary_style;
+        private int group_flags;
+        private long group_id;
+        private boolean has_image;
+        private boolean has_m3u8_video;
+        private int has_mp4_video;
+        private boolean has_video;
+        private int hot;
+        private int ignore_web_transform;
+        private boolean is_subject;
+        private long item_id;
+        private int item_version;
+        private String keywords;
+        private int level;
+        private LogPbBean log_pb;
+        private MediaInfoBean media_info;
+        private String media_name;
+        private MiddleImageBean middle_image;
+        private int publish_time;
+        private int read_count;
+        private int repin_count;
+        private String rid;
+        private int share_count;
+        private String share_url;
+        private Object show_more;
+        private boolean show_portrait;
+        private boolean show_portrait_article;
+        private String source;
+        private int source_icon_style;
+        private String source_open_url;
+        private String tag;
+        private long tag_id;
+        private int tip;
+        private String title;
+        private UgcRecommendBean ugc_recommend;
+        private String url;
+        private UserInfoBean user_info;
+        private int user_repin;
+        private int user_verified;
+        private String verified_content;
+        private int video_style;
+        private List<ActionListBean> action_list;
+        private List<FilterWordsBean> filter_words;
+        private List<ImageListBean> image_list;
+
+        public String getAbstractX() {
+            return abstractX;
+        }
+
+        public void setAbstractX(String abstractX) {
+            this.abstractX = abstractX;
+        }
+
+        public int getAggr_type() {
+            return aggr_type;
+        }
+
+        public void setAggr_type(int aggr_type) {
+            this.aggr_type = aggr_type;
+        }
+
+        public boolean isAllow_download() {
+            return allow_download;
+        }
+
+        public void setAllow_download(boolean allow_download) {
+            this.allow_download = allow_download;
+        }
+
+        public String getArticle_alt_url() {
+            return article_alt_url;
+        }
+
+        public void setArticle_alt_url(String article_alt_url) {
+            this.article_alt_url = article_alt_url;
+        }
+
+        public int getArticle_sub_type() {
+            return article_sub_type;
+        }
+
+        public void setArticle_sub_type(int article_sub_type) {
+            this.article_sub_type = article_sub_type;
+        }
+
+        public int getArticle_type() {
+            return article_type;
+        }
+
+        public void setArticle_type(int article_type) {
+            this.article_type = article_type;
+        }
+
+        public String getArticle_url() {
+            return article_url;
+        }
+
+        public void setArticle_url(String article_url) {
+            this.article_url = article_url;
+        }
+
+        public int getBan_comment() {
+            return ban_comment;
+        }
+
+        public void setBan_comment(int ban_comment) {
+            this.ban_comment = ban_comment;
+        }
+
+        public int getBehot_time() {
+            return behot_time;
+        }
+
+        public void setBehot_time(int behot_time) {
+            this.behot_time = behot_time;
+        }
+
+        public int getBury_count() {
+            return bury_count;
+        }
+
+        public void setBury_count(int bury_count) {
+            this.bury_count = bury_count;
+        }
+
+        public int getCell_flag() {
+            return cell_flag;
+        }
+
+        public void setCell_flag(int cell_flag) {
+            this.cell_flag = cell_flag;
+        }
+
+        public int getCell_layout_style() {
+            return cell_layout_style;
+        }
+
+        public void setCell_layout_style(int cell_layout_style) {
+            this.cell_layout_style = cell_layout_style;
+        }
+
+        public int getCell_type() {
+            return cell_type;
+        }
+
+        public void setCell_type(int cell_type) {
+            this.cell_type = cell_type;
+        }
+
+        public int getComment_count() {
+            return comment_count;
+        }
+
+        public void setComment_count(int comment_count) {
+            this.comment_count = comment_count;
+        }
+
+        public long getCursor() {
+            return cursor;
+        }
+
+        public void setCursor(long cursor) {
+            this.cursor = cursor;
+        }
+
+        public int getDigg_count() {
+            return digg_count;
+        }
+
+        public void setDigg_count(int digg_count) {
+            this.digg_count = digg_count;
+        }
+
+        public String getDisplay_url() {
+            return display_url;
+        }
+
+        public void setDisplay_url(String display_url) {
+            this.display_url = display_url;
+        }
+
+        public ForwardInfoBean getForward_info() {
+            return forward_info;
+        }
+
+        public void setForward_info(ForwardInfoBean forward_info) {
+            this.forward_info = forward_info;
+        }
+
+        public int getGallary_image_count() {
+            return gallary_image_count;
+        }
+
+        public void setGallary_image_count(int gallary_image_count) {
+            this.gallary_image_count = gallary_image_count;
+        }
+
+        public int getGallary_style() {
+            return gallary_style;
+        }
+
+        public void setGallary_style(int gallary_style) {
+            this.gallary_style = gallary_style;
+        }
+
+        public int getGroup_flags() {
+            return group_flags;
+        }
+
+        public void setGroup_flags(int group_flags) {
+            this.group_flags = group_flags;
+        }
+
+        public long getGroup_id() {
+            return group_id;
+        }
+
+        public void setGroup_id(long group_id) {
+            this.group_id = group_id;
+        }
+
+        public boolean isHas_image() {
+            return has_image;
+        }
+
+        public void setHas_image(boolean has_image) {
+            this.has_image = has_image;
+        }
+
+        public boolean isHas_m3u8_video() {
+            return has_m3u8_video;
+        }
+
+        public void setHas_m3u8_video(boolean has_m3u8_video) {
+            this.has_m3u8_video = has_m3u8_video;
+        }
+
+        public int getHas_mp4_video() {
+            return has_mp4_video;
+        }
+
+        public void setHas_mp4_video(int has_mp4_video) {
+            this.has_mp4_video = has_mp4_video;
+        }
+
+        public boolean isHas_video() {
+            return has_video;
+        }
+
+        public void setHas_video(boolean has_video) {
+            this.has_video = has_video;
+        }
+
+        public int getHot() {
+            return hot;
+        }
+
+        public void setHot(int hot) {
+            this.hot = hot;
+        }
+
+        public int getIgnore_web_transform() {
+            return ignore_web_transform;
+        }
+
+        public void setIgnore_web_transform(int ignore_web_transform) {
+            this.ignore_web_transform = ignore_web_transform;
+        }
+
+        public boolean isIs_subject() {
+            return is_subject;
+        }
+
+        public void setIs_subject(boolean is_subject) {
+            this.is_subject = is_subject;
+        }
+
+        public long getItem_id() {
+            return item_id;
+        }
+
+        public void setItem_id(long item_id) {
+            this.item_id = item_id;
+        }
+
+        public int getItem_version() {
+            return item_version;
+        }
+
+        public void setItem_version(int item_version) {
+            this.item_version = item_version;
+        }
+
+        public String getKeywords() {
+            return keywords;
+        }
+
+        public void setKeywords(String keywords) {
+            this.keywords = keywords;
+        }
+
+        public int getLevel() {
+            return level;
+        }
+
+        public void setLevel(int level) {
+            this.level = level;
+        }
+
+        public LogPbBean getLog_pb() {
+            return log_pb;
+        }
+
+        public void setLog_pb(LogPbBean log_pb) {
+            this.log_pb = log_pb;
+        }
+
+        public MediaInfoBean getMedia_info() {
+            return media_info;
+        }
+
+        public void setMedia_info(MediaInfoBean media_info) {
+            this.media_info = media_info;
+        }
+
+        public String getMedia_name() {
+            return media_name;
+        }
+
+        public void setMedia_name(String media_name) {
+            this.media_name = media_name;
+        }
+
+        public MiddleImageBean getMiddle_image() {
+            return middle_image;
+        }
+
+        public void setMiddle_image(MiddleImageBean middle_image) {
+            this.middle_image = middle_image;
+        }
+
+        public int getPublish_time() {
+            return publish_time;
+        }
+
+        public void setPublish_time(int publish_time) {
+            this.publish_time = publish_time;
+        }
+
+        public int getRead_count() {
+            return read_count;
+        }
+
+        public void setRead_count(int read_count) {
+            this.read_count = read_count;
+        }
+
+        public int getRepin_count() {
+            return repin_count;
+        }
+
+        public void setRepin_count(int repin_count) {
+            this.repin_count = repin_count;
+        }
+
+        public String getRid() {
+            return rid;
+        }
+
+        public void setRid(String rid) {
+            this.rid = rid;
+        }
+
+        public int getShare_count() {
+            return share_count;
+        }
+
+        public void setShare_count(int share_count) {
+            this.share_count = share_count;
+        }
+
+        public String getShare_url() {
+            return share_url;
+        }
+
+        public void setShare_url(String share_url) {
+            this.share_url = share_url;
+        }
+
+        public Object getShow_more() {
+            return show_more;
+        }
+
+        public void setShow_more(Object show_more) {
+            this.show_more = show_more;
+        }
+
+        public boolean isShow_portrait() {
+            return show_portrait;
+        }
+
+        public void setShow_portrait(boolean show_portrait) {
+            this.show_portrait = show_portrait;
+        }
+
+        public boolean isShow_portrait_article() {
+            return show_portrait_article;
+        }
+
+        public void setShow_portrait_article(boolean show_portrait_article) {
+            this.show_portrait_article = show_portrait_article;
+        }
+
+        public String getSource() {
+            return source;
+        }
+
+        public void setSource(String source) {
+            this.source = source;
+        }
+
+        public int getSource_icon_style() {
+            return source_icon_style;
+        }
+
+        public void setSource_icon_style(int source_icon_style) {
+            this.source_icon_style = source_icon_style;
+        }
+
+        public String getSource_open_url() {
+            return source_open_url;
+        }
+
+        public void setSource_open_url(String source_open_url) {
+            this.source_open_url = source_open_url;
+        }
+
+        public String getTag() {
+            return tag;
+        }
+
+        public void setTag(String tag) {
+            this.tag = tag;
+        }
+
+        public long getTag_id() {
+            return tag_id;
+        }
+
+        public void setTag_id(long tag_id) {
+            this.tag_id = tag_id;
+        }
+
+        public int getTip() {
+            return tip;
+        }
+
+        public void setTip(int tip) {
+            this.tip = tip;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+
+        public UgcRecommendBean getUgc_recommend() {
+            return ugc_recommend;
+        }
+
+        public void setUgc_recommend(UgcRecommendBean ugc_recommend) {
+            this.ugc_recommend = ugc_recommend;
+        }
+
+        public String getUrl() {
+            return url;
+        }
+
+        public void setUrl(String url) {
+            this.url = url;
+        }
+
+        public UserInfoBean getUser_info() {
+            return user_info;
+        }
+
+        public void setUser_info(UserInfoBean user_info) {
+            this.user_info = user_info;
+        }
+
+        public int getUser_repin() {
+            return user_repin;
+        }
+
+        public void setUser_repin(int user_repin) {
+            this.user_repin = user_repin;
+        }
+
+        public int getUser_verified() {
+            return user_verified;
+        }
+
+        public void setUser_verified(int user_verified) {
+            this.user_verified = user_verified;
+        }
+
+        public String getVerified_content() {
+            return verified_content;
+        }
+
+        public void setVerified_content(String verified_content) {
+            this.verified_content = verified_content;
+        }
+
+        public int getVideo_style() {
+            return video_style;
+        }
+
+        public void setVideo_style(int video_style) {
+            this.video_style = video_style;
+        }
+
+        public List<ActionListBean> getAction_list() {
+            return action_list;
+        }
+
+        public void setAction_list(List<ActionListBean> action_list) {
+            this.action_list = action_list;
+        }
+
+        public List<FilterWordsBean> getFilter_words() {
+            return filter_words;
+        }
+
+        public void setFilter_words(List<FilterWordsBean> filter_words) {
+            this.filter_words = filter_words;
+        }
+
+        public List<ImageListBean> getImage_list() {
+            return image_list;
+        }
+
+        public void setImage_list(List<ImageListBean> image_list) {
+            this.image_list = image_list;
+        }
+
+        public static class ForwardInfoBean {
+            /**
+             * forward_count : 0
+             */
+
+            private int forward_count;
+
+            public int getForward_count() {
+                return forward_count;
+            }
+
+            public void setForward_count(int forward_count) {
+                this.forward_count = forward_count;
+            }
+        }
+
+        public static class LogPbBean {
+            /**
+             * impr_id : 20171225165240010011061077880A1C
+             */
+
+            private String impr_id;
+
+            public String getImpr_id() {
+                return impr_id;
+            }
+
+            public void setImpr_id(String impr_id) {
+                this.impr_id = impr_id;
+            }
+        }
+
+        public static class MediaInfoBean {
+            /**
+             * avatar_url : http://p1.pstatp.com/large/24990017e1760a23638b
+             * follow : false
+             * is_star_user : false
+             * media_id : 6768458493
+             * name : 放心购精选
+             * recommend_reason :
+             * recommend_type : 0
+             * user_id : 6768100064
+             * user_verified : true
+             * verified_content :
+             */
+
+            private String avatar_url;
+            private boolean follow;
+            private boolean is_star_user;
+            private long media_id;
+            private String name;
+            private String recommend_reason;
+            private int recommend_type;
+            private long user_id;
+            private boolean user_verified;
+            private String verified_content;
+
+            public String getAvatar_url() {
+                return avatar_url;
+            }
+
+            public void setAvatar_url(String avatar_url) {
+                this.avatar_url = avatar_url;
+            }
+
+            public boolean isFollow() {
+                return follow;
+            }
+
+            public void setFollow(boolean follow) {
+                this.follow = follow;
+            }
+
+            public boolean isIs_star_user() {
+                return is_star_user;
+            }
+
+            public void setIs_star_user(boolean is_star_user) {
+                this.is_star_user = is_star_user;
+            }
+
+            public long getMedia_id() {
+                return media_id;
+            }
+
+            public void setMedia_id(long media_id) {
+                this.media_id = media_id;
+            }
+
+            public String getName() {
+                return name;
+            }
+
+            public void setName(String name) {
+                this.name = name;
+            }
+
+            public String getRecommend_reason() {
+                return recommend_reason;
+            }
+
+            public void setRecommend_reason(String recommend_reason) {
+                this.recommend_reason = recommend_reason;
+            }
+
+            public int getRecommend_type() {
+                return recommend_type;
+            }
+
+            public void setRecommend_type(int recommend_type) {
+                this.recommend_type = recommend_type;
+            }
+
+            public long getUser_id() {
+                return user_id;
+            }
+
+            public void setUser_id(long user_id) {
+                this.user_id = user_id;
+            }
+
+            public boolean isUser_verified() {
+                return user_verified;
+            }
+
+            public void setUser_verified(boolean user_verified) {
+                this.user_verified = user_verified;
+            }
+
+            public String getVerified_content() {
+                return verified_content;
+            }
+
+            public void setVerified_content(String verified_content) {
+                this.verified_content = verified_content;
+            }
+        }
+
+        public static class MiddleImageBean {
+            /**
+             * height : 360
+             * uri : list/4692000422a155dcf36d
+             * url : http://p1.pstatp.com/list/300x196/4692000422a155dcf36d.webp
+             * url_list : [{"url":"http://p1.pstatp.com/list/300x196/4692000422a155dcf36d.webp"},{"url":"http://pb3.pstatp.com/list/300x196/4692000422a155dcf36d.webp"},{"url":"http://pb9.pstatp.com/list/300x196/4692000422a155dcf36d.webp"}]
+             * width : 640
+             */
+
+            private int height;
+            private String uri;
+            private String url;
+            private int width;
+            private List<UrlListBean> url_list;
+
+            public int getHeight() {
+                return height;
+            }
+
+            public void setHeight(int height) {
+                this.height = height;
+            }
+
+            public String getUri() {
+                return uri;
+            }
+
+            public void setUri(String uri) {
+                this.uri = uri;
+            }
+
+            public String getUrl() {
+                return url;
+            }
+
+            public void setUrl(String url) {
+                this.url = url;
+            }
+
+            public int getWidth() {
+                return width;
+            }
+
+            public void setWidth(int width) {
+                this.width = width;
+            }
+
+            public List<UrlListBean> getUrl_list() {
+                return url_list;
+            }
+
+            public void setUrl_list(List<UrlListBean> url_list) {
+                this.url_list = url_list;
+            }
+
+            public static class UrlListBean {
+                /**
+                 * url : http://p1.pstatp.com/list/300x196/4692000422a155dcf36d.webp
+                 */
+
+                private String url;
+
+                public String getUrl() {
+                    return url;
+                }
+
+                public void setUrl(String url) {
+                    this.url = url;
+                }
+            }
+        }
+
+        public static class UgcRecommendBean {
+            /**
+             * activity :
+             * reason : 头条号时尚作者
+             */
+
+            private String activity;
+            private String reason;
+
+            public String getActivity() {
+                return activity;
+            }
+
+            public void setActivity(String activity) {
+                this.activity = activity;
+            }
+
+            public String getReason() {
+                return reason;
+            }
+
+            public void setReason(String reason) {
+                this.reason = reason;
+            }
+        }
+
+        public static class UserInfoBean {
+            /**
+             * avatar_url : http://p9.pstatp.com/thumb/24990017e1760a23638b
+             * description : 全场包邮，全场人工试穿再上线，放心、安心。认准放心购。
+             * follow : false
+             * follower_count : 0
+             * name : 放心购精选
+             * user_auth_info : {"auth_type": "0", "other_auth": {"pgc": "头条号时尚作者"}, "auth_info": "头条号时尚作者"}
+             * user_id : 6768100064
+             * user_verified : true
+             * verified_content : 头条号时尚作者
+             */
+
+            private String avatar_url;
+            private String description;
+            private boolean follow;
+            private int follower_count;
+            private String name;
+            private String user_auth_info;
+            private long user_id;
+            private boolean user_verified;
+            private String verified_content;
+
+            public String getAvatar_url() {
+                return avatar_url;
+            }
+
+            public void setAvatar_url(String avatar_url) {
+                this.avatar_url = avatar_url;
+            }
+
+            public String getDescription() {
+                return description;
+            }
+
+            public void setDescription(String description) {
+                this.description = description;
+            }
+
+            public boolean isFollow() {
+                return follow;
+            }
+
+            public void setFollow(boolean follow) {
+                this.follow = follow;
+            }
+
+            public int getFollower_count() {
+                return follower_count;
+            }
+
+            public void setFollower_count(int follower_count) {
+                this.follower_count = follower_count;
+            }
+
+            public String getName() {
+                return name;
+            }
+
+            public void setName(String name) {
+                this.name = name;
+            }
+
+            public String getUser_auth_info() {
+                return user_auth_info;
+            }
+
+            public void setUser_auth_info(String user_auth_info) {
+                this.user_auth_info = user_auth_info;
+            }
+
+            public long getUser_id() {
+                return user_id;
+            }
+
+            public void setUser_id(long user_id) {
+                this.user_id = user_id;
+            }
+
+            public boolean isUser_verified() {
+                return user_verified;
+            }
+
+            public void setUser_verified(boolean user_verified) {
+                this.user_verified = user_verified;
+            }
+
+            public String getVerified_content() {
+                return verified_content;
+            }
+
+            public void setVerified_content(String verified_content) {
+                this.verified_content = verified_content;
+            }
+        }
+
+        public static class ActionListBean {
+            /**
+             * action : 1
+             * desc :
+             * extra : {}
+             */
+
+            private int action;
+            private String desc;
+            private ExtraBean extra;
+
+            public int getAction() {
+                return action;
+            }
+
+            public void setAction(int action) {
+                this.action = action;
+            }
+
+            public String getDesc() {
+                return desc;
+            }
+
+            public void setDesc(String desc) {
+                this.desc = desc;
+            }
+
+            public ExtraBean getExtra() {
+                return extra;
+            }
+
+            public void setExtra(ExtraBean extra) {
+                this.extra = extra;
+            }
+
+            public static class ExtraBean {
+            }
+        }
+
+        public static class FilterWordsBean {
+            /**
+             * id : 8:0
+             * is_selected : false
+             * name : 看过了
+             */
+
+            private String id;
+            private boolean is_selected;
+            private String name;
+
+            public String getId() {
+                return id;
+            }
+
+            public void setId(String id) {
+                this.id = id;
+            }
+
+            public boolean isIs_selected() {
+                return is_selected;
+            }
+
+            public void setIs_selected(boolean is_selected) {
+                this.is_selected = is_selected;
+            }
+
+            public String getName() {
+                return name;
+            }
+
+            public void setName(String name) {
+                this.name = name;
+            }
+        }
+
+        public static class ImageListBean {
+            /**
+             * height : 360
+             * uri : list/4692000422a155dcf36d
+             * url : http://p1.pstatp.com/list/300x196/4692000422a155dcf36d.webp
+             * url_list : [{"url":"http://p1.pstatp.com/list/300x196/4692000422a155dcf36d.webp"},{"url":"http://pb3.pstatp.com/list/300x196/4692000422a155dcf36d.webp"},{"url":"http://pb9.pstatp.com/list/300x196/4692000422a155dcf36d.webp"}]
+             * width : 640
+             */
+
+            private int height;
+            private String uri;
+            private String url;
+            private int width;
+            private List<UrlListBeanX> url_list;
+
+            public int getHeight() {
+                return height;
+            }
+
+            public void setHeight(int height) {
+                this.height = height;
+            }
+
+            public String getUri() {
+                return uri;
+            }
+
+            public void setUri(String uri) {
+                this.uri = uri;
+            }
+
+            public String getUrl() {
+                return url;
+            }
+
+            public void setUrl(String url) {
+                this.url = url;
+            }
+
+            public int getWidth() {
+                return width;
+            }
+
+            public void setWidth(int width) {
+                this.width = width;
+            }
+
+            public List<UrlListBeanX> getUrl_list() {
+                return url_list;
+            }
+
+            public void setUrl_list(List<UrlListBeanX> url_list) {
+                this.url_list = url_list;
+            }
+
+            public static class UrlListBeanX {
+                /**
+                 * url : http://p1.pstatp.com/list/300x196/4692000422a155dcf36d.webp
+                 */
+
+                private String url;
+
+                public String getUrl() {
+                    return url;
+                }
+
+                public void setUrl(String url) {
+                    this.url = url;
+                }
+            }
+        }
+    }
+
 }

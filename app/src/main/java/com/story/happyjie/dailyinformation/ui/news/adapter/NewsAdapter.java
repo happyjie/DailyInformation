@@ -1,8 +1,10 @@
 package com.story.happyjie.dailyinformation.ui.news.adapter;
 
 import android.support.annotation.LayoutRes;
+import android.view.View;
 import android.view.ViewGroup;
 
+import com.orhanobut.logger.Logger;
 import com.story.happyjie.dailyinformation.R;
 import com.story.happyjie.dailyinformation.base.BaseAdapter.BaseRecycleViewAdapter;
 import com.story.happyjie.dailyinformation.base.BaseAdapter.BaseRecycleViewHolder;
@@ -32,7 +34,9 @@ public class NewsAdapter extends BaseRecycleViewAdapter<NewsDataResult.DataBean>
     @Override
     public int getItemViewType(int position) {
         NewsDataResult.DataBean bean = getDatas().get(position);
-        if(bean .getContent() != null && bean.getContent().getImage_list().size() >= 3){
+
+        if(bean .getContentBean() != null && bean.getContentBean().getImage_list() != null
+                &&bean.getContentBean().getImage_list().size() >= 3){
             return TYPE_THREE_IMAGES;
         } else {
             return TYPE_SINGLE_IMAGE;
@@ -49,6 +53,10 @@ public class NewsAdapter extends BaseRecycleViewAdapter<NewsDataResult.DataBean>
         protected void onBindViewHolder(NewsDataResult.DataBean object, int position) {
             mViewBinding.setBean(object);
             mViewBinding.executePendingBindings();
+            mViewBinding.include.tvAuthor.setText(object.getContentBean().getSource());
+            mViewBinding.include.tvHotFlag.setVisibility(1 == object.getContentBean().getHot() ? View.VISIBLE : View.GONE);
+            mViewBinding.include.tvCommentaries.setText(object.getContentBean().getComment_count() + "评论");
+            mViewBinding.include.tvTime.setText(object.getContentBean().getPublish_time());
             itemView.setOnClickListener((v) -> {
                 if(clickListener != null){
                     clickListener.onClick(object, position);
@@ -67,6 +75,10 @@ public class NewsAdapter extends BaseRecycleViewAdapter<NewsDataResult.DataBean>
         protected void onBindViewHolder(NewsDataResult.DataBean object, int position) {
             mViewBinding.setBean(object);
             mViewBinding.executePendingBindings();
+            mViewBinding.include.tvAuthor.setText(object.getContentBean().getSource());
+            mViewBinding.include.tvHotFlag.setVisibility(1 == object.getContentBean().getHot() ? View.VISIBLE : View.GONE);
+            mViewBinding.include.tvCommentaries.setText(object.getContentBean().getComment_count() + "评论");
+            mViewBinding.include.tvTime.setText(object.getContentBean().getPublish_time());
             itemView.setOnClickListener((v) -> {
                 if(clickListener != null){
                     clickListener.onClick(object, position);
