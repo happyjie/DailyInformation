@@ -35,8 +35,13 @@ public interface ApiService {
      * 获取今日头条的新闻数据
      * @return
      */
-    @GET("feed/v51/")
-    Observable<NewsDataResult> getNewsData(@Query("category") String category, @Query("refer") int refer, @Query("count") int count);
+    @GET("feed/v54/")
+    Observable<NewsDataResult> getNewsData(@Query("category") String category, @Query("refer") int refer, @Query("count") int count,
+                                           @Query("min_behot_time") long min_behot_time,
+                                           @Query("last_refresh_sub_entrance_interval") long last_refresh_sub_entrance_interval,
+                                           @Query("loc_mode") int loc_mode, @Query("loc_time") long loc_time,
+                                           @Query("latitude") double latitude, @Query("longitude") double longitude,
+                                           @Query("city") String city);
 
 
 }

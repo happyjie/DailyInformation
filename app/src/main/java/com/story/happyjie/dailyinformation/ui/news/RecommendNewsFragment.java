@@ -52,14 +52,14 @@ public class RecommendNewsFragment extends BaseFragment<FragmentRecommendNewsBin
 
         refreshLayout = mViewBinding.smartRefreshLayout;
 
-        mAdapter = new NewsAdapter();
+        mAdapter = new NewsAdapter(getContext());
         mViewBinding.recycleView.setLayoutManager(new LinearLayoutManager(getContext()));
         mViewBinding.recycleView.setAdapter(mAdapter);
 
-        mAdapter.setOnItemClickListener(new OnItemClickListener<GankIoDataResult.ResultsBean>() {
+        mAdapter.setOnItemClickListener(new OnItemClickListener<NewsDataResult.DataBean>() {
 
             @Override
-            public void onClick(GankIoDataResult.ResultsBean resultsBean, int position) {
+            public void onClick(NewsDataResult.DataBean resultsBean, int position) {
             }
         });
         isViewInited = true;
@@ -91,7 +91,7 @@ public class RecommendNewsFragment extends BaseFragment<FragmentRecommendNewsBin
     }
 
     private void getData(int page){
-        NewsRequestModel model = new NewsRequestModel("news_hot");
+        NewsRequestModel model = new NewsRequestModel("news_society");
         model.getData(new RequestCallBack<NewsDataResult>() {
             @Override
             public void onSuccess(NewsDataResult bean) {

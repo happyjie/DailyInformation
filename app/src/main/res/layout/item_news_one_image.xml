@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="bean"
             type="com.story.happyjie.dailyinformation.bean.NewsDataResult.DataBean" />
@@ -22,6 +22,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:gravity="center_vertical"
             android:orientation="vertical">
 
             <TextView
@@ -31,18 +32,12 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="2"
+                android:text="@{bean.ContentBean.abstractX}"
                 tools:text="超级女声出来的何洁本来绯闻很少，但是这段时间因为和丈夫赫子铭离婚案件正在开庭，因此也成为网友和粉丝们关注的焦点。今天何洁在网上发文称诉求：从来就是孩子我养，从未要求男方净身出户，相信法律的公正！" />
-
-            <!--android:text="@{bean.content.abstractX}"-->
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
 
             <include
                 android:id="@+id/include"
-                layout="@layout/layout_news_item_bottom"/>
+                layout="@layout/layout_news_item_bottom" />
             <!--app:bean="@{bean}"-->
 
         </LinearLayout>
@@ -53,8 +48,8 @@
             android:layout_height="70dp"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:showAdapterImage="@{bean.contentBean.image_list.get(0).url}"
             android:defaultImageType="@{1}"
+            android:showAdapterImage="@{bean.contentBean.image_list.get(0).url}"
             tools:src="@mipmap/ic_launcher" />
     </LinearLayout>
 
