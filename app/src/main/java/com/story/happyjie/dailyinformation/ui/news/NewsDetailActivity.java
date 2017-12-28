@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
+import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
@@ -31,20 +32,33 @@ public class NewsDetailActivity extends BaseActivity<ActivityNewsDetailBinding> 
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_news_detail);
 
         mUrl = getIntent().getStringExtra(PARAM_URL);
 
-        mViewBinding.webView.setWebViewClient(new WebViewClient(){
+        mViewBinding.webView.setWebViewClient(new WebViewClient());
+        mViewBinding.webView.setWebChromeClient(new WebChromeClient() {
             @Override
-            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-                return true;
+            public void onProgressChanged(WebView view, int newProgress) {
+                if (newProgress == 100) {
+                    mViewBinding.progressbar.setVisibility(View.INVISIBLE);
+                } else {
+                    if (View.INVISIBLE == mViewBinding.progressbar.getVisibility()) {
+                        mViewBinding.progressbar.setVisibility(View.VISIBLE);
+                    }
+                    mViewBinding.progressbar.setProgress(newProgress);
+                }
+                super.onProgressChanged(view, newProgress);
             }
-        });
-        webViewSetting();
 
+        });
+
+
+//        webViewSetting();
+        mViewBinding.webView.getSettings().setJavaScriptEnabled(true);
         showContentView();
 
         mViewBinding.webView.loadUrl(mUrl);
