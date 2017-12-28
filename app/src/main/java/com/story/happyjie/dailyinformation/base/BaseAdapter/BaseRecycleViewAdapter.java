@@ -62,6 +62,10 @@ public abstract class BaseRecycleViewAdapter<T> extends RecyclerView.Adapter<Bas
         notifyDataSetChanged();
     }
 
+    public boolean isEmpty(){
+        return null == datas || 0 == datas.size();
+    }
+
     /**
      * 清空数据，清完未添加刷新界面操作，如果需要，可手动调用notifyDataSetChanged()
      */

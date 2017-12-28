@@ -266,6 +266,7 @@ public class NewsDataResult {
         private ForwardInfoBean forward_info;
         private int gallary_image_count;
         private int gallary_style;
+        private int gallary_flag;
         private int group_flags;
         private long group_id;
         private boolean has_image;
@@ -460,6 +461,14 @@ public class NewsDataResult {
 
         public void setGallary_image_count(int gallary_image_count) {
             this.gallary_image_count = gallary_image_count;
+        }
+
+        public int getGallary_flag() {
+            return gallary_flag;
+        }
+
+        public void setGallary_flag(int gallary_flag) {
+            this.gallary_flag = gallary_flag;
         }
 
         public int getGallary_style() {

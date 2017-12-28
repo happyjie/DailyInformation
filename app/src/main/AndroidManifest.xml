@@ -35,6 +35,10 @@
         <activity android:name=".tools.view_big_image.ViewBigImageActivity"
             android:screenOrientation="portrait"
             android:label="显示大图界面"/>
+
+        <activity android:name=".ui.news.NewsDetailActivity"
+            android:screenOrientation="portrait"
+            android:label="新闻详情"/>
     </application>
 
 </manifest>

@@ -3,11 +3,9 @@ package com.story.happyjie.dailyinformation.ui.news.adapter;
 import android.content.Context;
 import android.support.annotation.LayoutRes;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.orhanobut.logger.Logger;
 import com.story.happyjie.dailyinformation.R;
 import com.story.happyjie.dailyinformation.base.BaseAdapter.BaseRecycleViewAdapter;
 import com.story.happyjie.dailyinformation.base.BaseAdapter.BaseRecycleViewHolder;
@@ -66,6 +64,19 @@ public class NewsAdapter extends BaseRecycleViewAdapter<NewsDataResult.DataBean>
             mViewBinding.include.tvAuthor.setText(object.getContentBean().getSource());
             mViewBinding.include.tvHotFlag.setVisibility(1 == object.getContentBean().getHot() ? View.VISIBLE : View.GONE);
             mViewBinding.include.tvCommentaries.setText(object.getContentBean().getComment_count() + "评论");
+
+            if(null == object.getContentBean().getImage_list() && null == object.getContentBean().getMiddle_image()){
+                mViewBinding.ivSinglePicLarge.setVisibility(View.GONE);
+                mViewBinding.ivSinglePicSmall.setVisibility(View.GONE);
+            } else {
+                if(1 == object.getContentBean().getGallary_style()){
+                    mViewBinding.ivSinglePicLarge.setVisibility(View.VISIBLE);
+                    mViewBinding.ivSinglePicSmall.setVisibility(View.GONE);
+                } else {
+                    mViewBinding.ivSinglePicLarge.setVisibility(View.GONE);
+                    mViewBinding.ivSinglePicSmall.setVisibility(View.VISIBLE);
+                }
+            }
 //            mViewBinding.include.tvTime.setText(object.getContentBean().getPublish_time());
             itemView.setOnClickListener((v) -> {
                 if (clickListener != null) {
@@ -96,29 +107,36 @@ public class NewsAdapter extends BaseRecycleViewAdapter<NewsDataResult.DataBean>
                 }
             });
 
+            mViewBinding.rcvThreePic.setVisibility(View.VISIBLE);
             mViewBinding.rcvThreePic.setLayoutManager(new GridLayoutManager(context, 3));
-            mViewBinding.rcvThreePic.setAdapter(new ImageAdapter());
+            ImageAdapter imageAdapter = new ImageAdapter(context);
+            mViewBinding.rcvThreePic.setAdapter(imageAdapter);
+            imageAdapter.setDatas(object.getContentBean().getImage_list());
 
             mViewBinding.executePendingBindings();
         }
     }
 
-    private static class ImageAdapter extends BaseRecycleViewAdapter<String>{
+    private static class ImageAdapter extends BaseRecycleViewAdapter<NewsDataResult.ContentBean.ImageListBean>{
+        private Context context;
+        public ImageAdapter(Context context){
+            this.context = context;
+        }
 
         @Override
         public BaseRecycleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             return new ImageViewHolder(parent, R.layout.item_news_image);
         }
 
-        private class ImageViewHolder extends BaseRecycleViewHolder<String, ItemNewsImageBinding>{
+        private class ImageViewHolder extends BaseRecycleViewHolder<NewsDataResult.ContentBean.ImageListBean, ItemNewsImageBinding>{
 
             public ImageViewHolder(ViewGroup parent, @LayoutRes int layoutId) {
                 super(parent, layoutId);
             }
 
             @Override
-            protected void onBindViewHolder(String object, int position) {
-                mViewBinding.setUrl(object);
+            protected void onBindViewHolder(NewsDataResult.ContentBean.ImageListBean object, int position) {
+                mViewBinding.setUrl(object.getUrl());
                 mViewBinding.executePendingBindings();
             }
         }

@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="4"
-                android:text="@{bean.contentBean.abstractX}"
+                android:text="@{bean.contentBean.title}"
                 tools:text="超级女声出来的何洁本来绯闻很少，但是这段时间因为和丈夫赫子铭离婚案件正在开庭，因此也成为网友和粉丝们关注的焦点。今天何洁在网上发文称诉求：从来就是孩子我养，从未要求男方净身出户，相信法律的公正！" />
 
             <android.support.v7.widget.RecyclerView

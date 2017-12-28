@@ -88,7 +88,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> implements V
 
         MyFragmentPagerAdapter pagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), fragmentList, titleList);
         mViewBinding.vpContent.setAdapter(pagerAdapter);
-        mViewBinding.vpContent.setOffscreenPageLimit(2);    //设置ViewPager预加载的页面个数
+        mViewBinding.vpContent.setOffscreenPageLimit(3);    //设置ViewPager预加载的页面个数
         mViewBinding.toolBar.ivTitleGank.setSelected(true);
         mViewBinding.vpContent.setCurrentItem(0);
         mViewBinding.vpContent.addOnPageChangeListener(this);
