@@ -2,14 +2,14 @@ package com.story.happyjie.dailyinformation.bean;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by llj on 2017/12/15.
  */
 
-public class NewsDataResult {
-
+public class NewsDataResult implements Serializable{
 
     private String message;
     private int total_number;
@@ -116,7 +116,7 @@ public class NewsDataResult {
         this.data = data;
     }
 
-    public static class TipsBean {
+    public static class TipsBean implements Serializable{
         /**
          * type : app
          * display_duration : 2
@@ -212,7 +212,7 @@ public class NewsDataResult {
         }
     }
 
-    public static class DataBean {
+    public static class DataBean implements Serializable{
 
         private String content;
         private String code;
@@ -243,7 +243,7 @@ public class NewsDataResult {
         }
     }
 
-    public static class ContentBean{
+    public static class ContentBean implements Serializable{
 
         @SerializedName("abstract")
         private String abstractX;
@@ -823,7 +823,7 @@ public class NewsDataResult {
             this.image_list = image_list;
         }
 
-        public static class ForwardInfoBean {
+        public static class ForwardInfoBean implements Serializable{
             /**
              * forward_count : 0
              */
@@ -839,7 +839,7 @@ public class NewsDataResult {
             }
         }
 
-        public static class LogPbBean {
+        public static class LogPbBean implements Serializable {
             /**
              * impr_id : 20171225165240010011061077880A1C
              */
@@ -855,7 +855,7 @@ public class NewsDataResult {
             }
         }
 
-        public static class MediaInfoBean {
+        public static class MediaInfoBean implements Serializable{
             /**
              * avatar_url : http://p1.pstatp.com/large/24990017e1760a23638b
              * follow : false
@@ -961,7 +961,7 @@ public class NewsDataResult {
             }
         }
 
-        public static class MiddleImageBean {
+        public static class MiddleImageBean implements Serializable{
             /**
              * height : 360
              * uri : list/4692000422a155dcf36d
@@ -1016,7 +1016,7 @@ public class NewsDataResult {
                 this.url_list = url_list;
             }
 
-            public static class UrlListBean {
+            public static class UrlListBean implements Serializable{
                 /**
                  * url : http://p1.pstatp.com/list/300x196/4692000422a155dcf36d.webp
                  */
@@ -1033,7 +1033,7 @@ public class NewsDataResult {
             }
         }
 
-        public static class UgcRecommendBean {
+        public static class UgcRecommendBean implements Serializable{
             /**
              * activity :
              * reason : 头条号时尚作者
@@ -1059,7 +1059,7 @@ public class NewsDataResult {
             }
         }
 
-        public static class UserInfoBean {
+        public static class UserInfoBean implements Serializable{
             /**
              * avatar_url : http://p9.pstatp.com/thumb/24990017e1760a23638b
              * description : 全场包邮，全场人工试穿再上线，放心、安心。认准放心购。
@@ -1155,7 +1155,7 @@ public class NewsDataResult {
             }
         }
 
-        public static class ActionListBean {
+        public static class ActionListBean implements Serializable{
             /**
              * action : 1
              * desc :
@@ -1190,11 +1190,11 @@ public class NewsDataResult {
                 this.extra = extra;
             }
 
-            public static class ExtraBean {
+            public static class ExtraBean implements Serializable{
             }
         }
 
-        public static class FilterWordsBean {
+        public static class FilterWordsBean implements Serializable{
             /**
              * id : 8:0
              * is_selected : false
@@ -1230,7 +1230,7 @@ public class NewsDataResult {
             }
         }
 
-        public static class ImageListBean {
+        public static class ImageListBean implements Serializable{
             /**
              * height : 360
              * uri : list/4692000422a155dcf36d
@@ -1285,7 +1285,7 @@ public class NewsDataResult {
                 this.url_list = url_list;
             }
 
-            public static class UrlListBeanX {
+            public static class UrlListBeanX implements Serializable{
                 /**
                  * url : http://p1.pstatp.com/list/300x196/4692000422a155dcf36d.webp
                  */

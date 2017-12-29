@@ -39,6 +39,9 @@
         <activity android:name=".ui.news.NewsDetailActivity"
             android:screenOrientation="portrait"
             android:label="新闻详情"/>
+        <activity android:name=".tools.webview.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:label="网页"/>
     </application>
 
 </manifest>

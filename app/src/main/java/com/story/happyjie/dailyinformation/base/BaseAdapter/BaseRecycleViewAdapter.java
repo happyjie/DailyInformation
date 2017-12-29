@@ -39,6 +39,15 @@ public abstract class BaseRecycleViewAdapter<T> extends RecyclerView.Adapter<Bas
     }
 
     /**
+     * 在List最前面添加数据集合
+     * @param list
+     */
+    public void addAllToFront(List<T> list){
+        datas.addAll(0, list);
+        notifyDataSetChanged();
+    }
+
+    /**
      * 在List末尾添加数据集合
      * @param list
      */

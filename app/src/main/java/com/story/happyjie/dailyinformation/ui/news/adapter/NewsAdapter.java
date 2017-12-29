@@ -66,17 +66,26 @@ public class NewsAdapter extends BaseRecycleViewAdapter<NewsDataResult.DataBean>
             mViewBinding.include.tvCommentaries.setText(object.getContentBean().getComment_count() + "评论");
 
             if(null == object.getContentBean().getImage_list() && null == object.getContentBean().getMiddle_image()){
-                mViewBinding.ivSinglePicLarge.setVisibility(View.GONE);
-                mViewBinding.ivSinglePicSmall.setVisibility(View.GONE);
+                mViewBinding.rlSinglePicLarge.setVisibility(View.GONE);
+                mViewBinding.rlSinglePicSmall.setVisibility(View.GONE);
             } else {
                 if(1 == object.getContentBean().getGallary_style()){
-                    mViewBinding.ivSinglePicLarge.setVisibility(View.VISIBLE);
-                    mViewBinding.ivSinglePicSmall.setVisibility(View.GONE);
+                    mViewBinding.rlSinglePicLarge.setVisibility(View.VISIBLE);
+                    mViewBinding.rlSinglePicSmall.setVisibility(View.GONE);
                 } else {
-                    mViewBinding.ivSinglePicLarge.setVisibility(View.GONE);
-                    mViewBinding.ivSinglePicSmall.setVisibility(View.VISIBLE);
+                    mViewBinding.rlSinglePicLarge.setVisibility(View.GONE);
+                    mViewBinding.rlSinglePicSmall.setVisibility(View.VISIBLE);
                 }
             }
+
+            if(object.getContentBean().isHas_video()){
+                mViewBinding.ivVideoPlayIconSmall.setVisibility(View.VISIBLE);
+                mViewBinding.ivVideoPlayIconSmall.setVisibility(View.VISIBLE);
+            } else {
+                mViewBinding.ivVideoPlayIconSmall.setVisibility(View.GONE);
+                mViewBinding.ivVideoPlayIconSmall.setVisibility(View.GONE);
+            }
+
 //            mViewBinding.include.tvTime.setText(object.getContentBean().getPublish_time());
             itemView.setOnClickListener((v) -> {
                 if (clickListener != null) {
@@ -109,7 +118,7 @@ public class NewsAdapter extends BaseRecycleViewAdapter<NewsDataResult.DataBean>
 
             mViewBinding.rcvThreePic.setVisibility(View.VISIBLE);
             mViewBinding.rcvThreePic.setLayoutManager(new GridLayoutManager(context, 3));
-            ImageAdapter imageAdapter = new ImageAdapter(context);
+            ImageAdapter imageAdapter = new ImageAdapter();
             mViewBinding.rcvThreePic.setAdapter(imageAdapter);
             imageAdapter.setDatas(object.getContentBean().getImage_list());
 
@@ -118,10 +127,6 @@ public class NewsAdapter extends BaseRecycleViewAdapter<NewsDataResult.DataBean>
     }
 
     private static class ImageAdapter extends BaseRecycleViewAdapter<NewsDataResult.ContentBean.ImageListBean>{
-        private Context context;
-        public ImageAdapter(Context context){
-            this.context = context;
-        }
 
         @Override
         public BaseRecycleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

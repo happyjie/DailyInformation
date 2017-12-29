@@ -12,6 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/selector_bg_white_border_bottom"
         android:orientation="horizontal"
         android:paddingBottom="10dp"
         android:paddingLeft="10dp"
@@ -35,15 +36,28 @@
                 android:text="@{bean.ContentBean.title}"
                 tools:text="超级女声出来的何洁本来绯闻很少，但是这段时间因为和丈夫赫子铭离婚案件正在开庭，因此也成为网友和粉丝们关注的焦点。今天何洁在网上发文称诉求：从来就是孩子我养，从未要求男方净身出户，相信法律的公正！" />
 
-            <ImageView
-                android:id="@+id/iv_single_pic_large"
+            <RelativeLayout
+                android:id="@+id/rl_single_pic_large"
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
-                android:layout_marginTop="5dp"
-                android:scaleType="fitXY"
-                android:defaultImageType="@{1}"
-                android:showAdapterImage="@{bean.contentBean.middle_image.url}"
-                tools:src="@mipmap/ic_launcher" />
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/iv_single_pic_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:defaultImageType="@{1}"
+                    android:scaleType="fitXY"
+                    android:showAdapterImage="@{bean.contentBean.middle_image.url}"
+                    tools:src="@mipmap/ic_launcher" />
+
+                <ImageView
+                    android:id="@+id/iv_video_play_icon_small"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/a5m" />
+            </RelativeLayout>
 
             <include
                 android:id="@+id/include"
@@ -52,16 +66,30 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/iv_single_pic_small"
+        <RelativeLayout
+            android:id="@+id/rl_single_pic_small"
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_marginLeft="10dp"
-            android:layout_weight="1"
-            android:scaleType="fitXY"
-            android:defaultImageType="@{1}"
-            android:showAdapterImage="@{bean.contentBean.middle_image.url}"
-            tools:src="@mipmap/ic_launcher" />
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_single_pic_small"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:defaultImageType="@{1}"
+                android:scaleType="fitXY"
+                android:showAdapterImage="@{bean.contentBean.middle_image.url}"
+                tools:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/iv_video_play_icon_big"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/a5m" />
+
+        </RelativeLayout>
     </LinearLayout>
 
 

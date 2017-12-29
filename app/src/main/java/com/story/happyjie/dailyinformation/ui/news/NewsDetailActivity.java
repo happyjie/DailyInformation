@@ -2,6 +2,7 @@ package com.story.happyjie.dailyinformation.ui.news;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
@@ -37,9 +38,21 @@ public class NewsDetailActivity extends BaseActivity<ActivityNewsDetailBinding> 
 
         setContentView(R.layout.activity_news_detail);
 
+        setTitle(getString(R.string.app_name_chinese));
+
         mUrl = getIntent().getStringExtra(PARAM_URL);
 
-        mViewBinding.webView.setWebViewClient(new WebViewClient());
+        mViewBinding.webView.setWebViewClient(new WebViewClient(){
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    view.loadUrl(request.getUrl().toString());
+                } else {
+                    view.loadUrl(request.toString());
+                }
+                return true;
+            }
+        });
         mViewBinding.webView.setWebChromeClient(new WebChromeClient() {
             @Override
             public void onProgressChanged(WebView view, int newProgress) {
@@ -57,11 +70,11 @@ public class NewsDetailActivity extends BaseActivity<ActivityNewsDetailBinding> 
         });
 
 
-//        webViewSetting();
-        mViewBinding.webView.getSettings().setJavaScriptEnabled(true);
+        webViewSetting();
+//        mViewBinding.webView.getSettings().setJavaScriptEnabled(true);
         showContentView();
 
-        mViewBinding.webView.loadUrl(mUrl);
+        mViewBinding.webView.loadUrl(mUrl/*"http://www.hao123.com"*/);
     }
 
     /**
@@ -69,20 +82,13 @@ public class NewsDetailActivity extends BaseActivity<ActivityNewsDetailBinding> 
      */
     private void webViewSetting() {
         WebSettings settings = mViewBinding.webView.getSettings();
-        settings.setDefaultTextEncodingName("UTF-8");
-        settings.setJavaScriptEnabled(true);
-        settings.setJavaScriptCanOpenWindowsAutomatically(true);
-        settings.setAllowFileAccess(true);
-        settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
-        settings.setSupportZoom(true);
-        settings.setBuiltInZoomControls(true);
-        settings.setUseWideViewPort(true);
-        settings.setSupportMultipleWindows(true);
-        settings.setAppCacheEnabled(true);
-        settings.setDomStorageEnabled(true);
-        settings.setGeolocationEnabled(true);
-        settings.setAppCacheMaxSize(Long.MAX_VALUE);
-        settings.setPluginState(WebSettings.PluginState.ON_DEMAND);
-        settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
+//        settings.setJavaScriptCanOpenWindowsAutomatically(true);//设置js可以直接打开窗口，如window.open()，默认为false
+        settings.setJavaScriptEnabled(true);//是否允许执行js，默认为false。设置true时，会提醒可能造成XSS漏洞
+//        settings.setSupportZoom(true);//是否可以缩放，默认true
+//        settings.setBuiltInZoomControls(true);//是否显示缩放按钮，默认false
+//        settings.setUseWideViewPort(true);//设置此属性，可任意比例缩放。大视图模式
+//        settings.setLoadWithOverviewMode(true);//和setUseWideViewPort(true)一起解决网页自适应问题
+        settings.setAppCacheEnabled(true);//是否使用缓存
+        settings.setDomStorageEnabled(true);//DOM Storage
     }
 }

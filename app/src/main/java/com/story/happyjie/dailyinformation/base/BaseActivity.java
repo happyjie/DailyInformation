@@ -113,6 +113,11 @@ public class BaseActivity<VDB extends ViewDataBinding> extends AppCompatActivity
         mBaseBinding.toolBar.setVisibility(visible ? View.VISIBLE : View.GONE);
     }
 
+
+    public void setTitle(CharSequence text) {
+        mBaseBinding.toolBar.setTitle(text);
+    }
+
     /**
      * 数据刷新
      */
@@ -193,7 +198,7 @@ public class BaseActivity<VDB extends ViewDataBinding> extends AppCompatActivity
     }
 
     @Override
-    public void onDestroy() {
+    protected void onDestroy() {
         super.onDestroy();
         if (this.mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions()) {
             this.mCompositeSubscription.unsubscribe();

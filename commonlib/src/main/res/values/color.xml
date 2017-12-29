@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--页面背景-->
+    <color name="bg_page">#f5f5f5</color>
+
     <!-- 分割线颜色-->
     <color name="line_gray">#eeeeee</color>
 
