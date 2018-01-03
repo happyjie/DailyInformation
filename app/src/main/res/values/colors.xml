@@ -23,4 +23,6 @@
     <!--彩色文字颜色-->
     <color name="textColorRed">#ee0000</color>
 
+    <!--内涵段子里面的粉丝字体颜色-->
+    <color name="text_joke_pink_color">#ff4070</color>
 </resources>

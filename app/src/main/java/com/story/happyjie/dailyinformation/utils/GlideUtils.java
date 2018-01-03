@@ -24,6 +24,7 @@ public class GlideUtils {
      * @param imageView
      * @param imageUrl
      */
+    @BindingAdapter({"android:showAdapterImage"})
     public static void showAvatar(ImageView imageView, String imageUrl){
         Glide.with(imageView.getContext())
                 .load(imageUrl)

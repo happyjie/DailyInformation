@@ -40,7 +40,7 @@ public class ClassificationNewsFragment extends BaseFragment<FragmentClassificat
     private int mCurPage = 1;
     private boolean isViewInited = false;
     private boolean isDateInited = false;
-    private String mClasssfication = "";
+    private String mCategory = "";
     private String mTitle = "";
 
     public static ClassificationNewsFragment getInstance(String classification, String title){
@@ -55,7 +55,7 @@ public class ClassificationNewsFragment extends BaseFragment<FragmentClassificat
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mClasssfication = getArguments().getString(PARAM_CLASSIFICATION);
+        mCategory = getArguments().getString(PARAM_CLASSIFICATION);
         mTitle = getArguments().getString(PARAM_TITLE);
     }
 
@@ -125,7 +125,7 @@ public class ClassificationNewsFragment extends BaseFragment<FragmentClassificat
     }
 
     private void getData(int page){
-        NewsRequestModel model = new NewsRequestModel(mClasssfication);
+        NewsRequestModel model = new NewsRequestModel(mCategory);
         model.getData(new RequestCallBack<NewsDataResult>() {
             @Override
             public void onSuccess(NewsDataResult bean) {
@@ -151,7 +151,7 @@ public class ClassificationNewsFragment extends BaseFragment<FragmentClassificat
                 ObservableHelper.simpleEvent(getContext(), bean, new ObservableHelper.simpleEventCallBack<NewsDataResult>() {
                     @Override
                     public void doSomething(NewsDataResult result) {
-                        UserCacheWrapper.saveNewsCache(getContext(), new String[]{mClasssfication}, bean);
+                        UserCacheWrapper.saveNewsCache(getContext(), new String[]{mCategory}, bean);
                     }
                 });
 
@@ -184,7 +184,7 @@ public class ClassificationNewsFragment extends BaseFragment<FragmentClassificat
     }
 
     private void showCacheData(){
-        List<NewsDataResult.DataBean> list = UserCacheWrapper.getNewsCache(getContext(), new String[]{mClasssfication});
+        List<NewsDataResult.DataBean> list = UserCacheWrapper.getNewsCache(getContext(), new String[]{mCategory});
         if(null != list && list.size() > 0){
             mAdapter.setDatas(list);
         }
