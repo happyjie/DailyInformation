@@ -12,7 +12,7 @@ import com.story.happyjie.dailyinformation.model.base.BaseJokeRequestModel;
  * Created by llj on 2018/1/3.
  */
 
-public class GetJokeListRequestModelModel extends BaseJokeRequestModel {
+public class GetJokeListRequestModel extends BaseJokeRequestModel {
     private int webp = 1;
     private int contentType;
     private int message_cursor = -1;
@@ -29,7 +29,7 @@ public class GetJokeListRequestModelModel extends BaseJokeRequestModel {
 
     private String url;     //自己另外添加，用于动态配置请求路径
 
-    public GetJokeListRequestModelModel(Context context, int contentType, String url, long min_time) {
+    public GetJokeListRequestModel(Context context, int contentType, String url, long min_time) {
         super(context);
         this.contentType = contentType;
         this.am_loc_time = System.currentTimeMillis();

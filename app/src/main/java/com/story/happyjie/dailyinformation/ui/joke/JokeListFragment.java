@@ -18,8 +18,8 @@ import com.story.happyjie.dailyinformation.cache.UserCacheWrapper;
 import com.story.happyjie.dailyinformation.consts.PreferenceConsts;
 import com.story.happyjie.dailyinformation.databinding.FragmentJokeListBinding;
 import com.story.happyjie.dailyinformation.http.RequestCallBack;
-import com.story.happyjie.dailyinformation.model.GetJokeListRequestModelModel;
-import com.story.happyjie.dailyinformation.model.JokeContentTypeRequestModelModel;
+import com.story.happyjie.dailyinformation.model.GetJokeListRequestModel;
+import com.story.happyjie.dailyinformation.model.JokeContentTypeRequestModel;
 import com.story.happyjie.dailyinformation.ui.joke.adapter.JokeAdapter;
 import com.story.happyjie.dailyinformation.utils.SharedPreferenceUtils;
 
@@ -143,7 +143,7 @@ public class JokeListFragment extends BaseFragment<FragmentJokeListBinding>{
             return;
         }
 
-        GetJokeListRequestModelModel model = new GetJokeListRequestModelModel(getContext(), contentTypeBean.getList_id(),
+        GetJokeListRequestModel model = new GetJokeListRequestModel(getContext(), contentTypeBean.getList_id(),
                 contentTypeBean.getUrl(), SharedPreferenceUtils.getLong(PreferenceConsts.JOKE_LAST_REQUEST_TIME, 0));
 
         model.getData(new RequestCallBack<JokeListResult>() {
@@ -176,7 +176,7 @@ public class JokeListFragment extends BaseFragment<FragmentJokeListBinding>{
     }
 
     private void requestJokeContentType(){
-        JokeContentTypeRequestModelModel model = new JokeContentTypeRequestModelModel(getContext());
+        JokeContentTypeRequestModel model = new JokeContentTypeRequestModel(getContext());
         model.getData(new RequestCallBack<JokeContentTypeResult>() {
             @Override
             public void onSuccess(JokeContentTypeResult obj) {
