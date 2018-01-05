@@ -6,4 +6,5 @@ package com.story.happyjie.dailyinformation.consts;
 
 public interface PreferenceConsts {
     String NEWS_LAST_REQUEST_TIME = "news_last_request_time_";
+    String JOKE_LAST_REQUEST_TIME = "news_last_request_time";
 }

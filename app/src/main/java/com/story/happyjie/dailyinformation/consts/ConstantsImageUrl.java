@@ -1,4 +1,4 @@
-package com.story.happyjie.dailyinformation.constants;
+package com.story.happyjie.dailyinformation.consts;
 
 import java.util.ArrayList;
 

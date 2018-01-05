@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="group"
+            type="com.story.happyjie.dailyinformation.bean.JokeListResult.DataBeanX.Data.Group" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_praise_num"
+            style="@style/textMiniColor69"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/joke_thumb_up"
+            android:gravity="center_vertical"
+            android:text="@{String.valueOf(item.group.diggCount)}"
+            tools:text="1000万" />
+
+
+        <TextView
+            android:id="@+id/tv_belittling_num"
+            style="@style/textMiniColor69"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:drawableLeft="@drawable/joke_thumb_down"
+            android:gravity="center_vertical"
+            android:text="@{String.valueOf(item.group.buryCount)}"
+            tools:text="1000万" />
+
+        <TextView
+            android:id="@+id/tv_comment_num"
+            style="@style/textMiniColor69"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:drawableLeft="@drawable/joke_comment"
+            android:gravity="center_vertical"
+            android:text="@{String.valueOf(item.group.commentCount)}"
+            tools:text="1000万" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_share_num"
+            style="@style/textMiniColor69"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/joke_share"
+            android:gravity="center_vertical"
+            android:text="@{String.valueOf(item.group.shareCount)}"
+            tools:text="1000万" />
+    </LinearLayout>
+</layout>

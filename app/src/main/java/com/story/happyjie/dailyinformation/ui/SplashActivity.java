@@ -11,9 +11,8 @@ import android.view.animation.AnimationUtils;
 
 import com.bumptech.glide.Glide;
 import com.story.happyjie.dailyinformation.R;
-import com.story.happyjie.dailyinformation.constants.ConstantsImageUrl;
+import com.story.happyjie.dailyinformation.consts.ConstantsImageUrl;
 import com.story.happyjie.dailyinformation.databinding.ActivitySplashBinding;
-import com.story.happyjie.dailyinformation.ui.MainActivity;
 
 import java.util.Random;
 

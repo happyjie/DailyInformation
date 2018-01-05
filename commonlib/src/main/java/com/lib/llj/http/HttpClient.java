@@ -1,6 +1,7 @@
 package com.lib.llj.http;
 
 import android.content.Context;
+import android.text.TextUtils;
 
 import java.io.IOException;
 import java.security.KeyManagementException;
@@ -58,18 +59,22 @@ public class HttpClient {
     }
 
     public Retrofit getRetrofit(String baseUrl) {
-        return new Retrofit.Builder()
-                .baseUrl(baseUrl)
-                .addConverterFactory(GsonConverterFactory.create())     //json转换器
+        Retrofit.Builder builder = new Retrofit.Builder();
+        if (!TextUtils.isEmpty(baseUrl)) {
+            builder.baseUrl(baseUrl);
+        }
+
+        return builder.addConverterFactory(GsonConverterFactory.create())     //json转换器
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())//使Retrofit可以与RxJava结合使用
                 .client(getOkHttpClient())  //设置网络请求客户端
                 .build();
+
     }
 
     private OkHttpClient getOkHttpClient() {
 
-        HttpLoggingInterceptor httpLoggingInterceptor= new HttpLoggingInterceptor();
-        httpLoggingInterceptor.setLevel(isDebug ? HttpLoggingInterceptor.Level.NONE : HttpLoggingInterceptor.Level.NONE);
+        HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
+        httpLoggingInterceptor.setLevel(isDebug ? HttpLoggingInterceptor.Level.BODY : HttpLoggingInterceptor.Level.NONE);
 
         OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
         okBuilder.readTimeout(20, TimeUnit.SECONDS)

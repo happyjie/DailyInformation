@@ -9,7 +9,7 @@ import com.lib.llj.utils.NetworkUtils;
  * Created by llj on 2018/1/3.
  */
 
-public class BaseJokeRequest extends BaseRequestModel {
+public class BaseJokeRequestModel extends BaseRequestModel {
     protected int essence = 1;
     protected String ac;
     protected String app_name = "joke_essay";
@@ -22,7 +22,7 @@ public class BaseJokeRequest extends BaseRequestModel {
     protected int os_api;
     protected String os_version;
 
-    public BaseJokeRequest(Context context) {
+    public BaseJokeRequestModel(Context context) {
         ac = NetworkUtils.getNetWorkTypeName(context);
         device_type = DeviceUtils.getModel();
         device_brand = DeviceUtils.getManufacturer();

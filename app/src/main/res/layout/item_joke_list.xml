@@ -1,45 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <!--<variable-->
-            <!--name="item"-->
-            <!--type="com.story.happyjie.dailyinformation.bean.JokeListResult.DataBeanX.DataBean"/>-->
+        <import type="android.view.View"/>
+        <variable
+            name="item"
+            type="com.story.happyjie.dailyinformation.bean.JokeListResult.DataBeanX.Data" />
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="10dp"
-        android:paddingRight="15dp"
-        android:paddingTop="10dp">
+        android:paddingBottom="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textMiniColorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/text_joke_pink_color"
+                    android:ems="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="热门"
+                    android:visibility="@{item.group.isNeihanHot ? View.VISIBLE : View.GONE}"/>
+
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:showAdapterImage="@{item.group.user.avatarUrl}"
+                    android:src="@drawable/avatar" />
+
+                <TextView
+                    style="@style/textMiniColor69"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@{item.group.user.name}"
+                    tools:text="撒即可的萨芬" />
+
+            </LinearLayout>
 
             <TextView
-                style="@style/textMiniColorWhite"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@color/text_joke_pink_color"
-                android:ems="1"
-                android:gravity="center_vertical"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:text="热门" />
+                android:id="@+id/tv_content"
+                style="@style/textNormalColor63"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                tools:text="安静的少女时代晚上阿达大第三次敖德萨大多安静的少女时代晚上阿达大第三次敖德萨大多安静的少女时代晚上阿达大第三次敖德萨大多安静的少女时代晚上阿达大第三次敖德萨大多安静的少女时代晚上阿达大第三次敖德萨大多" />
 
-            <ImageView
-                android:id="@+id/iv_avatar"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                />
-            <!--android:showAdapterImage="@{item.}"-->
+            <include
+                android:id="@+id/include"
+                layout="@layout/layout_joke_interactive"
+                app:group="@{item.group}"/>
 
         </LinearLayout>
-
-
     </LinearLayout>
+
 </layout>

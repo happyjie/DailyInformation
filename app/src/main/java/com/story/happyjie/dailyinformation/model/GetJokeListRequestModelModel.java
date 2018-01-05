@@ -3,18 +3,16 @@ package com.story.happyjie.dailyinformation.model;
 import android.content.Context;
 
 import com.story.happyjie.dailyinformation.api.ApiService;
-import com.story.happyjie.dailyinformation.bean.JokeContentTypeResult;
 import com.story.happyjie.dailyinformation.bean.JokeListResult;
 import com.story.happyjie.dailyinformation.http.HttpUtils;
 import com.story.happyjie.dailyinformation.http.RequestCallBack;
-import com.story.happyjie.dailyinformation.model.base.BaseJokeRequest;
-import com.story.happyjie.dailyinformation.model.base.BaseRequestModel;
+import com.story.happyjie.dailyinformation.model.base.BaseJokeRequestModel;
 
 /**
  * Created by llj on 2018/1/3.
  */
 
-public class GetJokeListRequestModel extends BaseJokeRequest {
+public class GetJokeListRequestModelModel extends BaseJokeRequestModel {
     private int webp = 1;
     private int contentType;
     private int message_cursor = -1;
@@ -31,18 +29,23 @@ public class GetJokeListRequestModel extends BaseJokeRequest {
 
     private String url;     //自己另外添加，用于动态配置请求路径
 
-    public GetJokeListRequestModel(Context context, int contentType, String url, long am_loc_time, long min_time) {
+    public GetJokeListRequestModelModel(Context context, int contentType, String url, long min_time) {
         super(context);
         this.contentType = contentType;
-        this.am_loc_time = am_loc_time;
+        this.am_loc_time = System.currentTimeMillis();
         this.min_time = min_time;
         if(url.startsWith(HttpUtils.API_JOKE)){
-            url = url.substring(HttpUtils.API_JOKE.length());
+            if(url.contains("?")){
+                url = url.substring(HttpUtils.API_JOKE.length(), url.indexOf("?"));
+            } else {
+                url = url.substring(HttpUtils.API_JOKE.length());
+            }
         }
         this.url = url;
     }
 
     public void getData(RequestCallBack<JokeListResult> callBack){
+
         request(ApiService.jokeApiService.getJokeList(url, essence, ac, channel, app_name, version_code,
                 version_name, device_platform, device_type, device_brand, os_api, os_version, webp, contentType,
                 message_cursor, am_longitude, am_latitude, am_city, am_loc_time, count, min_time, double_col_mode), callBack);

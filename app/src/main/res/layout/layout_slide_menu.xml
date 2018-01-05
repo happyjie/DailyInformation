@@ -41,7 +41,7 @@
                             android:layout_height="50dp"
                             app:border_width="3px"
                             app:border_color="@color/colorWhite"
-                            android:src="@drawable/default_avatar" />
+                            android:src="@drawable/avatar" />
 
                         <TextView
                             style="@style/textSmallColorWhite"

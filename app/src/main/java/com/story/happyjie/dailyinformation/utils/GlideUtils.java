@@ -30,6 +30,7 @@ public class GlideUtils {
                 .load(imageUrl)
                 .crossFade(500)
                 .error(R.drawable.default_avatar)
+                .placeholder(R.drawable.default_avatar)
                 .transform(new GlideCircleTransform(imageView.getContext()))
                 .into(imageView);
     }

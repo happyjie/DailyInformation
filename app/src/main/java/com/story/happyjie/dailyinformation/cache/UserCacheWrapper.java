@@ -3,7 +3,9 @@ package com.story.happyjie.dailyinformation.cache;
 
 import android.content.Context;
 
+import com.story.happyjie.dailyinformation.bean.GankIoDataResult;
 import com.story.happyjie.dailyinformation.bean.JokeContentTypeResult;
+import com.story.happyjie.dailyinformation.bean.JokeListResult;
 import com.story.happyjie.dailyinformation.bean.NewsDataResult;
 
 import java.util.List;
@@ -12,6 +14,8 @@ public class UserCacheWrapper {
 
     public static final String CACHE_TYPE_NEWS = "News";
     public static final String CACHE_JOKE_CONTENT_TYPE = "JOKE_CONTENT_TYPE";
+    public static final String CACHE_OTAKU_WELFARE_DATA = "CACHE_OTAKU_WELFARE_DATA";
+    public static final String CACHE_JOKE_LIST_DATA = "CACHE_JOKE_LIST_DATA";
 
     /**
      * 生产存储key
@@ -67,5 +71,50 @@ public class UserCacheWrapper {
         return result;
     }
 
+    /**
+     * 存储美女福利数据
+     * @param context
+     * @param result
+     */
+    public static void saveOtakuWelfareData(Context context, GankIoDataResult result){
+        ACache.get(context).put(CACHE_OTAKU_WELFARE_DATA, result);
+    }
 
+    /**
+     * 获取美女福利数据
+     * @param context
+     * @return
+     */
+    public static List<GankIoDataResult.ResultsBean> getOtakuWelfareData(Context context){
+        GankIoDataResult result = (GankIoDataResult) ACache.get(context).getAsObject(CACHE_OTAKU_WELFARE_DATA);
+        if(null != result && result.getResults() != null && result.getResults().size() > 0){
+            return result.getResults();
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * 存储内涵段子列表数据
+     * @param context
+     * @param result
+     */
+    public static void saveJokeListData(Context context, JokeListResult result){
+        ACache.get(context).put(CACHE_JOKE_LIST_DATA, result);
+    }
+
+    /**
+     * 获取内涵段子列表数据
+     * @param context
+     * @return
+     */
+    public static List<JokeListResult.DataBeanX.Data> getJokeListData(Context context){
+        JokeListResult result = (JokeListResult) ACache.get(context).getAsObject(CACHE_JOKE_LIST_DATA);
+        if(null != result && null != result.getDataBeanX() && null != result.getDataBeanX().getData()
+                && result.getDataBeanX().getData().size() > 0){
+            return result.getDataBeanX().getData();
+        } else {
+            return null;
+        }
+    }
 }

@@ -42,6 +42,8 @@
         <activity android:name=".tools.webview.WebViewActivity"
             android:screenOrientation="portrait"
             android:label="网页"/>
+        <activity android:name=".ui.joke.JokeDetailActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

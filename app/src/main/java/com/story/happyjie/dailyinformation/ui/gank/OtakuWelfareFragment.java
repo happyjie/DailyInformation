@@ -11,6 +11,7 @@ import com.story.happyjie.dailyinformation.R;
 import com.story.happyjie.dailyinformation.base.BaseAdapter.OnItemClickListener;
 import com.story.happyjie.dailyinformation.base.BaseFragment;
 import com.story.happyjie.dailyinformation.bean.GankIoDataResult;
+import com.story.happyjie.dailyinformation.cache.UserCacheWrapper;
 import com.story.happyjie.dailyinformation.databinding.FragmentOtakuWelfareBinding;
 import com.story.happyjie.dailyinformation.http.RequestCallBack;
 import com.story.happyjie.dailyinformation.model.GetGankIoRequestModel;
@@ -20,6 +21,7 @@ import com.story.happyjie.dailyinformation.ui.gank.adapter.OtakuWelfareAdapter;
 import com.story.happyjie.dailyinformation.utils.ToastUtils;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import rx.Subscription;
 
@@ -64,7 +66,12 @@ public class OtakuWelfareFragment extends BaseFragment<FragmentOtakuWelfareBindi
             }
         });
 
-        getData(mCurPage);
+        List<GankIoDataResult.ResultsBean> list = UserCacheWrapper.getOtakuWelfareData(getContext());
+        if(null != list){
+            mAdapter.setDatas(list);
+        } else {
+            getData(mCurPage);
+        }
     }
 
     @Override
@@ -109,10 +116,16 @@ public class OtakuWelfareFragment extends BaseFragment<FragmentOtakuWelfareBindi
                     mAdapter.clear();
                     imageList.clear();
                 }
+
                 mAdapter.addAll(bean.getResults());
                 for(int i = 0; i < bean.getResults().size(); i++){
                     ShowBigImageBean imageBean = new ShowBigImageBean(bean.getResults().get(i).getUrl(), 0);
                     imageList.add(imageBean);
+                }
+
+                //数据缓存
+                if(1 == page) {
+                    UserCacheWrapper.saveOtakuWelfareData(getContext(), bean);
                 }
             }
 

@@ -69,6 +69,32 @@ public interface ApiService {
                                                          @Query("os_api") int os_api, @Query("os_version") String os_version);
 
 
+    /**
+     * 获取内涵段子列表
+     * @param path
+     * @param essence
+     * @param ac
+     * @param channel
+     * @param app_name
+     * @param version_code
+     * @param version_name
+     * @param device_platform
+     * @param device_type
+     * @param device_brand
+     * @param os_api
+     * @param os_version
+     * @param webp
+     * @param content_type
+     * @param message_cursor
+     * @param am_longitude
+     * @param am_latitude
+     * @param am_city
+     * @param am_loc_time
+     * @param count
+     * @param min_time
+     * @param double_col_mode
+     * @return
+     */
     @GET("{path}")
     Observable<JokeListResult> getJokeList(@Path("path") String path, @Query("essence") int essence, @Query("ac") String ac,
                                            @Query("channel") String channel, @Query("app_name") String app_name, @Query("version_code") int version_code,
@@ -81,4 +107,13 @@ public interface ApiService {
                                            @Query("count") int count, @Query("min_time") long min_time,
                                            @Query("double_col_mode") int double_col_mode);
 
+
+    @GET("neihan/comments/")
+    Observable<Object> getJokeComment(@Query("essence") int essence, @Query("ac") String ac, @Query("channel") String channel,
+                                      @Query("app_name") String app_name, @Query("version_code") int version_code,
+                                      @Query("version_name") String version_name, @Query("device_platform") String device_platform,
+                                      @Query("device_type") String device_type, @Query("device_brand") String device_brand,
+                                      @Query("os_api") int os_api, @Query("os_version") String os_version,
+                                      @Query("group_id") long group_id, @Query("item_id") long item_id, @Query("count") int count,
+                                      @Query("offset") int offset, @Query("enable_image_comment") int enable_image_comment);
 }

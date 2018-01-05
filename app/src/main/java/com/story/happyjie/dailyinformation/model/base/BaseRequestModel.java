@@ -27,7 +27,7 @@ public abstract class BaseRequestModel {
 
                     @Override
                     public void onError(Throwable e) {
-                        Logger.e(e, "onError()");
+                        Logger.e(e.getMessage(), "onError()");
                         callBack.onError(e);
                     }
 

@@ -5,15 +5,15 @@ import android.content.Context;
 import com.story.happyjie.dailyinformation.api.ApiService;
 import com.story.happyjie.dailyinformation.bean.JokeContentTypeResult;
 import com.story.happyjie.dailyinformation.http.RequestCallBack;
-import com.story.happyjie.dailyinformation.model.base.BaseJokeRequest;
+import com.story.happyjie.dailyinformation.model.base.BaseJokeRequestModel;
 
 /**
  * Created by llj on 2018/1/3.
  */
 
-public class JokeContentTypeRequestModel extends BaseJokeRequest{
+public class JokeContentTypeRequestModelModel extends BaseJokeRequestModel {
 
-    public JokeContentTypeRequestModel(Context context) {
+    public JokeContentTypeRequestModelModel(Context context) {
         super(context);
     }
 

@@ -1,12 +1,13 @@
 package com.story.happyjie.dailyinformation.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by llj on 2017/12/13.
  */
 
-public class GankIoDataResult {
+public class GankIoDataResult implements Serializable{
 
 
     /**
@@ -33,7 +34,7 @@ public class GankIoDataResult {
         this.results = results;
     }
 
-    public static class ResultsBean {
+    public static class ResultsBean implements Serializable{
         /**
          * _id : 5a289393421aa90fe2f02cbb
          * createdAt : 2017-12-07T09:04:19.514Z
