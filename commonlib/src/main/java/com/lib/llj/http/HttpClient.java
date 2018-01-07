@@ -74,7 +74,7 @@ public class HttpClient {
     private OkHttpClient getOkHttpClient() {
 
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
-        httpLoggingInterceptor.setLevel(isDebug ? HttpLoggingInterceptor.Level.BODY : HttpLoggingInterceptor.Level.NONE);
+        httpLoggingInterceptor.setLevel(isDebug ? HttpLoggingInterceptor.Level.BASIC : HttpLoggingInterceptor.Level.NONE);
 
         OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
         okBuilder.readTimeout(20, TimeUnit.SECONDS)

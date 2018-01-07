@@ -9,7 +9,7 @@ import rx.Subscription;
  */
 
 public interface RequestCallBack<T> {
-    void onSuccess(T obj);
+    void onSuccess(T result);
 
     void onError(Throwable throwable);
 

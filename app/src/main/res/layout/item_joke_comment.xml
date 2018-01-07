@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+        <variable
+            name="item"
+            type="com.story.happyjie.dailyinformation.bean.JokeCommentResult.DataBean.RecentCommentsBean"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:showAvatarImage="@{item.avatar_url}"
+            tools:src="@drawable/default_avatar" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bg_white_border_bottom">
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/textMiniColor66"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="吃瓜群众"
+                android:text="@{item.user_name}"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/textMiniColor69"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:textSize="10sp"
+                tools:text="一小时前"
+                android:text='@{""+item.create_time}'/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_praise_num"
+                    style="@style/textMiniColor69"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/iv_share"
+                    android:drawableLeft="@drawable/joke_thumb_up"
+                    android:gravity="center_vertical"
+                    tools:text="999万"
+                    android:text="@{String.valueOf(item.digg_count)}"/>
+
+                <ImageView
+                    android:id="@+id/iv_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/joke_share" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/textSmallColor63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_time"
+                android:layout_marginTop="5dp"
+                tools:text="李小璐出轨pg-one是咋回事，谁来说说说说说说说说说说说说说说"
+                android:text="@{item.text}" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

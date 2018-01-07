@@ -12,11 +12,17 @@ import java.util.List;
 public abstract class BaseRecycleViewAdapter<T> extends RecyclerView.Adapter<BaseRecycleViewHolder> {
 
     private List<T> datas = new ArrayList<>();
-    protected OnItemClickListener clickListener;
-    protected OnItemLongClickListener longClickListener;
+    protected OnItemClickListener<T> clickListener;
+    protected OnItemLongClickListener<T> longClickListener;
 
     @Override
     public void onBindViewHolder(BaseRecycleViewHolder holder, int position) {
+        if(null != clickListener){
+            holder.setOnItemClickListener(clickListener);
+        }
+        if(null != longClickListener){
+            holder.setOnItemLongClickListener(longClickListener);
+        }
         holder.bindData(datas.get(position), position);
     }
 
@@ -95,11 +101,11 @@ public abstract class BaseRecycleViewAdapter<T> extends RecyclerView.Adapter<Bas
         }
     }
 
-    public void setOnItemClickListener(OnItemClickListener listener){
+    public void setOnItemClickListener(OnItemClickListener<T> listener){
         this.clickListener = listener;
     }
 
-    public void setOnItemLongClickListener(OnItemLongClickListener longClickListener) {
+    public void setOnItemLongClickListener(OnItemLongClickListener<T> longClickListener) {
         this.longClickListener = longClickListener;
     }
 }

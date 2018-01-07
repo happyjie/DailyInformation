@@ -22,7 +22,7 @@
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/joke_thumb_up"
             android:gravity="center_vertical"
-            android:text="@{String.valueOf(item.group.diggCount)}"
+            android:text="@{String.valueOf(group.diggCount)}"
             tools:text="1000万" />
 
 
@@ -34,7 +34,7 @@
             android:layout_marginLeft="5dp"
             android:drawableLeft="@drawable/joke_thumb_down"
             android:gravity="center_vertical"
-            android:text="@{String.valueOf(item.group.buryCount)}"
+            android:text="@{String.valueOf(group.buryCount)}"
             tools:text="1000万" />
 
         <TextView
@@ -45,7 +45,7 @@
             android:layout_marginLeft="5dp"
             android:drawableLeft="@drawable/joke_comment"
             android:gravity="center_vertical"
-            android:text="@{String.valueOf(item.group.commentCount)}"
+            android:text="@{String.valueOf(group.commentCount)}"
             tools:text="1000万" />
 
         <View
@@ -60,7 +60,7 @@
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/joke_share"
             android:gravity="center_vertical"
-            android:text="@{String.valueOf(item.group.shareCount)}"
+            android:text="@{String.valueOf(group.shareCount)}"
             tools:text="1000万" />
     </LinearLayout>
 </layout>

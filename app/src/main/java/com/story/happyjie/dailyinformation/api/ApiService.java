@@ -1,6 +1,7 @@
 package com.story.happyjie.dailyinformation.api;
 
 import com.story.happyjie.dailyinformation.bean.GankIoDataResult;
+import com.story.happyjie.dailyinformation.bean.JokeCommentResult;
 import com.story.happyjie.dailyinformation.bean.JokeContentTypeResult;
 import com.story.happyjie.dailyinformation.bean.JokeListResult;
 import com.story.happyjie.dailyinformation.bean.NewsDataResult;
@@ -109,11 +110,11 @@ public interface ApiService {
 
 
     @GET("neihan/comments/")
-    Observable<Object> getJokeComment(@Query("essence") int essence, @Query("ac") String ac, @Query("channel") String channel,
-                                      @Query("app_name") String app_name, @Query("version_code") int version_code,
-                                      @Query("version_name") String version_name, @Query("device_platform") String device_platform,
-                                      @Query("device_type") String device_type, @Query("device_brand") String device_brand,
-                                      @Query("os_api") int os_api, @Query("os_version") String os_version,
-                                      @Query("group_id") long group_id, @Query("item_id") long item_id, @Query("count") int count,
-                                      @Query("offset") int offset, @Query("enable_image_comment") int enable_image_comment);
+    Observable<JokeCommentResult> getJokeComment(@Query("essence") int essence, @Query("ac") String ac, @Query("channel") String channel,
+                                                 @Query("app_name") String app_name, @Query("version_code") int version_code,
+                                                 @Query("version_name") String version_name, @Query("device_platform") String device_platform,
+                                                 @Query("device_type") String device_type, @Query("device_brand") String device_brand,
+                                                 @Query("os_api") int os_api, @Query("os_version") String os_version,
+                                                 @Query("group_id") long group_id, @Query("item_id") long item_id, @Query("count") int count,
+                                                 @Query("offset") int offset, @Query("enable_image_comment") int enable_image_comment);
 }

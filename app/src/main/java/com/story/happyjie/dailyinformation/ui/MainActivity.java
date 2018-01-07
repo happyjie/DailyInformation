@@ -48,8 +48,8 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> implements V
     @Override
     protected void initView() {
         super.initView();
-        setToolbarVisible(false);
         showContentView();
+        setToolbarVisible(false);
         initViewId();
         initDrawerLayout();
         initContentView();

@@ -11,9 +11,9 @@ import com.story.happyjie.dailyinformation.model.base.BaseJokeRequestModel;
  * Created by llj on 2018/1/3.
  */
 
-public class JokeContentTypeRequestModelModel extends BaseJokeRequestModel {
+public class JokeContentTypeRequestModel extends BaseJokeRequestModel {
 
-    public JokeContentTypeRequestModelModel(Context context) {
+    public JokeContentTypeRequestModel(Context context) {
         super(context);
     }
 

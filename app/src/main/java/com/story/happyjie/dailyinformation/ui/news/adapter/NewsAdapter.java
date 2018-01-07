@@ -87,11 +87,11 @@ public class NewsAdapter extends BaseRecycleViewAdapter<NewsDataResult.DataBean>
             }
 
 //            mViewBinding.include.tvTime.setText(object.getContentBean().getPublish_time());
-            itemView.setOnClickListener((v) -> {
-                if (clickListener != null) {
-                    clickListener.onClick(object, position);
-                }
-            });
+//            itemView.setOnClickListener((v) -> {
+//                if (clickListener != null) {
+//                    clickListener.onClick(object, position);
+//                }
+//            });
             mViewBinding.executePendingBindings();
         }
     }
@@ -110,11 +110,11 @@ public class NewsAdapter extends BaseRecycleViewAdapter<NewsDataResult.DataBean>
             mViewBinding.include.tvHotFlag.setVisibility(1 == object.getContentBean().getHot() ? View.VISIBLE : View.GONE);
             mViewBinding.include.tvCommentaries.setText(object.getContentBean().getComment_count() + "评论");
 //            mViewBinding.include.tvTime.setText(object.getContentBean().getPublish_time());
-            itemView.setOnClickListener((v) -> {
-                if (clickListener != null) {
-                    clickListener.onClick(object, position);
-                }
-            });
+//            itemView.setOnClickListener((v) -> {
+//                if (clickListener != null) {
+//                    clickListener.onClick(object, position);
+//                }
+//            });
 
             mViewBinding.rcvThreePic.setVisibility(View.VISIBLE);
             mViewBinding.rcvThreePic.setLayoutManager(new GridLayoutManager(context, 3));

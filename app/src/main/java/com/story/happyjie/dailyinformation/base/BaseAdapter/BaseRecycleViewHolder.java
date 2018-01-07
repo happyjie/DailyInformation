@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 public abstract class BaseRecycleViewHolder<T, V extends ViewDataBinding> extends RecyclerView.ViewHolder{
 
     public V mViewBinding;
+    protected OnItemClickListener<T> clickListener;
+    protected OnItemLongClickListener<T> longClickListener;
 
     public BaseRecycleViewHolder(ViewGroup parent, @LayoutRes int layoutId) {
         // 此处inflate布局时需要依附 parent，否则显示item不全!!
@@ -32,8 +34,22 @@ public abstract class BaseRecycleViewHolder<T, V extends ViewDataBinding> extend
      * @param position
      */
     public void bindData(T obj, final int position){
+        if(clickListener != null) {
+            itemView.setOnClickListener((v) -> clickListener.onClick(obj, position));
+        }
+        if(longClickListener != null){
+            itemView.setOnLongClickListener(v -> longClickListener.onClick(obj, position));
+        }
         onBindViewHolder(obj, position);
         mViewBinding.executePendingBindings();
     }
 
+
+    public void setOnItemClickListener(OnItemClickListener<T> listener){
+        this.clickListener = listener;
+    }
+
+    public void setOnItemLongClickListener(OnItemLongClickListener<T> longClickListener) {
+        this.longClickListener = longClickListener;
+    }
 }

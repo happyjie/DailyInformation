@@ -30,11 +30,11 @@ public class OtakuWelfareAdapter extends BaseRecycleViewAdapter<GankIoDataResult
         protected void onBindViewHolder(GankIoDataResult.ResultsBean object, int position) {
             mViewBinding.setBean(object);
             mViewBinding.executePendingBindings();
-            itemView.setOnClickListener((v) -> {
-                if(clickListener != null){
-                    clickListener.onClick(object, position);
-                }
-            });
+//            itemView.setOnClickListener((v) -> {
+//                if(clickListener != null){
+//                    clickListener.onClick(object, position);
+//                }
+//            });
         }
     }
 }

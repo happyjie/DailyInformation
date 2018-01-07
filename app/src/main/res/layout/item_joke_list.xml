@@ -5,6 +5,7 @@
 
     <data>
         <import type="android.view.View"/>
+
         <variable
             name="item"
             type="com.story.happyjie.dailyinformation.bean.JokeListResult.DataBeanX.Data" />
@@ -48,7 +49,7 @@
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginLeft="5dp"
-                    android:showAdapterImage="@{item.group.user.avatarUrl}"
+                    android:showAvatarImage="@{item.group.user.avatarUrl}"
                     android:src="@drawable/avatar" />
 
                 <TextView

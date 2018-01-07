@@ -5,5 +5,5 @@ package com.story.happyjie.dailyinformation.base.BaseAdapter;
  */
 
 public interface OnItemLongClickListener<T> {
-    void onClick(T t, int position);
+    boolean onClick(T t, int position);
 }

@@ -1,5 +1,6 @@
 package com.story.happyjie.dailyinformation.base;
 
+import android.app.Activity;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.graphics.drawable.AnimationDrawable;
@@ -34,6 +35,13 @@ public abstract class BaseFragment<VDB extends ViewDataBinding> extends Fragment
 
     // fragment是否显示了
     protected boolean mIsVisible = false;
+    protected Activity mActivity;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mActivity = getActivity();
+    }
 
     @Nullable
     @Override

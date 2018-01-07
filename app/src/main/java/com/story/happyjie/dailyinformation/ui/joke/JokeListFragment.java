@@ -70,10 +70,10 @@ public class JokeListFragment extends BaseFragment<FragmentJokeListBinding>{
         mViewBinding.recycleView.setLayoutManager(new LinearLayoutManager(getContext()));
         mViewBinding.recycleView.setAdapter(mAdapter);
 
-        mAdapter.setOnItemClickListener(new OnItemClickListener() {
+        mAdapter.setOnItemClickListener(new OnItemClickListener<JokeListResult.DataBeanX.Data>() {
             @Override
-            public void onClick(Object o, int position) {
-
+            public void onClick(JokeListResult.DataBeanX.Data o, int position) {
+                JokeDetailActivity.startAction(getContext(), o.getGroup());
             }
         });
 
