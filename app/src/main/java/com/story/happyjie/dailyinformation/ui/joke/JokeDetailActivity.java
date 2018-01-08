@@ -8,10 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
-import android.util.Log;
 import android.view.View;
 
-import com.google.gson.Gson;
 import com.orhanobut.logger.Logger;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
@@ -64,14 +62,24 @@ public class JokeDetailActivity extends BaseActivity<ActivityJokeDetailBinding> 
                 0, STRING_HEAD.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         mViewBinding.tvContent.setText(spannableString);
 
-        mViewBinding.smartRefreshLayout.setEnableNestedScroll(true);
+//        mViewBinding.smartRefreshLayout.setEnableNestedScroll(false);
 
+        LinearLayoutManager layoutManager1 = new LinearLayoutManager(this);
+        layoutManager1.setSmoothScrollbarEnabled(true);
+        layoutManager1.setAutoMeasureEnabled(true);
         mHotAdapter = new JokeCommentAdapter();
-        mViewBinding.rcyHotComment.setLayoutManager(new LinearLayoutManager(this));
+        mViewBinding.rcyHotComment.setLayoutManager(layoutManager1/*new FullyLinearLayoutManager(this)*/);
+        mViewBinding.rcyHotComment.setHasFixedSize(true);
+        mViewBinding.rcyHotComment.setNestedScrollingEnabled(false);
         mViewBinding.rcyHotComment.setAdapter(mHotAdapter);
 
+        LinearLayoutManager layoutManager2 = new LinearLayoutManager(this);
+        layoutManager2.setSmoothScrollbarEnabled(true);
+        layoutManager2.setAutoMeasureEnabled(true);
         mNewAdapter = new JokeCommentAdapter();
-        mViewBinding.rcyNewComment.setLayoutManager(new LinearLayoutManager(this));
+        mViewBinding.rcyNewComment.setLayoutManager(layoutManager2/*new FullyLinearLayoutManager(this)*/);
+        mViewBinding.rcyNewComment.setHasFixedSize(true);
+        mViewBinding.rcyNewComment.setNestedScrollingEnabled(false);
         mViewBinding.rcyNewComment.setAdapter(mNewAdapter);
 
         showHotComment(false);
@@ -83,6 +91,7 @@ public class JokeDetailActivity extends BaseActivity<ActivityJokeDetailBinding> 
     protected void initListener() {
         mViewBinding.smartRefreshLayout.setEnableRefresh(false);
         mViewBinding.smartRefreshLayout.setEnableLoadmore(false);
+        mViewBinding.smartRefreshLayout.setEnableAutoLoadmore(true);
         mViewBinding.smartRefreshLayout.setOnLoadmoreListener(new OnLoadmoreListener() {
             @Override
             public void onLoadmore(RefreshLayout refreshlayout) {
