@@ -4,7 +4,6 @@ import android.content.Context;
 
 import com.story.happyjie.dailyinformation.api.ApiService;
 import com.story.happyjie.dailyinformation.bean.JokeCommentResult;
-import com.story.happyjie.dailyinformation.bean.JokeListResult;
 import com.story.happyjie.dailyinformation.http.RequestCallBack;
 import com.story.happyjie.dailyinformation.model.base.BaseJokeRequestModel;
 
